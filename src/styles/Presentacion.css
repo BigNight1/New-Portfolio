@@ -1,0 +1,49 @@
+.hero{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: Roboto;
+    gap: 2.5rem;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 1rem;
+    padding-top: 2rem;
+    /* cambiar o ver si cambio */
+    color: white;
+}
+
+.hero-image{
+    background: url("/fondo.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.title{
+    font-size: 4rem;
+    margin: 0;
+    text-align: center; 
+}
+
+.sub-title{
+    text-align: center;
+    font-size: 1.35rem;
+}
+
+.subtitle{
+    font-size: 1.5rem;
+    max-width: 600px;
+    text-align: center;
+}
+
+.boton-sobremi{
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: rgb(47, 255, 92);
+    padding: 0.75em 1.25em;
+    color: #242424;
+    border-radius: 40px;
+}
