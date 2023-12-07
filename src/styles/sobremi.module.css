@@ -1,49 +1,69 @@
 .content {
-  max-width: 120rem;
+  max-width: 1200px;
   margin: auto;
-  width: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title{
+.title {
   text-align: center;
   font-size: 2.4rem;
-  padding-top: 1.6rem;
 }
 
-.title2{
+.title2 {
   font-size: 1.5rem;
 }
 
-.proyectos_pa{
-  font-size: 1.25rem;
-  margin: 8px 0 ;
+.descripcion_two {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 }
-.description{
-  text-align: center;
-  font-size: 1.2rem;
-  
-}
-.content_wrapper{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem;
+.proyectos_pa {
+  margin: 10px 0;
 }
 
-.skills_list{
+.botonProyectos {
+  color: #242424;
+  border: none;
+  background-color: rgb(47, 255, 92);
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 0.75em 1.25em;
+  font-size: 1.3rem;
+}
+
+.encabezado {
+  padding: 2rem;
+}
+.description {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.content_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+}
+
+.skills_list {
   display: flex;
   flex-wrap: wrap;
+  gap: 1ch;
 }
 
 .skill_block {
   padding: 1rem 2rem;
-    margin-bottom: 1.5rem;
-    margin-right: 1.5rem;
-    font-size: 1.6rem;
-    background: #242424;
-    border-radius: 5px;
-    font-weight: 600;
-    color: #ffffff;
-
+  font-size: 1rem;
+  background: #242424;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-
+.myskill {
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}

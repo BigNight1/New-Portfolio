@@ -11,8 +11,8 @@ function App() {
       <Header/>
       <Presentacion/>
       <Sobremi/>
-      {/* <Proyecto/>
-      <Footer/> */}
+      <Proyecto/>
+      {/* <Footer/> */}
     </>
   )
 }

@@ -43,52 +43,46 @@ const skills = [
     name: "Git",
   },
 ];
-const proyecto = [
-  {
-    id: 1,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumnecessitatibus deserunt corporis at veritatis vitae, quae id utdoloribus",
-  },
-  {
-    id: 2,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumnecessitatibus deserunt corporis at veritatis vitae, quae id utdoloribus",
-  },
-  {
-    id: 3,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumnecessitatibus deserunt corporis at veritatis vitae, quae id utdoloribus",
-  },
-];
 
 const Sobremi = () => {
   return (
     <section>
       <div className={sobre.content}>
-        <h2 className={sobre.title}>Sobre Mi</h2>
-        <div className={sobre.description}>
-          1 año de experiencia programando paginas web y creando paginas
-          interesantes
+        <div className={sobre.encabezado}>
+          <h2 className={sobre.title}>Sobre Mi</h2>
+          <div className={sobre.description}>
+            1 año de experiencia programando paginas web y creando paginas
+            interesantes
+          </div>
         </div>
-
         <div className={sobre.content_wrapper}>
           <div className={sobre.descripcion_two}>
             <div className={sobre.title2}>Conóceme más</div>
+            <div className={sobre.content_parr}>
+              <p className={sobre.proyectos_pa}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla,
+                neque, itaque assumenda vero incidunt vel sunt, nam alias odio
+                tenetur at. Dolores quidem facere veniam neque voluptate.
+              </p>
+              <p className={sobre.proyectos_pa}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla,
+                neque, itaque assumenda vero incidunt vel sunt, nam alias odio
+                tenetur at. Dolores quidem facere veniam neque voluptate.
+              </p>
+              <p className={sobre.proyectos_pa}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla,
+                neque, itaque assumenda vero incidunt vel sunt, nam alias odio
+                tenetur at. Dolores quidem facere veniam neque voluptate.
+              </p>
+            </div>
             <div>
-              {proyecto.map((proyect) => {
-                return (
-                  <p className={sobre.proyectos_pa} key={proyect.id}>
-                    {proyect.description}
-                  </p>
-                );
-              })}
+            <button className={sobre.botonProyectos}>Proyecto</button>
+
             </div>
-            <div className="botonProyectos">
-              <a href="#Proyectos">Proyectos</a>
-            </div>
+            
           </div>
           <div className={sobre.skills}>
-            <div>Mis habilidades y herramientas</div>
+            <div className={sobre.myskill}>Mis habilidades y herramientas</div>
             <div className={sobre.skills_list}>
               {skills.map((skill) => (
                 <span className={sobre.skill_block} key={skill.id}>
