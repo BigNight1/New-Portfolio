@@ -32,6 +32,34 @@ const Proyecto = () => {
               <img src="/proyecto1.png" alt="Imagen" className={pro.img_pro} />
             </div>
           </div>
+          <div className={pro.project}>
+            <div className={pro.card_data}>
+              <h3>Proyecto Full Stack</h3>
+              <div>
+                <p>Ecommerce Frontend Y Backend mas Base de Datos</p>
+              </div>
+              <div>
+                <span className="skill-block">javascript</span>
+              </div>
+            </div>
+            <div className="img-project">
+              <img src="/proyecto1.png" alt="Imagen" className={pro.img_pro} />
+            </div>
+          </div>
+          <div className={pro.project}>
+            <div className={pro.card_data}>
+              <h3>Proyecto Full Stack</h3>
+              <div>
+                <p>Ecommerce Frontend Y Backend mas Base de Datos</p>
+              </div>
+              <div>
+                <span className="skill-block">javascript</span>
+              </div>
+            </div>
+            <div className="img-project">
+              <img src="/proyecto1.png" alt="Imagen" className={pro.img_pro} />
+            </div>
+          </div>
         </div>
       </div>
     </section>

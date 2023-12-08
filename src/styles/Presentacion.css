@@ -7,8 +7,6 @@
     min-height: 100vh;
     padding: 0 1rem;
     padding-top: 2rem;
-    /* cambiar o ver si cambio */
-    color: white;
 }
 
 .hero-image{
@@ -23,8 +21,6 @@
 
 .title{
     font-size: 4rem;
-    margin: 0;
-    text-align: center; 
 }
 
 .sub-title{
