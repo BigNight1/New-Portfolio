@@ -46,7 +46,7 @@ const skills = [
 
 const Sobremi = () => {
   return (
-    <section>
+    <section id="sobremi">
       <div className={sobre.content}>
         <div className={sobre.encabezado}>
           <h2 className={sobre.title}>Sobre Mi</h2>

@@ -14,7 +14,7 @@ const proyectos = [
 
 const Proyecto = () => {
   return (
-    <section className={pro.projects}>
+    <section id="proyecto" className={pro.projects}>
       <div className={pro.container}>
         <h2 className={pro.title_pro}>Proyectos</h2>
         <div className={pro.wrapper}>

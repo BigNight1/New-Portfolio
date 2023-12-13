@@ -7,15 +7,17 @@ nav {
   left: 0;
   padding: 0 1rem;
   z-index: 100;
-  width: 100%;
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-content {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 10px;
+  max-width: 1200px;
 }
 
 .nav-content h3 {
@@ -35,5 +37,37 @@ nav {
 .links a {
   text-decoration: none;
   font-size: 20px;
+  font-weight: 700;
   color: #e8e6e3;
+  cursor: pointer;
+}
+
+.container_all{
+  display: flex;
+  align-items: center;
+}
+
+.buton_theme{
+  display: flex;
+  background-color: #181a1b;
+  font-size: 1.5rem;
+  border: 2px solid green;
+  border-radius: 2rem;
+  padding: 0 0.5rem;
+  gap: 1ch;
+  cursor: pointer;
+}
+
+.dia{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black,.white{
+  padding: 5px 0;
+}
+
+.black{
+  color: aqua;
 }
