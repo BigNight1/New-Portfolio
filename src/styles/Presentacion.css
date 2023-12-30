@@ -10,7 +10,7 @@
 }
 
 .hero-image{
-    background: url("/fondo.jpg");
+    background: url("/images/fondo1.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;

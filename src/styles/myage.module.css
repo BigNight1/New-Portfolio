@@ -1,0 +1,53 @@
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+}
+
+.corazonIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  animation: heartbeat 1s infinite;
+  cursor: pointer;
+}
+
+.corazonIcon p {
+  cursor: pointer;
+}
+
+.edadTexto {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(236, 221, 221); 
+  font-size: 0.8rem; 
+  font-weight: 700;
+}
+
+.textoEncima {
+  display: none;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(236, 221, 221); 
+  font-size: 0.8rem; 
+  font-weight: 700;
+}
+
+.corazonIcon:hover .textoEncima {
+  display: block;
+}
