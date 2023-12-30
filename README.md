@@ -13,3 +13,5 @@ Currently, two official plugins are available:
  2. hacer el spanish and  English 
  3. arreglar los detalles 
  4. analizar bien la pagina para ver como esta quedando
+
+ me falta avanzar con el dark mode  hacer cambios generales en todo 

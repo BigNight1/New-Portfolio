@@ -1,16 +1,27 @@
 import "../styles/header.css";
-import { FaRegMoon } from "react-icons/fa";
-import { CiSun } from "react-icons/ci";
 import { Link } from "react-scroll";
 import MyAge from "./myage.jsx";
 import { useState } from "react";
+import { useEffect } from "react";
 
 function Header() {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState("light");
 
+  useEffect(() => {}, [theme]);
+  if (theme === "dark") {
+    document.querySelector("html").classList.add("dark");
+  }
+  
+  else {
+    document.querySelector("html").classList.remove("dark");
+  }
   const toggleTheme = () => {
-    setTheme(!theme);
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
+
+  const getImageSource = ()=>{
+    return theme  === "light" ? "/noche.webp" : "/dia.webp"
+  }
   return (
     <nav>
       <div className="nav-content">
@@ -34,14 +45,10 @@ function Header() {
           </ul>
 
           <button
-            className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center"
+            className="text-gray-500 dark:text-gray-400 hover:bg-gray-500 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center"
             onClick={toggleTheme}
           >
-            {theme ? (
-              <img src="/noche.webp" alt="noche" />
-            ) : (
-              <img src="/dia.webp" alt="dia" />
-            )}
+            <img src={getImageSource()} alt={theme} />
           </button>
         </div>
       </div>
