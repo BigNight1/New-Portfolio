@@ -1,11 +1,10 @@
 import React from "react";
-import sobre from "../../styles/sobremi.module.css";
 
-const SobremiItem = ({ description, id }) => {
+const SobremiItem = ({ description }) => {
   return (
-    <p className={sobre.proyectos_pa} key={id}>
+    <p className="my-2.5 text-black dark:text-white text-pretty">
       {description}
-    </p>
+      </p>
   );
 };
 

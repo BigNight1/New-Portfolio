@@ -1,48 +1,40 @@
 import React from "react";
 import "../styles/Presentacion.css";
 import { Link } from "react-scroll";
-const Presentacion = ({theme}) => {
-  const fondoEstilo = {
-    position: "absolute",
-    inset: "0",
-    zIndex: "-10",
-    height: "100%",
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    padding: "5px",
-    paddingTop: "24px",
-    background: theme === "dark"
-      ? "radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%)"
-      : "radial-gradient(125% 125% at 50% 10%, #fff 40%, #63e 100%)",
-  };
 
+const Presentacion = () => {
   return (
-    <div className="hero ">
-      <div style={fondoEstilo}></div>
+    <div className="relative min-h-screen p-4 pt-8 flex flex-col items-center justify-center">
+      {/* Background claro */}
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
+      {/* Background oscuro */}
+      <div className="dark:absolute dark:inset-0 dark:-z-10 dark:h-full dark:w-full dark:items-center dark:px-5 dark:py-24 dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 
-      <div className="saludo">
-        <h1 className="title text-black	">Hola, Soy Edu </h1>
-        <div className="sub-title text-black	">
+      <div className="text-center text-black py-7">
+        <h1 className="text-6xl font-bold py-1 dark:text-white">
+          Hola, Soy Edu
+        </h1>
+        <div className="text-xl dark:text-white">
           Futuro Programador Full Stack
-          {/* Future Programmer Full Stack */}
         </div>
       </div>
-      <div className="subtitle text-black	">
+
+      <div className="text-center text-lg max-w-[600px] text-black font-semibold	 dark:text-white">
         Desarrollador web experimentado que disfruta creando productos digitales
-        rapidos y accesibles
+        rápidos y accesibles
       </div>
-      <div>
+
+      <div className="flex gap-4 mt-4">
         <Link
           to="sobremi"
-          className="boton-sobremi text-black	"
+          className="boton-sobremi text-[#181a1b] font-bold"
           smooth={true}
           duration={500}
         >
           Sobre Mi
         </Link>
         <a
-          className="boton-sobremi text-black	"
+          className="boton-sobremi text-[#181a1b] font-bold font-SpaceMono"
           href="/cv-EduArmas.pdf"
           download="cv-EduArmas.pdf"
         >

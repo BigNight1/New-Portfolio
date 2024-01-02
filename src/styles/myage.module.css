@@ -3,7 +3,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(0.95);
   }
   100% {
     transform: scale(1);
@@ -43,7 +43,7 @@
   top: 95%;
   left: 50%;
   transform: translateX(-50%);
-  color: rgb(236, 221, 221); 
+  color: black;
   font-size: 0.8rem; 
   font-weight: 700;
 }

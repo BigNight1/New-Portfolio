@@ -1,5 +1,4 @@
 nav {
-  background-color: #181a1b;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.75);
   position: fixed;
   right: 0;
@@ -20,29 +19,10 @@ nav {
   max-width: 1200px;
 }
 
-.nav-content h3 {
-  font-size: 1.5rem;
-  color: #e8e6e3;
+.rotate {
+  transition: transform 0.5s ease-in-out;
 }
 
-.links {
-  display: flex;
-}
-
-.links li {
-  padding: 1.25rem 0.9rem;
-  list-style: none;
-}
-
-.links a {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 700;
-  color: #e8e6e3;
-  cursor: pointer;
-}
-
-.container_all {
-  display: flex;
-  align-items: center;
+.dark .rotate {
+  transform: rotate(180deg);
 }
