@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
 .content {
   max-width: 1200px;
   margin: auto;
@@ -8,19 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.title2 {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-size: 24px;
-  color: #e8e6e3;
-}
-
-.descripcion_two {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
 }
 
 .botonProyectos {
@@ -33,26 +17,8 @@
   font-size: 1.3rem;
 }
 
-.content_wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
-}
-
-.skills_list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1ch;
-}
-
-.nameskill {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-size: 16px;
-  color: #e8e6e3;
-}
 .skill_block {
-  position: relative; 
+  position: relative;
   padding: 0.7rem 1rem;
   font-size: 1rem;
   background: #242424;
@@ -77,11 +43,11 @@
 }
 
 .contiene_img {
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -104,3 +70,4 @@
     opacity: 1;
   }
 }
+

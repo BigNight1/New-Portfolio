@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        SpaceMono : ["Space Mono", "monospace"]
+        SpaceMono : ["Space Mono", "monospace"],
+        Roboto: ["Roboto","sans-serif"]
       }
     },
   },

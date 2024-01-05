@@ -6,13 +6,13 @@ const ProyectoItem = ({ name, description, skills, img, alt }) => {
     <div className="flex">
       
       <div className={pro.card_data}>
-        <h3 className="text-white">{name}</h3>
+        <h3 className="text-white text-xl	font-SpaceMono font-bold uppercase">{name}</h3>
         <div>
-          <p className="text-white">{description}</p>
+          <p className="text-white font-Roboto">{description}</p>
         </div>
         <div className="flex space-x-2">
           {skills.map((skill, index) => (
-            <span key={index} className="px-1 text-white">
+            <span key={index} className="px-1 text-white font-Roboto ">
               {skill}
             </span>
           ))}

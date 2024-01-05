@@ -26,3 +26,10 @@ nav {
 .dark .rotate {
   transform: rotate(180deg);
 }
+
+@media (max-width:640px) {
+  .linkdesaparece{
+    display: none;
+  }
+}
+
