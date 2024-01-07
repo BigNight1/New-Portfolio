@@ -34,7 +34,7 @@ function Header() {
               {LINKS.map((links) => (
                 <Link
                   key={links.link}
-                  className="text-lg font-semibold text-black dark:text-gray-300 cursor-pointer px-3 dark:hover:text-[#67fd67] hover:text-[#0018CC]"
+                  className="text-lg font-bold text-black dark:text-gray-300 cursor-pointer px-3 dark:hover:text-[#67fd67] hover:text-[#0018CC]"
                   to={links.to}
                   smooth={true}
                   duration={500}

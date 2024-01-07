@@ -63,7 +63,7 @@ const skills = [
   {
     id: 12,
     name: "Astro",
-    img: "/icons/astro.webp",
+    // img: "/icons/astro.webp",
   },
 ];
 
@@ -99,9 +99,8 @@ const Sobremi = () => {
           </div>
         </div>
 
-
-      <div className="lg:grid lg:grid-cols-2 lg:gap-20 ">
-      {/* Contenido de la primera columna */}
+        <div className="lg:grid lg:grid-cols-2 lg:gap-20 ">
+          {/* Contenido de la primera columna */}
           <div className="flex gap-1 flex-col	 ">
             <h2 className="text-black text-4xl font-bold dark:text-white">
               Conóceme más
@@ -112,16 +111,14 @@ const Sobremi = () => {
               ))}
             </div>
             <div>
-              <button className={sobre.botonProyectos}>
-                <Link
-                  className="font-black"
-                  smooth={true}
-                  duration={500}
-                  to="proyecto"
-                >
-                  Proyecto
-                </Link>
-              </button>
+              <Link
+                className="font-black"
+                smooth={true}
+                duration={500}
+                to="proyecto"
+              >
+                <button className="botonProyectos">Proyecto</button>
+              </Link>
             </div>
           </div>
 
@@ -130,7 +127,7 @@ const Sobremi = () => {
             <div className="text-black text-4xl font-bold mb-4 dark:text-white 	">
               Mis habilidades y herramientas
             </div>
-            <div className="flex flex-wrap gap-3 sm:w-[650px]">
+            <div className="flex flex-wrap gap-3 ">
               {skills.map((skill) => (
                 <div key={skill.id} className={sobre.skill_block}>
                   {skill.img && (

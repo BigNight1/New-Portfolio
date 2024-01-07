@@ -1,25 +1,68 @@
-
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15vh;
-    padding-top: 3rem;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15vh;
+  padding-top: 3rem;
 }
 
-.card_data{
-    background-color: #181a1b;
-    border-radius: 7px;
-    box-shadow: 0 0 20px rgba(0,0,0,.75);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+.project {
+  flex-direction: row-reverse;
+  --orientation: flex-start;
+  background-color: #181a1b;
+  border-radius: 0.5rem;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.75);
+  display: flex;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, background-color;
+  transition-timing-function: ease;
+  width: 100%;
+  
+
 }
 
-.img_pro{
-    height: 250px;
-    width: 100%;
-    border-radius: 5px;
+.card_data {
+  align-items: center;
+  align-items: flex-start;
+  background-color: #181a1b;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  transition-duration: 0.3s;
+  transition-property: background-color, box-shadow;
+  transition-timing-function: ease;
+  z-index: 2;
+}
+
+.img_wrapper {
+  display: flex;
+  flex: 6;
+}
+
+.img_pro {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .project {
+    flex-direction: column-reverse;
+  }
+}
+
+.tag_block {
+  background-color: #242424;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  color: white;
+  transition: background-color 0.3s ease;
 }

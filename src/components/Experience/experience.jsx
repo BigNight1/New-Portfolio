@@ -1,5 +1,6 @@
 import React from "react";
 import ExperienceItem from "./experienceItem.jsx";
+import styled from "styled-components";
 
 const Experience = () => {
   const EXPERIENCE = [
@@ -27,7 +28,7 @@ const Experience = () => {
   ];
 
   return (
-    <div id="trayectoria" className="dark:bg-slate-900	">
+    <StyledCelExperience id="trayectoria" className="dark:bg-slate-900">
       <div className="w-full mx-auto lg:w-[740px] md:w-[670px] py-44 	">
         <ol className="relative border-s border-gray-200 dark:border-gray-700">
           {EXPERIENCE.map((experiencie) => (
@@ -37,8 +38,14 @@ const Experience = () => {
           ))}
         </ol>
       </div>
-    </div>
+    </StyledCelExperience>
   );
 };
+
+const StyledCelExperience = styled.div`
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+`;
 
 export default Experience;

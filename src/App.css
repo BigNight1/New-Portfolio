@@ -18,3 +18,14 @@ section {
   min-height: 100vh;
   padding: 6rem 2rem;
 }
+
+
+.botonProyectos {
+  color: #242424;
+  border: none;
+  background-color: rgb(47, 255, 92);
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 0.75em 1.25em;
+  font-size: 1.3rem;
+}
