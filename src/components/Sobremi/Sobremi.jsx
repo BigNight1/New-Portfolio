@@ -2,6 +2,7 @@ import React from "react";
 import sobre from "../../styles/sobremi.module.css";
 import SobremiItem from "./SobremiItem.jsx";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 const skills = [
   {
@@ -86,16 +87,17 @@ const DESCRIPTION = [
 ];
 
 const Sobremi = () => {
+  const {t} = useTranslation()
+
   return (
     <section id="sobremi" className="bg-white dark:bg-slate-900	">
       <div className={sobre.content}>
         <div className="py-24">
           <h2 className="text-black pb-5	 text-5xl flex justify-center font-bold	dark:text-white">
-            Sobre mi
+            {t("Sobremi.sobre")}
           </h2>
           <div className="text-xl text-gray-500 font-normal	text-center	max-w-[750px]	">
-            2 año de experiencia programando paginas web y creando paginas
-            interesantes
+            {t("Sobremi.subsobre")}
           </div>
         </div>
 
@@ -103,7 +105,7 @@ const Sobremi = () => {
           {/* Contenido de la primera columna */}
           <div className="flex gap-1 flex-col	 ">
             <h2 className="text-black text-4xl font-bold dark:text-white">
-              Conóceme más
+              {t("Sobremi.conoceme")}
             </h2>
             <div className=" text-pretty">
               {DESCRIPTION.map((description) => (

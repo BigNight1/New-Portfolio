@@ -4,8 +4,10 @@ import { Link } from "react-scroll";
 import MyAge from "../Myage/myage.jsx";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+  const { t } = useTranslation();
   const { toggleTheme, theme } = useTheme();
   const [open, setOpen] = useState(false);
 
@@ -19,7 +21,7 @@ function Header() {
     <nav className="dark:bg-slate-900">
       <div className="nav-content ">
         <div className="flex gap-1 py-5">
-          <MyAge/>
+          <MyAge />
           <a
             href="/"
             className="text-2xl text-black font-black dark:text-[#e8e6e3]  lg:block md:block  desaparece"
@@ -39,14 +41,14 @@ function Header() {
                   smooth={true}
                   duration={500}
                 >
-                  {links.link}
+                  {t(`Menu.${links.link}`)}
                 </Link>
               ))}
             </li>
           </ul>
 
           <span
-            className="hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center rotate mx-[0.3rem]"
+            className="hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center rotate mx-[0.3rem] cursor-pointer"
             onClick={toggleTheme}
           >
             <img src={imageSource} alt={theme} />

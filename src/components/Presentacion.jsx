@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-scroll";
 import { Github } from "./Icons/github.jsx";
 import { Linkedin } from "./Icons/Linkedim.jsx";
+import { useTranslation } from "react-i18next";
 
 const Presentacion = () => {
+  const {t} = useTranslation()
   return (
     <div className="relative min-h-screen p-4 pt-8 flex flex-col items-center justify-center">
       {/* Background claro */}
@@ -14,17 +16,15 @@ const Presentacion = () => {
       <div className="flex flex-col items-center		">
         <div className="text-center text-black py-7">
           <h1 className="text-6xl font-bold py-1 dark:text-white">
-            Hola,Soy Edu
+            {t("Presentacion.presentation")}
           </h1>
           <div className="text-xl dark:text-white ">
-            <h2 className="font-Roboto font-normal">Programador Full Stack</h2>
+            <h2 className="font-Roboto font-normal">{t("Presentacion.subtitle")}</h2>
           </div>
         </div>
 
         <div className="text-center text-lg max-w-[650px] text-black font-normal font-Roboto	 dark:text-white">
-          Desarrollador web full stack con experiencia en diseño y desarrollo de
-          aplicaciones web utilizando tecnologías front-end y back-end. Experto
-          en crear soluciones interactivas y funcionales.
+          {t("Presentacion.description")}
         </div>
 
         <div className="flex gap-x-3 py-2">
@@ -59,14 +59,14 @@ const Presentacion = () => {
             smooth={true}
             duration={500}
           >
-            <button className="text-xl">Sobre Mi</button>
+            <button className="text-xl">{t("Presentacion.boton1")}</button>
           </Link>
           <a
             className=" text-[#181a1b] font-bold font-Roboto"
             href="/cv-EduArmas.pdf"
             download="cv-EduArmas.pdf"
           >
-            <button className="text-xl">CV</button>
+            <button className="text-xl">{t("Presentacion.boton2")}</button>
           </a>
         </div>
       </div>
