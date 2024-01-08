@@ -7,14 +7,16 @@
   align-items: center;
 }
 
-.botonProyectos {
-  color: #242424;
-  border: none;
-  background-color: rgb(47, 255, 92);
+.button-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.link-content {
+  display: flex;
+  gap: 1ch;
   text-decoration: none;
-  border-radius: 6px;
-  padding: 0.75em 1.25em;
-  font-size: 1.3rem;
 }
 
 .skill_block {
@@ -70,4 +72,3 @@
     opacity: 1;
   }
 }
-

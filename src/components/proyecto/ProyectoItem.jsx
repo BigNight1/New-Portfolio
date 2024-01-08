@@ -48,9 +48,11 @@ const ProyectoItem = ({ name, description, skills, img, alt, href }) => {
             </div>
           )}
         </div>
-        <div className="pt-5">
-          <a href={href} target="__BLANK" className="botonProyectos">
-            Ver
+        <div className="button-wrapper ">
+          <a href={href} target="__BLANK">
+            <button>
+              <span className="link-content">Check it</span>
+            </button>
           </a>
         </div>
       </div>

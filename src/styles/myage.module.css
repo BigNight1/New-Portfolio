@@ -52,3 +52,9 @@
 .corazonIcon:hover .textoEncima {
   display: block;
 }
+
+@media (max-width:320px){
+  .contenedor{
+    display: none;
+  }
+}

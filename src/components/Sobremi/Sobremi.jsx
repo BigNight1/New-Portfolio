@@ -91,7 +91,7 @@ const Sobremi = () => {
       <div className={sobre.content}>
         <div className="py-24">
           <h2 className="text-black pb-5	 text-5xl flex justify-center font-bold	dark:text-white">
-            Sobre Mi
+            Sobre mi
           </h2>
           <div className="text-xl text-gray-500 font-normal	text-center	max-w-[750px]	">
             2 año de experiencia programando paginas web y creando paginas
@@ -117,7 +117,7 @@ const Sobremi = () => {
                 duration={500}
                 to="proyecto"
               >
-                <button className="botonProyectos">Proyecto</button>
+                <button>Proyecto</button>
               </Link>
             </div>
           </div>

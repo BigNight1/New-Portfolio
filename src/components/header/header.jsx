@@ -19,7 +19,7 @@ function Header() {
     <nav className="dark:bg-slate-900">
       <div className="nav-content ">
         <div className="flex gap-1 py-5">
-          <MyAge />
+          <MyAge/>
           <a
             href="/"
             className="text-2xl text-black font-black dark:text-[#e8e6e3]  lg:block md:block  desaparece"
@@ -45,12 +45,12 @@ function Header() {
             </li>
           </ul>
 
-          <button
-            className=" hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center rotate"
+          <span
+            className="hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center rotate mx-[0.3rem]"
             onClick={toggleTheme}
           >
             <img src={imageSource} alt={theme} />
-          </button>
+          </span>
 
           {/* {boton hamburguesa} */}
           <div className="-mr-2 flex md:hidden">
