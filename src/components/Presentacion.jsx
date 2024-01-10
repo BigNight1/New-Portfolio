@@ -19,7 +19,7 @@ const Presentacion = () => {
             {t("Presentacion.presentation")}
           </h1>
           <div className="text-xl dark:text-white ">
-            <h2 className="font-Roboto font-normal">{t("Presentacion.subtitle")}</h2>
+            <h2 className="font-Roboto font-normal">{"</>"} {t("Presentacion.subtitle")}</h2>
           </div>
         </div>
 

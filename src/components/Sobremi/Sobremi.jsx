@@ -70,24 +70,18 @@ const skills = [
 
 const DESCRIPTION = [
   {
-    id: 1,
-    description:
-      "¡Hola! Soy Edu, un apasionado programador Full Stack con un recorrido emocionante en el mundo del desarrollo web. Comencé mi travesía enfocándome en el frontend, explorando las maravillas de HTML, CSS y JavaScript. Mi curiosidad me llevó a sumergirme en un programa intensivo en CoderHouse, donde no solo consolidé mis conocimientos existentes, sino que también adquirí un conjunto de habilidades Full Stack de alta calidad.",
+    description: "Sobremi.descripcion.1",
   },
   {
-    id: 2,
-    description:
-      "Durante mi formación en CoderHouse, me embarqué en la desafiante pero gratificante carrera de Full Stack. A medida que avanzaba en la carrera, me enfrenté a proyectos centrados en el ecommerce, donde pude aplicar mis habilidades para crear experiencias de usuario sólidas y funcionales. El backend se convirtió en mi próximo desafío, y aunque fue un camino más complicado, encontré una gran satisfacción en superar cada obstáculo.",
+    description: "Sobremi.descripcion.2",
   },
   {
-    id: 3,
-    description:
-      "Mis logros académicos en la carrera Full Stack fueron destacados, y ahora me encuentro en un punto emocionante de mi carrera, listo para llevar mis habilidades al mundo laboral. Mi experiencia no solo se basa en la resolución de problemas y el desarrollo técnico, sino también en mi amor por los desafíos que enfrento en cada proyecto. Estoy decidido a seguir aprendiendo y mejorando constantemente mis habilidades para destacarme en el competitivo mundo laboral del desarrollo web.",
+    description: "Sobremi.descripcion.3",
   },
 ];
 
 const Sobremi = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <section id="sobremi" className="bg-white dark:bg-slate-900	">
@@ -108,8 +102,8 @@ const Sobremi = () => {
               {t("Sobremi.conoceme")}
             </h2>
             <div className=" text-pretty">
-              {DESCRIPTION.map((description) => (
-                <SobremiItem key={description.id} {...description} />
+              {DESCRIPTION.map((description, index) => (
+                <SobremiItem key={index} description={t(description.description)} />
               ))}
             </div>
             <div>
@@ -127,7 +121,7 @@ const Sobremi = () => {
           {/* Contenido de la segunda columna */}
           <div className="lg:py-0  sm:py-6  py-6">
             <div className="text-black text-4xl font-bold mb-4 dark:text-white 	">
-              Mis habilidades y herramientas
+              {t("Mishabilidades.habher")}
             </div>
             <div className="flex flex-wrap gap-3 ">
               {skills.map((skill) => (

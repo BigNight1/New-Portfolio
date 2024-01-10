@@ -7,7 +7,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 function Header() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { toggleTheme, theme } = useTheme();
   const [open, setOpen] = useState(false);
 
@@ -46,6 +46,22 @@ function Header() {
               ))}
             </li>
           </ul>
+
+          {/* cambio de Idioma */}
+          <div className="cambiar_idioma flex gap-2">
+            <button
+              className="rounded-full"
+              onClick={() => i18n.changeLanguage("es")}
+            >
+              Es
+            </button>
+            <button
+              className="rounded-full"
+              onClick={() => i18n.changeLanguage("en")}
+            >
+              En
+            </button>
+          </div>
 
           <span
             className="hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center rotate mx-[0.3rem] cursor-pointer"
