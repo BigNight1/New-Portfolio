@@ -17,6 +17,9 @@ function Header() {
     setOpen((prev) => !prev);
   };
 
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
   return (
     <nav className="dark:bg-slate-900">
       <div className="nav-content ">
@@ -46,22 +49,17 @@ function Header() {
               ))}
             </li>
           </ul>
-
-          {/* cambio de Idioma */}
-          <div className="cambiar_idioma flex gap-2">
-            <button
-              className="rounded-full"
-              onClick={() => i18n.changeLanguage("es")}
-            >
-              Es
-            </button>
-            <button
-              className="rounded-full"
-              onClick={() => i18n.changeLanguage("en")}
-            >
-              En
-            </button>
-          </div>
+          {/* Select de Idiomas */}
+          <select
+            className="rounded-full p-1"
+            name="language"
+            id="languageSelect"
+            value={i18n.language}
+            onChange={(e) => handleLanguageChange(e.target.value)}
+          >
+            <option  value="es">Es</option>
+            <option  value="en">En</option>
+          </select>
 
           <span
             className="hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center rotate mx-[0.3rem] cursor-pointer"

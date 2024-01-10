@@ -26,5 +26,11 @@
   },
   "Mishabilidades": {
     "habher": "My skills and tools"
+  },
+  "Proyecto":{
+    "title-project" : "PROJECTS"
+  },
+  "Copy":{
+    "copyright": "Copyright 2023. All Rights to be a Programmer"
   }
 }

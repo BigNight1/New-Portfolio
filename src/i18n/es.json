@@ -22,9 +22,15 @@
       "1": "¡Hola! Soy Edu, un apasionado programador Full Stack con un recorrido emocionante en el mundo del desarrollo web. Comencé mi travesía enfocándome en el frontend, explorando las maravillas de HTML, CSS y JavaScript. Mi curiosidad me llevó a sumergirme en un programa intensivo en CoderHouse, donde no solo consolidé mis conocimientos existentes, sino que también adquirí un conjunto de habilidades Full Stack de alta calidad.",
       "2": "Durante mi formación en CoderHouse, me embarqué en la desafiante pero gratificante carrera de Full Stack. A medida que avanzaba en la carrera, me enfrenté a proyectos centrados en el ecommerce, donde pude aplicar mis habilidades para crear experiencias de usuario sólidas y funcionales. El backend se convirtió en mi próximo desafío, y aunque fue un camino más complicado, encontré una gran satisfacción en superar cada obstáculo.",
       "3": "Mis logros académicos en la carrera Full Stack fueron destacados, y ahora me encuentro en un punto emocionante de mi carrera, listo para llevar mis habilidades al mundo laboral. Mi experiencia no solo se basa en la resolución de problemas y el desarrollo técnico, sino también en mi amor por los desafíos que enfrento en cada proyecto. Estoy decidido a seguir aprendiendo y mejorando constantemente mis habilidades para destacarme en el competitivo mundo laboral del desarrollo web."
-    },
-    "Mishabilidades": {
-      "habher": "Mis habilidades y herramientas"
     }
+  },
+  "Mishabilidades": {
+    "habher": "Mis habilidades y herramientas"
+  },
+  "Proyecto":{
+    "title-project" : "PROYECTOS"
+  },
+  "Copy":{
+    "copyright": "Copyright 2023. Todos los Derechos de ser un Programador"
   }
 }
