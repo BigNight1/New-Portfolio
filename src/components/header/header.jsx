@@ -1,5 +1,11 @@
 import "../../styles/header.css";
-import { useTheme, getImageSource, LINKS } from "./themeUtils.jsx";
+import {
+  useTheme,
+  getImageSource,
+  LINKS,
+  LANGUAGES,
+  useLanguage,
+} from "./themeUtils.jsx";
 import { Link } from "react-scroll";
 import MyAge from "../Myage/myage.jsx";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -7,9 +13,11 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 function Header() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { toggleTheme, theme } = useTheme();
   const [open, setOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const currentLanguage = LANGUAGES.find((lang) => lang.code === language);
 
   const imageSource = getImageSource(theme);
 
@@ -17,12 +25,10 @@ function Header() {
     setOpen((prev) => !prev);
   };
 
-  const handleLanguageChange = (language) => {
-    i18n.changeLanguage(language);
-  };
   return (
     <nav className="dark:bg-slate-900">
       <div className="nav-content ">
+        {/* Web - Live */}
         <div className="flex gap-1 py-5">
           <MyAge />
           <a
@@ -34,6 +40,7 @@ function Header() {
         </div>
 
         <div className="flex items-center ">
+          {/* Links  */}
           <ul className="flex menu sm:hidden lg:block md:block  linkdesaparece">
             <li className="p-4">
               {LINKS.map((links) => (
@@ -49,18 +56,18 @@ function Header() {
               ))}
             </li>
           </ul>
-          {/* Select de Idiomas */}
-          <select
-            className="rounded-full p-1"
-            name="language"
-            id="languageSelect"
-            value={i18n.language}
-            onChange={(e) => handleLanguageChange(e.target.value)}
-          >
-            <option  value="es">Es</option>
-            <option  value="en">En</option>
-          </select>
 
+          {/* Bandera del idioma actual */}
+          {currentLanguage && (
+            <img
+              src={currentLanguage.icon}
+              alt={currentLanguage.code}
+              className="w-6 h-6 cursor-pointer mx-2"
+              onClick={toggleLanguage}
+            />
+          )}
+
+          {/* Dark Mode */}
           <span
             className="hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center rotate mx-[0.3rem] cursor-pointer"
             onClick={toggleTheme}
@@ -68,7 +75,7 @@ function Header() {
             <img src={imageSource} alt={theme} />
           </span>
 
-          {/* {boton hamburguesa} */}
+          {/* boton hamburguesa */}
           <div className="-mr-2 flex md:hidden">
             <button
               type="button"
