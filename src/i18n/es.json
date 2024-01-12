@@ -7,16 +7,18 @@
   "TiempodeVida": {
     "Edad": "Edad"
   },
+ 
   "Presentacion": {
     "presentation": "Hola,Soy Edu",
     "subtitle": "Programador Full Stack",
     "description": "Desarrollador web full stack con experiencia en diseño y desarrollo de aplicaciones web utilizando tecnologías front-end y back-end. Experto en crear soluciones interactivas y funcionales.",
     "boton1": "Sobre Mi",
-    "boton2": "CV"
+    "boton2": "HV",
+    "link-cv" : "https://acrobat.adobe.com/id/urn%3Aaaid%3Asc%3AVA6C2%3A217f1a6d-6178-49a4-ad22-e04d7cfaccb8/?filetype=application%2Fpdf&viewer%21megaVerb=group-discover"
   },
   "Sobremi": {
     "sobre": "Sobre mi",
-    "subsobre": "2 año de experiencia programando paginas web y creando paginas interesantes",
+    "subsobre": "año de experiencia programando paginas web y creando paginas interesantes",
     "conoceme": "Conóceme más",
     "boton_proyecto": "Proyecto",
     "descripcion": {
@@ -29,7 +31,12 @@
     "habher": "Mis habilidades y herramientas"
   },
   "Proyecto":{
-    "title-project" : "PROYECTOS"
+    "title-project" : "PROYECTOS",
+    "boton": "Revisar",
+    "verMas" : "Ver más",
+    "menos" : "mostrar menos",
+    "code" : "codigo"
+
   },
   "Copy":{
     "copyright": "Copyright 2023. Todos los Derechos de ser un Programador"

@@ -41,7 +41,7 @@
 
 .img_wrapper {
   display: flex;
-  flex: 6;
+  flex: 5;
 }
 
 .img_pro {
@@ -51,7 +51,7 @@
   max-width: 100%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
   .project {
     flex-direction: column-reverse;
   }
@@ -65,4 +65,28 @@
   padding: 0.75rem 1rem;
   color: white;
   transition: background-color 0.3s ease;
+}
+
+.code_container {
+  position: relative;
+  display: inline-block;
+}
+
+
+.code_tooltip {
+  display: none;
+  position: absolute;
+  bottom: -35px; /* Ajusta según sea necesario para la posición vertical */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.code_container:hover .code_tooltip {
+  display: block;
 }

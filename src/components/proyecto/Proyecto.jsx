@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const PROYECTO = [
   {
     id: 1,
-    name: "Full Stack - FireBase",
+    name: "Ecommerce - FireBase",
     description: "descripcion del proyecto hecho",
     skills: [
       "React",
@@ -20,9 +20,10 @@ const PROYECTO = [
       "JSON Server",
       "SweetAlert2",
     ],
-    img: "/proyectos-img/Proyecto.webp",
+    img: "/proyectos-img/proyecto1.webp",
     alt: "contexto de la imagen",
     href: "https://proyect-react-2.vercel.app/",
+    code : "https://github.com/BigNitgh/Proyect-React-2"
   },
   {
     id: 2,
@@ -51,15 +52,19 @@ const PROYECTO = [
     img: "/proyectos-img/Proyecto2.webp",
     alt: "contexto de la imagen",
     href: "https://probandoloscambios.onrender.com",
+    code : "https://github.com/BigNitgh/Pre-entrega-backend/tree/ImpLog"
+
   },
   {
     id: 3,
     name: "proyecto3",
     description: "descripcion del proyecto hecho",
     skills: ["JavaScript", "HTML", "CSS"],
-    img: "/proyectos-img/Proyecto.webp",
+    img: "/proyectos-img/Proyecto2.webp",
     alt: "contexto de la imagen",
     href: "https://probandoloscambios.onrender.com",
+    code : "https://github.com/BigNitgh/Proyect-React-2"
+
   },
 ];
 

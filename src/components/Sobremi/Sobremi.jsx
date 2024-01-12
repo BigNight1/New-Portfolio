@@ -63,9 +63,9 @@ const skills = [
   },
   {
     id: 12,
-    name: "Astro",
-    // img: "/icons/astro.webp",
-  },
+    name: "Tailwind",
+    img: "/icons/tailwind.webp",
+  }
 ];
 
 const DESCRIPTION = [
@@ -86,24 +86,28 @@ const Sobremi = () => {
   return (
     <section id="sobremi" className="bg-white dark:bg-slate-900	">
       <div className={sobre.content}>
-        <div className="py-24">
+        <div className="py-12 lg:py-28 sm:py-8 md:py-8">
           <h2 className="text-black pb-5	 text-5xl flex justify-center font-bold	dark:text-white">
             {t("Sobremi.sobre")}
           </h2>
-          <div className="text-xl text-gray-500 font-normal	text-center	max-w-[750px]	">
-            {t("Sobremi.subsobre")}
+          <div className="text-xl text-gray-500 font-normal font-Roboto	text-center	max-w-[750px]	">
+            <span className="text-[#67fd67] font-Roboto">2 </span> 
+             {t("Sobremi.subsobre")}
           </div>
         </div>
 
         <div className="lg:grid lg:grid-cols-2 lg:gap-20 ">
           {/* Contenido de la primera columna */}
           <div className="flex gap-1 flex-col	 ">
-            <h2 className="text-black text-4xl font-bold dark:text-white">
+            <h2 className="text-black text-4xl font-bold font-Roboto dark:text-white">
               {t("Sobremi.conoceme")}
             </h2>
             <div className=" text-pretty">
               {DESCRIPTION.map((description, index) => (
-                <SobremiItem key={index} description={t(description.description)} />
+                <SobremiItem
+                  key={index}
+                  description={t(description.description)}
+                />
               ))}
             </div>
             <div>
@@ -120,7 +124,7 @@ const Sobremi = () => {
 
           {/* Contenido de la segunda columna */}
           <div className="lg:py-0  sm:py-6  py-6">
-            <div className="text-black text-4xl font-bold mb-4 dark:text-white 	">
+            <div className="text-black text-4xl font-bold mb-4 font-Roboto dark:text-white 	">
               {t("Mishabilidades.habher")}
             </div>
             <div className="flex flex-wrap gap-3 ">

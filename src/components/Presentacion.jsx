@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { Github } from "./Icons/github.jsx";
 import { Linkedin } from "./Icons/Linkedim.jsx";
 import { useTranslation } from "react-i18next";
+import { Gmail } from "./Icons/gmail.jsx";
 
 const Presentacion = () => {
   const {t} = useTranslation()
@@ -19,14 +20,14 @@ const Presentacion = () => {
             {t("Presentacion.presentation")}
           </h1>
           <div className="text-xl dark:text-white ">
-            <h2 className="font-Roboto font-normal">{"</>"} {t("Presentacion.subtitle")}</h2>
+            <h2 className="font-Roboto font-normal"><span className="font-Roboto font-bold">{"</>"}</span> {t("Presentacion.subtitle")}</h2>
           </div>
         </div>
 
         <div className="text-center text-lg max-w-[650px] text-black font-normal font-Roboto	 dark:text-white">
           {t("Presentacion.description")}
         </div>
-
+      {/* GitHub and Linkedim */}
         <div className="flex gap-x-3 py-2">
           <a
             href="https://github.com/BigNitgh"
@@ -50,6 +51,16 @@ const Presentacion = () => {
               Linkedim
             </span>
           </a>
+          <a
+            target="__BLANK"
+            alt="Linkedin"
+            className="rounded-full border dark:border-white/30 border-black flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:scale-105 hover:bg-white/10 transition"
+          >
+            <Gmail className="dark:text-white h-6 w-6" />
+            <span className="dark:text-white font-Roboto font-semibold">
+              eduarmascontact@gmail.com
+            </span>
+          </a>
         </div>
 
         <div className="flex gap-6 mt-4">
@@ -63,8 +74,8 @@ const Presentacion = () => {
           </Link>
           <a
             className=" text-[#181a1b] font-bold font-Roboto"
-            href="/cv-EduArmas.pdf"
-            download="cv-EduArmas.pdf"
+            href={t("Presentacion.link-cv")}
+            target="__BLANK"
           >
             <button className="text-xl">{t("Presentacion.boton2")}</button>
           </a>

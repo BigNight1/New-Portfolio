@@ -12,11 +12,12 @@
     "subtitle": "Programmer Full Stack",
     "description": "Full stack web developer with experience in web application design and development using front-end and back-end technologies. Expert in creating interactive and functional solutions.",
     "boton1": "About",
-    "boton2": "CV"
+    "boton2": "CV",
+    "link-cv" : "https://acrobat.adobe.com/id/urn%3Aaaid%3Asc%3AVA6C2%3A3cba145f-ad18-4e24-89bf-a77b1feb63c9/?filetype=application%2Fpdf&viewer%21megaVerb=group-discover"
   },
   "Sobremi": {
     "sobre": "About me",
-    "subsobre": "2 years of experience programming web pages and creating interesting web pages.",
+    "subsobre": "years of experience programming web pages and creating interesting web pages.",
     "conoceme": "Know me better",
     "boton_proyecto": "Project",
     "descripcion": {
@@ -29,7 +30,11 @@
     "habher": "My skills and tools"
   },
   "Proyecto":{
-    "title-project" : "PROJECTS"
+    "title-project" : "PROJECTS",
+    "boton": "Review",
+    "verMas" : "more",
+    "menos" : "less",
+    "code" : "code"
   },
   "Copy":{
     "copyright": "Copyright 2023. All Rights to be a Programmer"

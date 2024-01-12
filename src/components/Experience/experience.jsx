@@ -29,7 +29,7 @@ const Experience = () => {
 
   return (
     <StyledCelExperience id="trayectoria" className="dark:bg-slate-900">
-      <div className="w-full mx-auto lg:w-[740px] md:w-[670px] py-44 	">
+      <div className="w-full mx-auto lg:w-[740px] md:w-[670px] py-40 	">
         <ol className="relative border-s border-gray-200 dark:border-gray-700">
           {EXPERIENCE.map((experiencie) => (
             <li key={experiencie.id} className="mb-10 ms-4">
