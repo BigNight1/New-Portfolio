@@ -20,15 +20,16 @@ export const LANGUAGES = [
   {
     code: "es",
     label: "Es",
-    icon: "/languages/spain.png",
+    icon: "/languages/spain.webp",
   },
   {
     code: "en",
     label: "En",
-    icon: "/languages/Ingles.png",
+    icon: "/languages/Ingles.webp",
   },
 ];
 
+// Change Theme Night and Sun
 export const useTheme = () => {
   const [theme, setTheme] = useState(() => {
     if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
@@ -55,6 +56,7 @@ export const getImageSource = (theme) => {
   return theme === "light" ? "/others/noche.webp" : "/others/dia.webp";
 };
 
+// Cambio de Bandera-Language
 export const useLanguage = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
