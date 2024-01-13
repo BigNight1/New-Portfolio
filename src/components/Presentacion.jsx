@@ -4,6 +4,7 @@ import { Github } from "./Icons/github.jsx";
 import { Linkedin } from "./Icons/Linkedim.jsx";
 import { useTranslation } from "react-i18next";
 import { Gmail } from "./Icons/gmail.jsx";
+import styled from "styled-components";
 
 const Presentacion = () => {
   const {t} = useTranslation()
@@ -24,11 +25,11 @@ const Presentacion = () => {
           </div>
         </div>
 
-        <div className="text-center text-lg max-w-[650px] text-black font-normal font-Roboto	 dark:text-white">
+        <Description className="text-center text-pretty text-lg max-w-[650px] text-black font-normal font-Roboto	 dark:text-white">
           {t("Presentacion.description")}
-        </div>
+        </Description>
       {/* GitHub and Linkedim */}
-        <div className="flex gap-x-3 py-2">
+        <Mobile className="flex gap-x-3 py-2">
           <a
             href="https://github.com/BigNitgh"
             target="__BLANK"
@@ -61,8 +62,10 @@ const Presentacion = () => {
               eduarmascontact@gmail.com
             </span>
           </a>
-        </div>
-
+          
+          
+        </Mobile>
+        {/* about and Cv */}
         <div className="flex gap-6 mt-4">
           <Link
             to="sobremi"
@@ -85,5 +88,20 @@ const Presentacion = () => {
     </div>
   );
 };
+
+const Mobile  = styled.div`
+  @media (max-width: 623px) {
+    flex-direction: column;
+    a{
+      margin: 6px 0;
+    }
+  }
+`
+
+const Description = styled.div`
+  @media (max-width: 667px) {
+    padding: 0 1.5rem;
+  }
+`
 
 export default Presentacion;
