@@ -7,13 +7,36 @@
   "TiempodeVida": {
     "Edad": "Age"
   },
+  "Experiencia": {
+    "title": "Experience"
+  },
+  "EXPERIENCE": [
+    {
+      "id": 1,
+      "date": "JANUARY 2024",
+      "title": "Content Creator - Programming",
+      "description": "Generate content in the field of programming, teaching how to create engaging and eye-catching projects to attract more people to the fascinating world of programming."
+    },
+    {
+      "id": 2,
+      "date": "December 2023",
+      "title": "Full Stack Project - Ecommerce - MongoDb",
+      "description": "Led the development of the frontend side of the project, ensuring an attractive interface for the client. Implemented a CRUD system for managing client data, created APIs to facilitate communication between frontend and backend, and selected key libraries for the project's success."
+    },
+    {
+      "id": 3,
+      "date": "October 2023",
+      "title": "Full Stack Career - CODERHOUSE",
+      "description": "Completed the Full Stack Career at Coderhouse, acquiring a solid foundation in Frontend and Backend development. Now, I am focused on perfecting the skills provided during the training."
+    }
+  ],
   "Presentacion": {
     "presentation": "Hey,I'm Edu",
     "subtitle": "Programmer Full Stack",
     "description": "Full stack web developer with experience in web application design and development using front-end and back-end technologies. Expert in creating interactive and functional solutions.",
     "boton1": "About",
     "boton2": "CV",
-    "link-cv" : "https://acrobat.adobe.com/id/urn%3Aaaid%3Asc%3AVA6C2%3A3cba145f-ad18-4e24-89bf-a77b1feb63c9/?filetype=application%2Fpdf&viewer%21megaVerb=group-discover"
+    "link-cv": "https://acrobat.adobe.com/id/urn%3Aaaid%3Asc%3AVA6C2%3A3cba145f-ad18-4e24-89bf-a77b1feb63c9/?filetype=application%2Fpdf&viewer%21megaVerb=group-discover"
   },
   "Sobremi": {
     "sobre": "About me",
@@ -29,14 +52,77 @@
   "Mishabilidades": {
     "habher": "My skills and tools"
   },
-  "Proyecto":{
-    "title-project" : "PROJECTS",
+  "Proyecto": {
+    "title-project": "PROJECTS",
     "boton": "Review",
-    "verMas" : "more",
-    "menos" : "less",
-    "code" : "code"
+    "verMas": "more",
+    "menos": "less",
+    "code": "code"
   },
-  "Copy":{
+  "PROYECTOS": [
+    {
+      "id": 1,
+      "name": "Ecommerce with Firebase",
+      "description": "Customize your shopping experience by choosing the type of polo you want and add it to the cart. Upon completing the purchase, you will receive a ticket that is saved in the database.",
+      "skills": [
+        "Css",
+        "React",
+        "Material-UI",
+        "Axios",
+        "Bootstrap",
+        "Firebase",
+        "Formik",
+        "Yup",
+        "React Router",
+        "JSON Server",
+        "SweetAlert2"
+      ],
+      "img": "/proyectos-img/proyecto1.webp",
+      "alt": "Customized polo in shopping cart",
+      "href": "https://proyect-react-2.vercel.app/",
+      "code": "https://github.com/BigNitgh/Proyect-React-2"
+    },
+    {
+      "id": 2,
+      "name": "Full Stack",
+      "description": "Manage products, make purchases, and log in with your GitHub account. If you have admin permissions, you can create and delete products.",
+      "skills": [
+        "Handlebars",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Bootstrap",
+        "JWT",
+        "Swagger",
+        "Socket.io",
+        "Mongoose",
+        "Handlebars",
+        "Passport",
+        "bcrypt",
+        "Winston",
+        "Chai",
+        "Mocha",
+        "Supertest"
+      ],
+      "img": "/proyectos-img/Proyecto2.webp",
+      "alt": "Administrator interface managing products",
+      "href": "https://probandoloscambios.onrender.com",
+      "code": "https://github.com/BigNitgh/Pre-entrega-backend/tree/ImpLog"
+    },
+    {
+      "id": 3,
+      "name": "GitHub User Search",
+      "description": "Find the person you admire the most on GitHub with this user search tool.",
+      "skills": ["React", "Vite", "Styled-components", "tailwind"],
+      "img": "/proyectos-img/proyecto3.webp",
+      "alt": "GitHub user search results",
+      "href": "https://users-git-hub.vercel.app/",
+      "code": "https://github.com/BigNight1/Users-GitHub/tree/main"
+    }
+  ],
+  "Copy": {
     "copyright": "Copyright 2023. All Rights to be a Programmer"
   }
 }

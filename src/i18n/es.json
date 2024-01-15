@@ -7,14 +7,37 @@
   "TiempodeVida": {
     "Edad": "Edad"
   },
- 
+  "Experiencia": {
+    "title": "Experiencia"
+  },
+  "EXPERIENCE": [
+    {
+      "id": 1,
+      "date": "ENERO 2024",
+      "title": "Creador de Contenido - Programación",
+      "description": "Genero contenido en el ámbito de la programación, enseñando cómo crear proyectos atractivos y llamativos para atraer a más personas al fascinante mundo de la programación."
+    },
+    {
+      "id": 2,
+      "date": "Diciembre 2023",
+      "title": "Proyecto Full Stack - Ecommerce - MongoDb",
+      "description": "Lideré el desarrollo del lado frontend del proyecto, garantizando una interfaz atractiva para el cliente. Implementé un sistema CRUD para la gestión de datos del cliente, creé APIs para facilitar la comunicación entre el frontend y el backend, y seleccioné las librerías clave para el éxito del proyecto."
+    },
+    {
+      "id": 3,
+      "date": "Octubre 2023",
+      "title": "Carrera Full Stack - CODERHOUSE",
+      "description": "Completé la Carrera Full Stack de Coderhouse, adquiriendo una sólida base en el desarrollo Frontend y Backend. Ahora estoy enfocado en perfeccionar las habilidades que me proporcionaron durante la formación."
+    }
+  ],
+
   "Presentacion": {
     "presentation": "Hola,Soy Edu",
     "subtitle": "Programador Full Stack",
     "description": "Desarrollador web full stack con experiencia en diseño y desarrollo de aplicaciones web utilizando tecnologías front-end y back-end. Experto en crear soluciones interactivas y funcionales.",
     "boton1": "Sobre Mi",
     "boton2": "HV",
-    "link-cv" : "https://acrobat.adobe.com/id/urn%3Aaaid%3Asc%3AVA6C2%3A217f1a6d-6178-49a4-ad22-e04d7cfaccb8/?filetype=application%2Fpdf&viewer%21megaVerb=group-discover"
+    "link-cv": "https://acrobat.adobe.com/id/urn%3Aaaid%3Asc%3AVA6C2%3A217f1a6d-6178-49a4-ad22-e04d7cfaccb8/?filetype=application%2Fpdf&viewer%21megaVerb=group-discover"
   },
   "Sobremi": {
     "sobre": "Sobre mi",
@@ -30,15 +53,77 @@
   "Mishabilidades": {
     "habher": "Mis habilidades y herramientas"
   },
-  "Proyecto":{
-    "title-project" : "PROYECTOS",
+  "Proyecto": {
+    "title-project": "PROYECTOS",
     "boton": "Revisar",
-    "verMas" : "Ver más",
-    "menos" : "mostrar menos",
-    "code" : "codigo"
-
+    "verMas": "Ver más",
+    "menos": "mostrar menos",
+    "code": "codigo"
   },
-  "Copy":{
+  "PROYECTOS": [
+    {
+      "id": 1,
+      "name": "Ecommerce con Firebase",
+      "description": "Personaliza tu experiencia de compra eligiendo el tipo de polo que deseas y agrégalo al carrito. Al finalizar la compra, recibirás un ticket que se guarda en la base de datos",
+      "skills": [
+        "Css",
+        "React",
+        "Material-UI",
+        "Axios",
+        "Bootstrap",
+        "Firebase",
+        "Formik",
+        "Yup",
+        "React Router",
+        "JSON Server",
+        "SweetAlert2"
+      ],
+      "img": "/proyectos-img/proyecto1.webp",
+      "alt": "Polo personalizado en carrito de compras",
+      "href": "https://proyect-react-2.vercel.app/",
+      "code": "https://github.com/BigNitgh/Proyect-React-2"
+    },
+    {
+      "id": 2,
+      "name": "Full Stack",
+      "description": "Gestiona productos, realiza compras y accede con tu cuenta de GitHub. Si tienes permisos de administrador, puedes crear y eliminar productos.",
+      "skills": [
+        "Handlebars",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Bootstrap",
+        "JWT",
+        "Swagger",
+        "Socket.io",
+        "Mongoose",
+        "Handlebars",
+        "Passport",
+        "bcrypt",
+        "Winston",
+        "Chai",
+        "Mocha",
+        "Supertest"
+      ],
+      "img": "/proyectos-img/Proyecto2.webp",
+      "alt": "Interfaz de administrador gestionando productos",
+      "href": "https://probandoloscambios.onrender.com",
+      "code": "https://github.com/BigNitgh/Pre-entrega-backend/tree/ImpLog"
+    },
+    {
+      "id": 3,
+      "name": "Buscador de Usuarios de GitHub",
+      "description": "Encuentra a la persona que más admiras en GitHub con este buscador de usuarios",
+      "skills": ["React", "Vite", "Styled-components", "tailwind"],
+      "img": "/proyectos-img/proyecto3.webp",
+      "alt": "Resultados de búsqueda de usuarios de GitHub",
+      "href": "https://users-git-hub.vercel.app/",
+      "code": "https://github.com/BigNight1/Users-GitHub/tree/main"
+    }
+  ],
+  "Copy": {
     "copyright": "Copyright 2023. Todos los Derechos de ser un Programador"
   }
 }
