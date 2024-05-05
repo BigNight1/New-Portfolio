@@ -6,7 +6,8 @@ export default {
     extend: {
       fontFamily:{
         SpaceMono : ["Space Mono", "monospace"],
-        Roboto: ["Roboto","sans-serif"]
+        Roboto: ["Roboto","sans-serif"],
+        Jersey: ["Jersey 15", "sans-serif"]
       }
     },
   },

@@ -7,7 +7,7 @@ import { Gmail } from "./Icons/gmail.jsx";
 import styled from "styled-components";
 
 const Presentacion = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className="relative min-h-screen p-4 pt-8 flex flex-col items-center justify-center">
       {/* Background claro */}
@@ -21,14 +21,17 @@ const Presentacion = () => {
             {t("Presentacion.presentation")}
           </h1>
           <div className="text-xl dark:text-white ">
-            <h2 className="font-Roboto font-normal"><span className="font-Roboto font-bold">{"</>"}</span> {t("Presentacion.subtitle")}</h2>
+            <h2 className="font-Roboto font-normal">
+              <span className="font-Roboto font-bold">{"</>"}</span>{" "}
+              {t("Presentacion.subtitle")}
+            </h2>
           </div>
         </div>
 
-        <Description className="text-center text-pretty text-lg max-w-[650px] text-black font-normal font-Roboto	 dark:text-white">
+        <Description className="text-center font-Jersey text-lg max-w-[627px] text-black 	 dark:text-white">
           {t("Presentacion.description")}
         </Description>
-      {/* GitHub and Linkedim */}
+        {/* GitHub and Linkedim */}
         <Mobile className="flex gap-x-3 py-2">
           <a
             href="https://github.com/BigNitgh"
@@ -62,8 +65,6 @@ const Presentacion = () => {
               eduarmascontact@gmail.com
             </span>
           </a>
-          
-          
         </Mobile>
         {/* about and Cv */}
         <div className="flex gap-6 mt-4">
@@ -84,24 +85,23 @@ const Presentacion = () => {
           </a>
         </div>
       </div>
-      
     </div>
   );
 };
 
-const Mobile  = styled.div`
+const Mobile = styled.div`
   @media (max-width: 623px) {
     flex-direction: column;
-    a{
+    a {
       margin: 6px 0;
     }
   }
-`
+`;
 
 const Description = styled.div`
   @media (max-width: 667px) {
     padding: 0 1.5rem;
   }
-`
+`;
 
 export default Presentacion;

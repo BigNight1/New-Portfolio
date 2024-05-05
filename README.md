@@ -15,5 +15,4 @@ Currently, two official plugins are available:
 me falta avanzar con el dark mode hacer cambios generales en todo
 
  <!-- este color uso :  #e8e6e3 
- font-family: "Roboto", sans-serif;
  text-gray-500 dark:text-gray-400 de dia y de noche -->
