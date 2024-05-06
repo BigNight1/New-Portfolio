@@ -65,6 +65,21 @@ const skills = [
     id: 12,
     name: "Tailwind",
     img: "/icons/tailwind.webp",
+  },
+  {
+    id: 13,
+    name: "Postmam",
+    img: "/icons/postman.webp",
+  },
+  {
+    id: 14,
+    name: "Adobe Photoshop",
+    img: "/icons/Adobe_Photoshop.webp",
+  },
+  {
+    id: 15,
+    name: "Adobe Premiere",
+    img: "/icons/Premiere-Pro.webp",
   }
 ];
 
