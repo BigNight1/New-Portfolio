@@ -114,13 +114,13 @@
     },
     {
       "id": 3,
-      "name": "Buscador de Usuarios de GitHub",
-      "description": "Encuentra a la persona que más admiras en GitHub con este buscador de usuarios",
-      "skills": ["React", "Vite", "Styled-components", "tailwind"],
-      "img": "/proyectos-img/proyecto3.webp",
-      "alt": "Resultados de búsqueda de usuarios de GitHub",
-      "href": "https://users-git-hub.vercel.app/",
-      "code": "https://github.com/BigNight1/Users-GitHub/tree/main"
+      "name": "Pagina Web ArmalyCell",
+      "description": "Página web dedicada a la reparación de celulares y otros servicios técnicos, ofreciendo contacto directo con el técnico.",
+      "skills": ["React", "Vite", "Styled-components", "tailwind", "flowbite"],
+      "img": "/proyectos-img/WebsiteArmalycell.webp",
+      "alt": "Pagina web ArmalyCell",
+      "href": "https://web-site-armaly.vercel.app/",
+      "code": "https://github.com/BigNight1/WebSite-Armaly"
     }
   ],
   "Copy": {
