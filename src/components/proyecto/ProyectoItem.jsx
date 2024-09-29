@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import pro from "../../styles/proyecto.module.css";
 import { useTranslation } from "react-i18next";
+import { Carousel } from "flowbite-react";
 
-const ProyectoItem = ({ name, description, skills, img, alt, href, code }) => {
+const ProyectoItem = ({ name, description, skills, imgs, alt, href, code }) => {
   const [verMas, setVerMas] = useState(false);
   const skillsToShow = verMas ? skills : skills.slice(0, 6);
   const { t } = useTranslation();
@@ -55,10 +56,9 @@ const ProyectoItem = ({ name, description, skills, img, alt, href, code }) => {
 
         {/* Button and Code */}
         <div className="flex items-end justify-between	gap-6 w-full h-full 	 mt-3">
-
           <div>
             <a href={href} target="__BLANK">
-              <button>
+              <button className="button">
                 <span className="link-content">{t("Proyecto.boton")}</span>
               </button>
             </a>
@@ -74,14 +74,23 @@ const ProyectoItem = ({ name, description, skills, img, alt, href, code }) => {
             </a>
             <div className={pro.code_tooltip}>{t("Proyecto.code")}</div>
           </div>
-
         </div>
-
       </div>
 
-      <div className={pro.img_wrapper}>
-        <img src={img} alt={alt} className={pro.img_pro} />
+      <div className="flex flex-[5]">
+  <Carousel slide={false} className="h-full w-full">
+    {imgs.map((image, index) => (
+      <div key={index} className="h-full w-full flex items-center justify-center">
+        <img
+          src={image}
+          alt={alt}
+          className="object-fill h-full w-full"
+        />
       </div>
+    ))}
+  </Carousel>
+</div>
+
     </div>
   );
 };

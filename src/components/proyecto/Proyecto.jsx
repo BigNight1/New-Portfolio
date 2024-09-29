@@ -1,4 +1,3 @@
-import React from "react";
 import pro from "../../styles/proyecto.module.css";
 import ProyectoItem from "./ProyectoItem.jsx";
 import { useTranslation } from "react-i18next";

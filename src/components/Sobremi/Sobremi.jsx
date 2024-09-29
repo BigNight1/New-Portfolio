@@ -132,7 +132,7 @@ const Sobremi = () => {
                 duration={500}
                 to="proyecto"
               >
-                <button>{t("Sobremi.boton_proyecto")}</button>
+                <button className="button">{t("Sobremi.boton_proyecto")}</button>
               </Link>
             </div>
           </div>

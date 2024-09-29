@@ -39,11 +39,6 @@
   z-index: 2;
 }
 
-.img_wrapper {
-  display: flex;
-  flex: 5;
-}
-
 .img_pro {
   object-fit: cover;
   width: 100%;

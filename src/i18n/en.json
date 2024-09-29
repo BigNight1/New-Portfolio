@@ -77,7 +77,14 @@
         "JSON Server",
         "SweetAlert2"
       ],
-      "img": "/proyectos-img/proyecto1.webp",
+      "imgs": [
+        "/proyectos-img/proyecto1/proyecto1-1.jpg",
+        "/proyectos-img/proyecto1/proyecto1-2.jpg",
+        "/proyectos-img/proyecto1/proyecto1-3.jpg",
+        "/proyectos-img/proyecto1/proyecto1-4.jpg",
+        "/proyectos-img/proyecto1/proyecto1-5.jpg",
+        "/proyectos-img/proyecto1/proyecto1-6.jpg"
+      ],
       "alt": "Customized polo in shopping cart",
       "href": "https://proyect-react-2.vercel.app/",
       "code": "https://github.com/BigNitgh/Proyect-React-2"
@@ -106,7 +113,11 @@
         "Mocha",
         "Supertest"
       ],
-      "img": "/proyectos-img/Proyecto2.webp",
+      "imgs": [
+        "/proyectos-img/proyecto1/proyecto1-1.jpg",
+        "/proyectos-img/proyecto1/proyecto1-1.jpg",
+        "/proyectos-img/proyecto1/proyecto1-1.jpg"
+      ],
       "alt": "Administrator interface managing products",
       "href": "https://ecommerce-ugl8.onrender.com",
       "code": "https://github.com/BigNight1/Pre-entrega-backend/tree/PracIntEcom"
@@ -116,7 +127,11 @@
       "name": "ArmalyCell Website",
       "description": "A website dedicated to cell phone repair and other technical services, offering direct contact with the technician.",
       "skills": ["React", "Vite", "Styled-components", "Tailwind", "Flowbite"],
-      "img": "/proyectos-img/WebsiteArmalycell.webp",
+      "imgs": [
+        "/proyectos-img/proyecto1/proyecto1-1.jpg",
+        "/proyectos-img/proyecto1/proyecto1-1.jpg",
+        "/proyectos-img/proyecto1/proyecto1-1.jpg"
+      ],
       "alt": "ArmalyCell website",
       "href": "https://web-site-armaly.vercel.app/",
       "code": "https://github.com/BigNight1/WebSite-Armaly"

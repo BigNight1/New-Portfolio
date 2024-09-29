@@ -74,14 +74,14 @@ const Presentacion = () => {
             smooth={true}
             duration={500}
           >
-            <button className="text-xl">{t("Presentacion.boton1")}</button>
+            <button className="text-xl button">{t("Presentacion.boton1")}</button>
           </Link>
           <a
             className=" text-[#181a1b] font-bold font-Roboto"
             href={t("Presentacion.link-cv")}
             target="__BLANK"
           >
-            <button className="text-xl">{t("Presentacion.boton2")}</button>
+            <button className="text-xl button">{t("Presentacion.boton2")}</button>
           </a>
         </div>
       </div>

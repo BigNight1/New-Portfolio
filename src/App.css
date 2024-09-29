@@ -19,7 +19,7 @@ section {
   padding: 6rem 2rem;
 }
 
-button{
+.button{
     background-color: rgba(103,253,103,.8);
     border: none;
     border-radius: 4px;
@@ -34,9 +34,10 @@ button{
     transition: all .3s ease;
 }
 
-button:hover{
+.button:hover{
   background-color: rgba(103, 253, 103, 0.9);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.75);
   color: #181a1b;
   transform: translateY(-0.125em);
 }
+
