@@ -114,12 +114,12 @@
     },
     {
       "id": 3,
-      "name": "Pagina Web ArmalyCell",
+      "name": "Pagina Web ArmalyTech",
       "description": "Página web dedicada a la reparación de celulares y otros servicios técnicos, ofreciendo contacto directo con el técnico.",
       "skills": ["React", "Vite", "Styled-components", "tailwind", "flowbite"],
-      "img": "/proyectos-img/WebsiteArmalycell.webp",
-      "alt": "Pagina web ArmalyCell",
-      "href": "https://web-site-armaly.vercel.app/",
+      "img": "/proyectos-img/Armalytech.webp",
+      "alt": "Pagina web ArmalyTech",
+      "href": "https://www.armalytech.com/",
       "code": "https://github.com/BigNight1/WebSite-Armaly"
     }
   ],

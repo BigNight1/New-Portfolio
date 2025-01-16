@@ -113,12 +113,12 @@
     },
     {
       "id": 3,
-      "name": "ArmalyCell Website",
+      "name": "ArmalyTech Website",
       "description": "A website dedicated to cell phone repair and other technical services, offering direct contact with the technician.",
       "skills": ["React", "Vite", "Styled-components", "Tailwind", "Flowbite"],
-      "img": "/proyectos-img/WebsiteArmalycell.webp",
-      "alt": "ArmalyCell website",
-      "href": "https://web-site-armaly.vercel.app/",
+      "img": "/proyectos-img/Armalytech.webp",
+      "alt": "ArmalyTech website",
+      "href": "https://www.armalytech.com/",
       "code": "https://github.com/BigNight1/WebSite-Armaly"
     }
   ],
