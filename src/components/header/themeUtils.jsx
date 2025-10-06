@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 
 export const LINKS = [
   {
-    link: "Trayectoria",
-    to: "trayectoria",
+    link: "Experiencia",
+    to: "experiencia",
   },
   {
     link: "Sobre Mi",

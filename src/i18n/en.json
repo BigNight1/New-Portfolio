@@ -1,6 +1,6 @@
 {
   "Menu": {
-    "Trayectoria": "Career",
+    "Experiencia": "Experience",
     "Sobre Mi": "About",
     "Proyectos": "Projects"
   },
@@ -8,26 +8,33 @@
     "Edad": "Age"
   },
   "Experiencia": {
-    "title": "Experience"
+    "title": "Experience",
+    "technologies": "Technologies"
   },
   "EXPERIENCE": [
     {
       "id": 1,
-      "date": "JANUARY 2024",
-      "title": "Content Creator - Programming",
-      "description": "Generate content in the field of programming, teaching how to create engaging and eye-catching projects to attract more people to the fascinating world of programming."
+      "date": "2025 - Present",
+      "title": "Full Stack Developer",
+      "company": "E-commerce Polo Store Project - Lima, Peru",
+      "description": "Full stack development of a complete e-commerce platform with payment gateway, shopping cart, JWT authentication, admin panel, review system, image upload, notifications, and inventory management.",
+      "technologies": ["React", "TypeScript", "Context API", "Tailwind CSS", "Node.js", "NestJS", "Express", "MongoDB", "JWT", "Passport", "Izipay", "Vercel"]
     },
     {
       "id": 2,
-      "date": "December 2023",
-      "title": "Full Stack Project - Ecommerce - MongoDb",
-      "description": "Led the development of the frontend side of the project, ensuring an attractive interface for the client. Implemented a CRUD system for managing client data, created APIs to facilitate communication between frontend and backend, and selected key libraries for the project's success."
+      "date": "February 2025 - May 2025",
+      "title": "Video Game Developer",
+      "company": "Unity 2D (Bonsai.meme) - Remote",
+      "description": "Development of top-down 2D video game with Unity in collaboration with international team using agile methodologies. Weekly coordination with international client and optimization for PC and mobile platforms.",
+      "technologies": ["Unity", "C#", "2D Game Development", "Agile Methodologies", "Multiplatform Optimization"]
     },
     {
       "id": 3,
-      "date": "October 2023",
-      "title": "Full Stack Career - CODERHOUSE",
-      "description": "Completed the Full Stack Career at Coderhouse, acquiring a solid foundation in Frontend and Backend development. Now, I am focused on perfecting the skills provided during the training."
+      "date": "2021 - 2023",
+      "title": "Full Stack Career",
+      "company": "Coderhouse - Buenos Aires, Argentina",
+      "description": "Completed Full Stack career with intensive training in Frontend (HTML5, CSS3, JavaScript ES6+, React) and Backend (Node.js, Express, databases). Developed practical e-commerce projects and web applications. As a self-taught learner, expanded knowledge in NestJS, TypeScript, DevOps, video games, and production projects.",
+      "technologies": ["HTML5", "CSS3", "JavaScript ES6+", "React", "Node.js", "Express", "MongoDB", "NestJS", "TypeScript", "DevOps"]
     }
   ],
   "Presentacion": {
@@ -36,7 +43,7 @@
     "description": "Full stack web developer with experience in web application design and development using front-end and back-end technologies. Expert in creating interactive and functional solutions.",
     "boton1": "About",
     "boton2": "CV",
-    "link-cv": "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:58781464-6ec6-4abe-b3a0-9f3e3da4262b"
+    "link-cv": "/CV/CV_Edu_Armas_English.pdf"
   },
   "Sobremi": {
     "sobre": "About me",
@@ -62,57 +69,6 @@
   "PROYECTOS": [
     {
       "id": 1,
-      "name": "Ecommerce with Firebase",
-      "description": "Customize your shopping experience by choosing the type of polo you want and add it to the cart. Upon completing the purchase, you will receive a ticket that is saved in the database.",
-      "skills": [
-        "Css",
-        "React",
-        "Material-UI",
-        "Axios",
-        "Bootstrap",
-        "Firebase",
-        "Formik",
-        "Yup",
-        "React Router",
-        "JSON Server",
-        "SweetAlert2"
-      ],
-      "img": "/proyectos-img/proyecto1.webp",
-      "alt": "Customized polo in shopping cart",
-      "href": "https://proyect-react-2.vercel.app/",
-      "code": "https://github.com/BigNitgh/Proyect-React-2"
-    },
-    {
-      "id": 2,
-      "name": "Full Stack",
-      "description": "Manage products, make purchases, and log in with your GitHub account. If you have admin permissions, you can create and delete products.",
-      "skills": [
-        "Handlebars",
-        "CSS",
-        "JavaScript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Bootstrap",
-        "JWT",
-        "Swagger",
-        "Socket.io",
-        "Mongoose",
-        "Handlebars",
-        "Passport",
-        "bcrypt",
-        "Winston",
-        "Chai",
-        "Mocha",
-        "Supertest"
-      ],
-      "img": "/proyectos-img/Proyecto2.webp",
-      "alt": "Administrator interface managing products",
-      "href": "https://ecommerce-ugl8.onrender.com",
-      "code": "https://github.com/BigNight1/Pre-entrega-backend/tree/PracIntEcom"
-    },
-    {
-      "id": 3,
       "name": "ArmalyTech Website",
       "description": "A website dedicated to cell phone repair and other technical services, offering direct contact with the technician.",
       "skills": ["React", "Vite", "Styled-components", "Tailwind", "Flowbite"],
@@ -120,6 +76,63 @@
       "alt": "ArmalyTech website",
       "href": "https://www.armalytech.com/",
       "code": "https://github.com/BigNight1/WebSite-Armaly"
+    },
+    {
+      "id": 2,
+      "name": "Polo Ecommerce - Complete System",
+      "description": "Complete ecommerce platform for polo sales with administration system, real-time notifications, Tupay payment gateway, order management and customizable landing page. Includes multiple authentication (Google, normal users and administrators), shopping cart, Facebook-style notification system and complete administrative panel.",
+      "skills": [
+        "React",
+        "TypeScript", 
+        "Tailwind CSS",
+        "NestJS",
+        "MongoDB",
+        "Mongoose",
+        "Firebase Auth",
+        "React Router",
+        "Zustand",
+        "Axios",
+        "Lucide React",
+        "Downshift",
+        "Vite",
+        "Node.js",
+        "Express",
+        "JWT",
+        "Tupay Payment Gateway",
+        "Email Service",
+        "File Upload",
+        "Admin Dashboard",
+        "Real-time Notifications",
+        "Order Management",
+        "Product Management",
+        "User Management",
+        "SaaS Architecture"
+      ],
+      "img": "/proyectos-img/proyecto-polos.webp",
+      "alt": "Complete ecommerce system for polo sales",
+      "href": "https://venta-de-polo.vercel.app/",
+      "code": "https://github.com/BigNight1/venta-de-polo"
+    },
+    {
+      "id": 3,
+      "name": "Lords of Memes and Magic 2.0",
+      "description": "Project developed for the bonsai.meme community. 2D Unity game that combined construction, exploration and battle mechanics with integration to its own cryptocurrency. Although the project remained a prototype due to lack of budget and closure of the crypto initiative, it allowed implementing tilemap systems, resource management, animations and UI in Unity.",
+      "skills": [
+        "Unity 2D",
+        "C#",
+        "Tilemaps",
+        "Animations",
+        "Resource systems",
+        "UI / HUD",
+        "Scene management",
+        "Game Design",
+        "Blockchain integration (planned)"
+      ],
+      "estado": "In development / Cancelled",
+      "img": "/proyectos-img/lords-memes-magic.webp",
+      "alt": "Lords of Memes and Magic 2.0 screenshot",
+      "href": "https://bignight1.itch.io/lords-of-memes-and-magic",
+      "code": "https://github.com/BigNight1/Lords-of-Memes-and-Magic-2.0"
     }
   ],
   "Copy": {

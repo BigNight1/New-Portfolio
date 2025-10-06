@@ -2,28 +2,21 @@ import "../../styles/header.css";
 import {
   useTheme,
   getImageSource,
-  LINKS,
   LANGUAGES,
   useLanguage,
 } from "./themeUtils.jsx";
-import { Link } from "react-scroll";
 import MyAge from "../Myage/myage.jsx";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ThemeToggle from "./ThemeToggle";
+import Tooltip from "./Tooltip";
 
 function Header() {
   const { t } = useTranslation();
   const { toggleTheme, theme } = useTheme();
-  const [open, setOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
   const currentLanguage = LANGUAGES.find((lang) => lang.code === language);
 
   const imageSource = getImageSource(theme);
-
-  const handleMenu = () => {
-    setOpen((prev) => !prev);
-  };
 
   return (
     <nav className="dark:bg-slate-900">
@@ -40,88 +33,44 @@ function Header() {
         </div>
 
         <div className="flex items-center ">
-          {/* Links  */}
-          <ul className="flex menu sm:hidden lg:block md:block  linkdesaparece">
-            <li className="p-4">
-              {LINKS.map((links) => (
-                <Link
-                  key={links.link}
-                  className="text-lg font-bold text-black dark:text-gray-300 cursor-pointer px-3 dark:hover:text-[#67fd67] hover:text-[#0018CC]"
-                  to={links.to}
-                  smooth={true}
-                  duration={500}
-                >
-                  {t(`Menu.${links.link}`)}
-                </Link>
-              ))}
-            </li>
-          </ul>
 
           {/* Bandera del idioma actual */}
           {currentLanguage && (
-            <img
-              src={currentLanguage.icon}
-              alt={currentLanguage.code}
-              className="w-6 h-6 cursor-pointer mx-2"
-              onClick={toggleLanguage}
-            />
+            <Tooltip
+              text={currentLanguage.code === "es" ? "Español" : "English"}
+              position="bottom"
+            >
+              <div className="relative group mx-2 p-1 rounded-full  dark:hover:bg-gray-800 transition-colors duration-300 cursor-pointer">
+                <div
+                  className="transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-2 group-hover:shadow-xl  group-active:scale-95 group-hover:brightness-110"
+                  onClick={toggleLanguage}
+                >
+                  <img
+                    src={currentLanguage.icon}
+                    alt={currentLanguage.code}
+                    className="w-6 h-6 rounded-full border-2 border-transparent  transition-all duration-300"
+                  />
+                  {/* Efecto de glow sutil para la bandera */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400/20 to-blue-400/20 opacity-0  transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+              </div>
+            </Tooltip>
           )}
 
           {/* Dark Mode */}
-          <span
-            className="hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5 w-10 h-10 inline-flex items-center justify-center rotate mx-[0.3rem] cursor-pointer"
-            onClick={toggleTheme}
+          <Tooltip
+            text={theme === "light" ? "Modo Oscuro" : "Modo Claro"}
+            position="bottom"
           >
-            <img src={imageSource} alt={theme} />
-          </span>
+            <ThemeToggle
+              theme={theme}
+              toggleTheme={toggleTheme}
+              imageSource={imageSource}
+            />
+          </Tooltip>
 
-          {/* boton hamburguesa */}
-          <div className="-mr-2 flex md:hidden">
-            <button
-              type="button"
-              onClick={handleMenu}
-              className=" inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-            >
-              <span className="sr-only">Open Main Menu</span>
-              {open == true ? <FaTimes /> : <FaBars />}
-            </button>
-          </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {open ? (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-100 z-50 ">
-          <div className="flex items-center justify-between p-4">
-            <div>
-              <a href="/" className="text-2xl text-white font-bold">
-                BIGNIGHT.DEV
-              </a>
-            </div>
-            <button
-              type="button"
-              onClick={handleMenu}
-              className="text-white focus:outline-none"
-            >
-              <FaTimes className="text-2xl" />
-            </button>
-          </div>
-          <div className="px-4 pb-3 space-y-3">
-            {LINKS.map((links) => (
-              <Link
-                key={links.link}
-                className="cursor-pointer block text-white px-3 py-2 rounded-md text-lg font-medium transition duration-300 ease-in-out hover:bg-gray-800 hover:text-gray-300"
-                to={links.to}
-                smooth={true}
-                duration={500}
-                onClick={handleMenu}
-              >
-                {links.link}
-              </Link>
-            ))}
-          </div>
-        </div>
-      ) : null}
     </nav>
   );
 }
