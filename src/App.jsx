@@ -8,14 +8,14 @@ import Proyecto from "./components/proyecto/Proyecto.jsx";
 
 function App() {
   return (
-    <>
+    <main className="overflow-x-hidden">
       <Header />
       <Presentacion />
       <ExperienceSidebar />
       <Sobremi />
       <Proyecto />
       <Footer />
-    </>
+    </main>
   );
 }
 

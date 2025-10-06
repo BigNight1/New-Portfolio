@@ -136,12 +136,12 @@ export default function ExperienceSidebar() {
   return (
     <>
       {/* MOBILE VERSION - Timeline vertical con GSAP */}
-      <div className="lg:hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 px-4" id="experiencia">
+      <div className="lg:hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 py-16 px-4" id="experiencia">
         <div className="max-w-3xl mx-auto">
           {/* Header */}
           <div className="flex items-center gap-3 mb-16">
             <Briefcase className="w-6 h-6 text-cyan-400" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">{t('Experiencia.title')}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white">{t('Experiencia.title')}</h2>
           </div>
 
           {/* Timeline Container */}
@@ -168,37 +168,37 @@ export default function ExperienceSidebar() {
                   ></div>
 
                   {/* Card Content */}
-                  <div className="bg-slate-800 rounded-2xl p-6 shadow-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="bg-gray-100 dark:bg-slate-800 rounded-2xl p-6 shadow-xl border border-gray-200 dark:border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
                     {/* Date */}
                     <div className="text-cyan-400 text-sm font-semibold mb-2">
                       {exp.date}
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {exp.title}
                     </h3>
                     
                     {/* Company */}
-                    <p className="text-sm sm:text-base text-slate-400 mb-4">
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-slate-400 mb-4">
                       {exp.company}
                     </p>
                     
                     {/* Description */}
-                    <p className="text-sm sm:text-base text-slate-300 mb-6 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-800 dark:text-slate-300 mb-6 leading-relaxed">
                       {exp.description}
                     </p>
                     
                     {/* Technologies */}
                     <div className="mb-6">
-                      <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
+                      <h4 className="text-xs font-semibold text-gray-600 dark:text-slate-400 uppercase tracking-wider mb-3">
                         {t('Experiencia.technologies')}
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 bg-slate-700 text-cyan-400 rounded-full text-xs font-medium border border-cyan-400/20"
+                            className="px-2 py-1 bg-gray-300 dark:bg-slate-700 text-cyan-600 dark:text-cyan-400 rounded-full text-xs font-medium border border-cyan-400/20"
                           >
                             {tech}
                           </span>
@@ -215,13 +215,13 @@ export default function ExperienceSidebar() {
       </div>
 
       {/* DESKTOP VERSION - Diseño con sidebar */}
-      <div className="hidden lg:block min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" id="experiencia">
+      <div className="hidden lg:block min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900" id="experiencia">
         <div ref={containerRef} className="h-screen flex max-w-7xl mx-auto">
           {/* Sidebar */}
-          <div className="w-1/3 bg-gradient-to-b from-slate-800 to-slate-700 p-12 flex flex-col justify-center">
+          <div className="w-1/3 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-slate-800 dark:to-slate-700 p-12 flex flex-col justify-center">
             <div className="flex items-center gap-3 mb-12">
               <Briefcase className="w-8 h-8 text-cyan-400" />
-              <h2 className="text-3xl font-bold text-white">{t('Experiencia.title')}</h2>
+              <h2 className="text-3xl font-bold text-gray-800 dark:text-white">{t('Experiencia.title')}</h2>
             </div>
 
             <div className="space-y-6">
@@ -237,10 +237,10 @@ export default function ExperienceSidebar() {
                   <div className="text-cyan-400 text-sm font-semibold mb-1">
                     {exp.date}
                   </div>
-                  <div className="text-white text-lg font-medium">
+                  <div className="text-gray-800 dark:text-white text-lg font-medium">
                     {exp.title}
                   </div>
-                  <div className="text-slate-400 text-sm">
+                  <div className="text-gray-700 dark:text-slate-400 text-sm">
                     {exp.company}
                   </div>
                 </div>
@@ -260,26 +260,26 @@ export default function ExperienceSidebar() {
                 }`}
               >
                 <div className="max-w-4xl w-full text-center">
-                  <h3 className="text-4xl font-bold text-white mb-2">
+                  <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
                     {exp.title}
                   </h3>
                   <p className="text-lg text-cyan-400 mb-6">
                     {exp.company}
                   </p>
-                  <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+                  <p className="text-lg text-gray-800 dark:text-slate-300 mb-6 leading-relaxed">
                     {exp.description}
                   </p>
                   
                   {/* Technologies */}
                   <div className="mb-8">
-                    <h4 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">
+                    <h4 className="text-sm font-semibold text-gray-600 dark:text-slate-400 uppercase tracking-wider mb-3">
                       {t('Experiencia.technologies')}
                     </h4>
                     <div className="flex flex-wrap gap-2 justify-center">
                       {exp.technologies.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1 bg-slate-800 text-cyan-400 rounded-full text-sm font-medium border border-cyan-400/20"
+                          className="px-3 py-1 bg-gray-300 dark:bg-slate-800 text-cyan-600 dark:text-cyan-400 rounded-full text-sm font-medium border border-cyan-400/20"
                         >
                           {tech}
                         </span>

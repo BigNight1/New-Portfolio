@@ -61,14 +61,14 @@ const Proyecto = () => {
     <section
       ref={sectionRef}
       id="proyecto"
-      className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.1),transparent_50%)]"></div>
 
       {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.1)_50%,transparent_75%,transparent_100%)] bg-[length:40px_40px] animate-pulse"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.05)_50%,transparent_75%,transparent_100%)] dark:bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.1)_50%,transparent_75%,transparent_100%)] bg-[length:40px_40px] animate-pulse"></div>
 
       {/* Floating Code Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -99,14 +99,14 @@ const Proyecto = () => {
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
               <Rocket className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white bg-gradient-to-r from-white via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              {t("Proyecto.title-project")}
-            </h2>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-800 dark:text-white bg-gradient-to-r from-gray-800 via-cyan-400 to-blue-500 dark:from-white dark:via-cyan-400 dark:to-blue-500 bg-clip-text text-transparent">
+          {t("Proyecto.title-project")}
+        </h2>
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
               <Star className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
             </div>
           </div>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto px-4">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Proyectos que demuestran mi pasión por la programación y la
             innovación
           </p>
@@ -140,7 +140,7 @@ const Proyecto = () => {
 
                       {/* Project Title */}
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white group-hover:text-cyan-400 transition-colors duration-300">
                           {proyecto.name}
                         </h3>
                         {/* Status Indicators */}
@@ -191,7 +191,7 @@ const Proyecto = () => {
                       </div>
 
                       {/* Project Description */}
-                      <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                      <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
                         {proyecto.description}
                       </p>
 
@@ -208,7 +208,7 @@ const Proyecto = () => {
                             </span>
                           ))}
                         {proyecto.skills.length > 4 && (
-                          <span className="px-2 sm:px-3 py-1 bg-slate-700/50 text-gray-400 rounded-full text-xs sm:text-sm font-medium border border-gray-500/20">
+                          <span className="px-2 sm:px-3 py-1 bg-slate-700/50 dark:bg-slate-700/50 bg-gray-200 dark:bg-slate-700/50 text-gray-600 dark:text-gray-400 rounded-full text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-500/20">
                             +{proyecto.skills.length - 4} más
                           </span>
                         )}

@@ -270,11 +270,11 @@ const Sobremi = () => {
     <section 
       ref={sectionRef}
       id="sobremi" 
-      className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.1)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.05)_50%,transparent_75%,transparent_100%)] dark:bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.1)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px]"></div>
       
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -292,49 +292,49 @@ const Sobremi = () => {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 py-12">
         {/* Header Section */}
-        <div ref={titleRef} className="text-center mb-16">
-          <h2 className="text-6xl lg:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-white via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        <div ref={titleRef} className="text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4 bg-gradient-to-r from-gray-800 via-cyan-400 to-blue-500 dark:from-white dark:via-cyan-400 dark:to-blue-500 bg-clip-text text-transparent">
             {t("Sobremi.sobre")}
           </h2>
-          <div className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
-            <span className="text-cyan-400 font-bold text-3xl">2+ </span> 
+          <div className="text-lg lg:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+            <span className="text-cyan-400 font-bold text-2xl">4+ </span> 
             {t("Sobremi.subsobre")}
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column - About Content */}
-          <div ref={contentRef} className="space-y-8">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                <Award className="w-6 h-6 text-white" />
+          <div ref={contentRef} className="space-y-6">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                <Award className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-4xl lg:text-5xl font-bold text-white">
+              <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white">
                 {t("Sobremi.conoceme")}
               </h3>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {DESCRIPTION.map((description, index) => (
                 <div 
                   key={index}
-                  className="group relative p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70"
+                  className="group relative p-4 bg-gray-100/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:bg-gray-100/70 dark:hover:bg-slate-800/70"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <p className="relative text-gray-300 leading-relaxed text-lg">
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <p className="relative text-gray-800 dark:text-gray-300 leading-relaxed text-base">
                     {t(description.description)}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="pt-6">
+            <div className="pt-4">
               <Link to="proyecto" smooth={true} duration={800}>
-                <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+                <button className="group relative px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
                   <span className="relative z-10 flex items-center gap-2">
-                    <Target className="w-5 h-5" />
+                    <Target className="w-4 h-4" />
                     {t("Sobremi.boton_proyecto")}
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -344,57 +344,57 @@ const Sobremi = () => {
           </div>
 
           {/* Right Column - Skills */}
-          <div className="space-y-8">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-white" />
+          <div className="space-y-6">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-4xl lg:text-5xl font-bold text-white">
+              <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white">
                 {t("Mishabilidades.habher")}
               </h3>
             </div>
 
             {/* Skills Grid */}
-            <div ref={skillsRef} className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <div ref={skillsRef} className="grid grid-cols-2 lg:grid-cols-3 gap-3">
               {skills.map((skill) => {
                 const IconComponent = skill.icon;
                 return (
                   <div
                     key={skill.id}
-                    className={`group relative p-4 rounded-xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer ${skill.bgColor} ${skill.borderColor} hover:shadow-cyan-500/20`}
+                    className={`group relative p-3 rounded-lg border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer ${skill.bgColor} ${skill.borderColor} hover:shadow-cyan-500/20`}
                   >
-                    <div className="flex flex-col items-center text-center space-y-3">
-                      <div className={`w-8 h-8 ${skill.color} transition-transform duration-300 group-hover:scale-110`}>
+                    <div className="flex flex-col items-center text-center space-y-2">
+                      <div className={`w-6 h-6 ${skill.color} transition-transform duration-300 group-hover:scale-110`}>
                         <IconComponent className="w-full h-full" />
                       </div>
-                      <span className="font-semibold text-white text-sm group-hover:text-cyan-400 transition-colors duration-300">
+                      <span className="font-semibold text-gray-900 dark:text-white text-xs group-hover:text-cyan-400 transition-colors duration-300">
                         {skill.name}
                       </span>
-                      <span className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                      <span className="text-xs text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300">
                         {skill.category}
                       </span>
                     </div>
                     
                     {/* Hover Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                 );
               })}
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8">
-              <div className="text-center p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
-                <div className="text-2xl font-bold text-cyan-400">15+</div>
-                <div className="text-sm text-gray-400">Technologies</div>
+            <div className="grid grid-cols-3 gap-3 pt-6">
+              <div className="text-center p-3 bg-gray-100/50 dark:bg-slate-800/50 rounded-lg border border-gray-200/50 dark:border-slate-700/50">
+                <div className="text-xl font-bold text-cyan-400">15+</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Technologies</div>
               </div>
-              <div className="text-center p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
-                <div className="text-2xl font-bold text-green-400">2+</div>
-                <div className="text-sm text-gray-400">Years</div>
+              <div className="text-center p-3 bg-gray-100/50 dark:bg-slate-800/50 rounded-lg border border-gray-200/50 dark:border-slate-700/50">
+                <div className="text-xl font-bold text-green-400">2+</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Years</div>
               </div>
-              <div className="text-center p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
-                <div className="text-2xl font-bold text-purple-400">∞</div>
-                <div className="text-sm text-gray-400">Passion</div>
+              <div className="text-center p-3 bg-gray-100/50 dark:bg-slate-800/50 rounded-lg border border-gray-200/50 dark:border-slate-700/50">
+                <div className="text-xl font-bold text-purple-400">∞</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Passion</div>
               </div>
             </div>
           </div>
