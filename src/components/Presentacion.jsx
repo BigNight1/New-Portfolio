@@ -189,7 +189,7 @@ const Presentacion = () => {
           {/* Lado Derecho - Imagen */}
           <div
             ref={rightImageRef}
-            className="flex justify-center lg:justify-end order-first lg:order-last mt-24 sm:mt-24 lg:mt-0"
+            className="flex justify-center  order-first lg:order-last mt-24 sm:mt-24 lg:mt-0"
           >
             <div className="hero-image relative group">
               {/* Tu imagen con efectos modernos */}

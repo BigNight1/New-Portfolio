@@ -19,14 +19,14 @@ function Header() {
   const imageSource = getImageSource(theme);
 
   return (
-    <nav className="dark:bg-slate-900">
+    <nav className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm">
       <div className="nav-content ">
         {/* Web - Live */}
         <div className="flex gap-1 py-5">
           <MyAge />
           <a
             href="/"
-            className="text-2xl text-black font-black dark:text-[#e8e6e3]  lg:block md:block  desaparece"
+            className="text-2xl text-gray-800 font-black dark:text-[#e8e6e3] lg:block md:block desaparece hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
           >
             BIGNIGHT.DEV
           </a>
