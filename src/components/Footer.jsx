@@ -72,6 +72,7 @@ const Footer = () => {
               <a
                 href="https://linkedin.com/in/edu-armas"
                 target="_blank"
+                aria-label="LinkedIn de Edu Armas"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-200/50 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-blue-500/20 hover:border hover:border-blue-400/50 transition-all duration-300"
               >
@@ -79,6 +80,8 @@ const Footer = () => {
               </a>
               <a
                 href="mailto:edu.armas.dev@gmail.com"
+                target="_blank" 
+                rel="noopener"
                 className="w-10 h-10 bg-gray-200/50 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-red-500/20 hover:border hover:border-red-400/50 transition-all duration-300"
               >
                 <Mail className="w-5 h-5" />

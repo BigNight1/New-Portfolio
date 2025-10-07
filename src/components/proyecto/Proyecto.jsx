@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Github, Eye, Rocket, Star, ArrowRight } from "lucide-react";
+import OptimizedImage from "../OptimizedImage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -310,10 +311,11 @@ const Proyecto = () => {
                   {/* Right Side - Project Image */}
                   <div className="relative overflow-hidden order-1 lg:order-2 h-64 sm:h-80 lg:h-full">
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 to-blue-500/10 pointer-events-none"></div>
-                    <img
+                    <OptimizedImage
                       src={proyecto.img}
                       alt={proyecto.alt}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
 
                     {/* Simple Hover Effect */}

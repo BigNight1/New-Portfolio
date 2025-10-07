@@ -8,6 +8,7 @@ import { Gmail } from "./Icons/gmail.jsx";
 import { gsap } from "gsap";
 import FloatingIcons from "./FloatingIcons";
 import OrbitingIcons from "./OrbitingIcons";
+import OptimizedImage from "./OptimizedImage";
 
 const Presentacion = () => {
   const { t } = useTranslation();
@@ -82,7 +83,7 @@ const Presentacion = () => {
       <div className="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
       {/* Background oscuro */}
       <div className="dark:absolute dark:inset-0 dark:-z-10 dark:h-full dark:w-full dark:items-center dark:px-5 dark:py-24 dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-      
+
       {/* Iconos flotantes */}
       <FloatingIcons />
 
@@ -156,8 +157,9 @@ const Presentacion = () => {
                 </span>
               </a>
               <a
-                target="__BLANK"
                 alt="Gmail"
+                target="_blank"
+                rel="noopener"
                 className="group rounded-full border border-gray-300 dark:border-gray-600 flex justify-center items-center gap-x-2 py-2 px-4 sm:py-3 sm:px-6 bg-white/80 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-700 hover:scale-105 hover:shadow-lg transition-all duration-300 backdrop-blur-sm"
               >
                 <Gmail className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white h-4 w-4 sm:h-5 sm:w-5 transition-colors" />
@@ -195,9 +197,17 @@ const Presentacion = () => {
             <div className="hero-image relative group">
               {/* Tu imagen con efectos modernos */}
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl transition-transform duration-500 lg:group-hover:scale-105">
-                <img
-                  src="/User/Edu_armas.webp"
+                <OptimizedImage
+                  src="/User/Edu_armas288x288.webp"
+                  srcSet="
+                    /User/Edu_armas120x120.webp 120w,
+                    /User/Edu_armas288x288.webp 288w,
+                    /User/Edu_armas600x600.webp 600w
+                  "
+                  sizes="(max-width: 600px) 120px, (max-width: 1200px) 288px, 600px"
                   alt="Edu Armas"
+                  fetchPriority="high"
+                  loading="eager"
                   className="w-full h-full object-cover object-center rounded-full"
                 />
               </div>
@@ -207,7 +217,7 @@ const Presentacion = () => {
 
               {/* Borde animado */}
               <div className="absolute inset-0 rounded-full border-3 border-green-500/60 lg:group-hover:border-green-400 transition-all duration-500"></div>
-              
+
               {/* Iconos orbitando alrededor de la imagen */}
               <OrbitingIcons />
             </div>
