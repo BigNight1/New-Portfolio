@@ -38,7 +38,7 @@
     }
   ],
   "Presentacion": {
-    "presentation": "Hey,I'm Edu",
+    "presentation": "Hey, I'm Edu",
     "subtitle": "Programmer Full Stack",
     "description": "Full stack web developer with experience in web application design and development using front-end and back-end technologies. Expert in creating interactive and functional solutions.",
     "boton1": "About",
@@ -137,5 +137,18 @@
   ],
   "Copy": {
     "copyright": "Copyright 2023. All Rights to be a Programmer"
+  },
+  "Footer": {
+    "description": "Full Stack developer passionate about creating innovative digital experiences and quality technological solutions.",
+    "connect": "Connect With Me",
+    "collaborate": "Interested in collaborating?",
+    "rights": "All rights reserved.",
+    "made_with": "Made with",
+    "and_coffee": "and lots of coffee"
+  },
+  "AriaLabels": {
+    "about_section": "Go to About section",
+    "projects_section": "Go to Projects section",
+    "whatsapp_contact": "Contact via WhatsApp for collaboration"
   }
 }

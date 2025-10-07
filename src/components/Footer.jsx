@@ -49,15 +49,14 @@ const Footer = () => {
               <p className="text-cyan-400 text-sm font-medium">bignight.dev</p>
             </div>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed max-w-md mx-auto lg:mx-0">
-              Desarrollador Full Stack apasionado por crear experiencias
-              digitales innovadoras y soluciones tecnológicas de calidad.
+              {t("Footer.description")}
             </p>
           </div>
 
           {/* Contact & Social */}
           <div className="text-center sm:text-right">
             <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
-              Conecta Conmigo
+              {t("Footer.connect")}
             </h4>
             <div className="flex justify-center sm:justify-end gap-4 mb-4">
               <a
@@ -82,6 +81,7 @@ const Footer = () => {
                 href="mailto:edu.armas.dev@gmail.com"
                 target="_blank" 
                 rel="noopener"
+                aria-label="Enviar email a Edu Armas"
                 className="w-10 h-10 bg-gray-200/50 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-red-500/20 hover:border hover:border-red-400/50 transition-all duration-300"
               >
                 <Mail className="w-5 h-5" />
@@ -93,10 +93,11 @@ const Footer = () => {
                 href="https://wa.me/51965728013?text=¡Hola!%20Me%20interesa%20colaborar%20contigo%20en%20un%20proyecto.%20¿Podemos%20hablar?"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t("AriaLabels.whatsapp_contact")}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200/30 dark:bg-slate-800/30 backdrop-blur-sm rounded-full border border-gray-300/30 dark:border-slate-600/30 hover:border-cyan-400/50 hover:bg-gray-300/40 dark:hover:bg-slate-700/40 transition-all duration-300 text-gray-600 dark:text-gray-300 hover:text-cyan-300 text-xs"
               >
                 <Zap className="w-3 h-3" />
-                <span>¿Interesado en colaborar?</span>
+                <span>{t("Footer.collaborate")}</span>
                 <ArrowRight className="w-3 h-3" />
               </a>
             </div>
@@ -110,13 +111,13 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
           <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-xs sm:text-sm text-center sm:text-left">
             <span>&copy; 2025</span>
-            <span>Todos los derechos reservados.</span>
+            <span>{t("Footer.rights")}</span>
           </div>
 
           <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-xs sm:text-sm">
-            <span>Hecho con</span>
+            <span>{t("Footer.made_with")}</span>
             <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 animate-pulse" />
-            <span>y mucho café</span>
+            <span>{t("Footer.and_coffee")}</span>
           </div>
         </div>
       </div>

@@ -138,5 +138,18 @@
   ],
   "Copy": {
     "copyright": "Copyright 2023. Todos los Derechos de ser un Programador"
+  },
+  "Footer": {
+    "description": "Desarrollador Full Stack apasionado por crear experiencias digitales innovadoras y soluciones tecnológicas de calidad.",
+    "connect": "Conecta Conmigo",
+    "collaborate": "¿Interesado en colaborar?",
+    "rights": "Todos los derechos reservados.",
+    "made_with": "Hecho con",
+    "and_coffee": "y mucho café"
+  },
+  "AriaLabels": {
+    "about_section": "Ir a la sección Sobre Mí",
+    "projects_section": "Ir a la sección de Proyectos",
+    "whatsapp_contact": "Contactar por WhatsApp para colaboración"
   }
 }

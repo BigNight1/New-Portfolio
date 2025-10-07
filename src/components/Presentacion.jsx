@@ -114,15 +114,16 @@ const Presentacion = () => {
 
             {/* Botones About y CV - Solo visibles en móvil después de la descripción */}
             <div className="hero-buttons flex flex-row gap-4 justify-center lg:hidden">
-              <Link to="sobremi" smooth={true} duration={500}>
+              <a href="#sobremi" aria-label={t("AriaLabels.about_section")}>
                 <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
                   {t("Presentacion.boton1")}
                 </button>
-              </Link>
+              </a>
               <a
                 href={t("Presentacion.link-cv")}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Descargar CV de Edu Armas"
                 className="inline-block"
               >
                 <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
@@ -136,8 +137,8 @@ const Presentacion = () => {
               <a
                 href="https://github.com/BigNight1"
                 aria-label="GitHub de Edu Armas"
-                target="__BLANK"
-                alt="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group rounded-full border border-gray-300 dark:border-gray-600 flex justify-center items-center gap-x-2 py-2 px-4 sm:py-3 sm:px-6 bg-white/80 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-700 hover:scale-105 hover:shadow-lg transition-all duration-300 backdrop-blur-sm"
               >
                 <Github className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white h-4 w-4 sm:h-5 sm:w-5 transition-colors" />
@@ -147,8 +148,9 @@ const Presentacion = () => {
               </a>
               <a
                 href="https://www.linkedin.com/in/edu-armas-1a4b16260/"
-                target="__BLANK"
-                alt="Linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn de Edu Armas"
                 className="group rounded-full border border-gray-300 dark:border-gray-600 flex justify-center items-center gap-x-2 py-2 px-4 sm:py-3 sm:px-6 bg-white/80 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-700 hover:scale-105 hover:shadow-lg transition-all duration-300 backdrop-blur-sm"
               >
                 <Linkedin className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white h-4 w-4 sm:h-5 sm:w-5 transition-colors" />
@@ -157,9 +159,10 @@ const Presentacion = () => {
                 </span>
               </a>
               <a
-                alt="Gmail"
+                href="mailto:edu.armas.dev@gmail.com"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
+                aria-label="Enviar email a Edu Armas"
                 className="group rounded-full border border-gray-300 dark:border-gray-600 flex justify-center items-center gap-x-2 py-2 px-4 sm:py-3 sm:px-6 bg-white/80 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-700 hover:scale-105 hover:shadow-lg transition-all duration-300 backdrop-blur-sm"
               >
                 <Gmail className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white h-4 w-4 sm:h-5 sm:w-5 transition-colors" />
@@ -171,15 +174,16 @@ const Presentacion = () => {
 
             {/* Botones About y CV - Solo visibles en desktop al final */}
             <div className="hero-buttons hidden lg:flex gap-4 justify-center lg:justify-start">
-              <Link to="sobremi" smooth={true} duration={500}>
+              <a href="#sobremi" aria-label={t("AriaLabels.about_section")}>
                 <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
                   {t("Presentacion.boton1")}
                 </button>
-              </Link>
+              </a>
               <a
                 href={t("Presentacion.link-cv")}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Descargar CV de Edu Armas"
                 className="inline-block"
               >
                 <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">

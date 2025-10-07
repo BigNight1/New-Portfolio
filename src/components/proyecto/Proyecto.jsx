@@ -224,6 +224,7 @@ const Proyecto = () => {
                           href={proyecto.href}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`Ver proyecto ${proyecto.titulo} en vivo`}
                           className="group/btn flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 sm:hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/30 w-full sm:min-w-[160px] lg:min-w-[180px] relative z-30 cursor-pointer border-2 border-transparent hover:border-cyan-300"
                         >
                           <Eye className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -263,6 +264,7 @@ const Proyecto = () => {
                           href={proyecto.code}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`Ver código del proyecto ${proyecto.titulo}`}
                           className={`group/btn flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 font-bold rounded-full border-2 transition-all duration-300 w-full sm:min-w-[160px] lg:min-w-[180px] relative z-30 cursor-pointer ${
                             proyecto.estado &&
                             (proyecto.estado.includes("Cancelado") ||

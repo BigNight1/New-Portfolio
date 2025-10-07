@@ -45,15 +45,15 @@ const skills = [
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/20",
   },
-  {
-    id: 3,
-    name: "SASS",
-    category: "Frontend",
-    icon: Layers,
-    color: "text-pink-500",
-    bgColor: "bg-pink-500/10",
-    borderColor: "border-pink-500/20",
-  },
+    {
+      id: 3,
+      name: "NestJS",
+      category: "Backend",
+      icon: Layers,
+      color: "text-pink-500",
+      bgColor: "bg-pink-500/10",
+      borderColor: "border-pink-500/20",
+    },
   {
     id: 4,
     name: "JavaScript",
@@ -308,7 +308,7 @@ const Sobremi = () => {
             </div>
 
             <div className="pt-4">
-              <Link to="proyecto" smooth={true} duration={800}>
+              <a href="#proyecto" aria-label={t("AriaLabels.projects_section")}>
                 <button className="group relative px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
                   <span className="relative z-10 flex items-center gap-2">
                     <Target className="w-4 h-4" />
@@ -316,7 +316,7 @@ const Sobremi = () => {
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
 
