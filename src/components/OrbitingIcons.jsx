@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import styled from 'styled-components';
 import { gsap } from 'gsap';
+import './OrbitingIcons.css';
 
 const OrbitingIcons = ({ icons = [] }) => {
   const containerRef = useRef(null);
@@ -16,12 +16,11 @@ const OrbitingIcons = ({ icons = [] }) => {
     { id: 7, src: '/icons/html.webp', alt: 'HTML' },
     { id: 8, src: '/icons/css.webp', alt: 'CSS' },
     { id: 9, src: '/icons/typescript.webp', alt: 'TypeScript' },
-    { id: 10, src: '/icons/vercel.webp', alt: 'Vercel' },
+    { id: 10, src: '/icons/github.webp', alt: 'Github' },
   ];
 
   const displayIcons = icons.length > 0 ? icons : defaultIcons;
   const totalIcons = displayIcons.length;
-  const angleStep = 360 / totalIcons;
 
   useEffect(() => {
     const container = containerRef.current;
@@ -29,113 +28,86 @@ const OrbitingIcons = ({ icons = [] }) => {
 
     const iconElements = container.querySelectorAll('.orbit-icon');
     
-    // Animación GSAP para rotación infinita del contenedor
-    gsap.to(container, {
-      rotation: 360,
-      duration: 20,
-      ease: 'none',
-      repeat: -1,
-    });
+    // Función para calcular radio dinámicamente según el tamaño de pantalla
+    const getRadius = () => {
+      const width = window.innerWidth;
+      if (width <= 640) return 170; // mobile
+      if (width <= 1024) return 200; // tablet
+      return 240; // desktop
+    };
+
+    // Función para posicionar iconos usando trigonometría
+    const positionIcons = () => {
+      const radius = getRadius();
+      
+      gsap.set(iconElements, {
+        x: (i) => Math.cos((i / totalIcons) * Math.PI * 2) * radius,
+        y: (i) => Math.sin((i / totalIcons) * Math.PI * 2) * radius,
+        duration: 0,
+        transformOrigin: "center center"
+      });
+    };
+
+    // Posicionar iconos inicialmente
+    positionIcons();
+
+    // Recalcular posición en resize
+    const handleResize = () => {
+      positionIcons();
+    };
+    
+    window.addEventListener('resize', handleResize);
+
+    // Timeline para animaciones coordinadas
+    const tl = gsap.timeline({ repeat: -1 });
+    
+    // Rotación del contenedor
+    tl.to(container, { 
+      rotation: 360, 
+      duration: 20, 
+      ease: "none" 
+    }, 0);
 
     // Contra-rotación de cada icono para mantenerlos derechos
     iconElements.forEach((icon) => {
-      gsap.to(icon, {
-        rotation: -360,
-        duration: 20,
-        ease: 'none',
-        repeat: -1,
-      });
+      tl.to(icon, { 
+        rotation: -360, 
+        duration: 20, 
+        ease: "none" 
+      }, 0);
     });
 
     return () => {
+      window.removeEventListener('resize', handleResize);
       gsap.killTweensOf(container);
       gsap.killTweensOf(iconElements);
+      tl.kill();
     };
-  }, [displayIcons.length]);
+  }, [displayIcons.length, totalIcons]);
 
   return (
-    <OrbitContainer ref={containerRef}>
+    <div ref={containerRef} className="orbit-container">
       {displayIcons.map((icon, index) => {
-        const angle = angleStep * index;
         return (
-          <IconWrapper 
+          <div 
             key={icon.id || index} 
-            angle={angle}
             className="orbit-icon"
           >
-            <IconImage src={icon.src} alt={icon.alt} />
-          </IconWrapper>
+            <img 
+              src={icon.src} 
+              alt={icon.alt} 
+              className="orbit-icon-image"
+            />
+          </div>
         );
       })}
-    </OrbitContainer>
+    </div>
   );
 };
 
-// Styled Components
-const OrbitContainer = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-`;
-
-const IconWrapper = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 56px;
-  height: 56px;
-  margin: -28px 0 0 -28px;
-  
-  /* Posicionamiento en círculo perfecto - Solo posición inicial */
-  transform: 
-    rotate(${props => props.angle}deg) 
-    translate(240px) 
-    rotate(-${props => props.angle}deg);
-  
-  /* Responsive - Tablet */
-  @media (max-width: 1024px) {
-    width: 48px;
-    height: 48px;
-    margin: -24px 0 0 -24px;
-    
-    transform: 
-      rotate(${props => props.angle}deg) 
-      translate(200px) 
-      rotate(-${props => props.angle}deg);
-  }
-  
-  /* Responsive - Mobile */
-  @media (max-width: 640px) {
-    width: 40px;
-    height: 40px;
-    margin: -20px 0 0 -20px;
-    
-    transform: 
-      rotate(${props => props.angle}deg) 
-      translate(170px) 
-      rotate(-${props => props.angle}deg);
-  }
-`;
-
-const IconImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  
-  &:hover {
-    transform: scale(1.2);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
-    background: rgba(255, 255, 255, 0.2);
-  }
-`;
+// GSAP optimizado con:
+// - Posicionamiento dinámico usando trigonometría
+// - Timeline para animaciones coordinadas
+// - Responsive automático sin media queries
 
 export default OrbitingIcons;

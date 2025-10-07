@@ -1,38 +1,27 @@
 import React, { useEffect, useRef } from "react";
-import sobre from "../../styles/sobremi.module.css";
-import SobremiItem from "./SobremiItem.jsx";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { 
-  Code, 
-  Database, 
-  Globe, 
-  Smartphone, 
-  Server, 
+import {
+  Code,
+  Database,
+  Server,
   Terminal,
   GitBranch,
   Cpu,
   Zap,
-  Shield,
   Layers,
   Palette,
   Github,
   FileText,
   Monitor,
   Cloud,
-  Wifi,
-  HardDrive,
   Settings,
-  Lock,
-  Rocket,
-  Puzzle,
-  Box,
   Activity,
   Award,
   Target,
-  TrendingUp
+  TrendingUp,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -41,153 +30,138 @@ const skills = [
   {
     id: 1,
     name: "HTML",
-    img: "/icons/html.webp",
     category: "Frontend",
     icon: FileText,
     color: "text-orange-500",
     bgColor: "bg-orange-500/10",
-    borderColor: "border-orange-500/20"
+    borderColor: "border-orange-500/20",
   },
   {
     id: 2,
     name: "CSS",
-    img: "/icons/css.webp",
     category: "Frontend",
     icon: Palette,
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
-    borderColor: "border-blue-500/20"
+    borderColor: "border-blue-500/20",
   },
   {
     id: 3,
     name: "SASS",
-    img: "/icons/sass.webp",
     category: "Frontend",
     icon: Layers,
     color: "text-pink-500",
     bgColor: "bg-pink-500/10",
-    borderColor: "border-pink-500/20"
+    borderColor: "border-pink-500/20",
   },
   {
     id: 4,
     name: "JavaScript",
-    img: "/icons/javascript.webp",
     category: "Frontend",
     icon: Code,
     color: "text-yellow-500",
     bgColor: "bg-yellow-500/10",
-    borderColor: "border-yellow-500/20"
+    borderColor: "border-yellow-500/20",
   },
   {
     id: 5,
     name: "React",
-    img: "/icons/react.webp",
     category: "Frontend",
     icon: Cpu,
     color: "text-cyan-500",
     bgColor: "bg-cyan-500/10",
-    borderColor: "border-cyan-500/20"
+    borderColor: "border-cyan-500/20",
   },
   {
     id: 6,
     name: "Node.js",
-    img: "/icons/nodejs.webp",
     category: "Backend",
     icon: Server,
     color: "text-green-500",
     bgColor: "bg-green-500/10",
-    borderColor: "border-green-500/20"
+    borderColor: "border-green-500/20",
   },
   {
     id: 7,
     name: "Express",
-    img: "/icons/express.webp",
     category: "Backend",
     icon: Terminal,
     color: "text-gray-500",
     bgColor: "bg-gray-500/10",
-    borderColor: "border-gray-500/20"
+    borderColor: "border-gray-500/20",
   },
   {
     id: 8,
     name: "MongoDB",
-    img: "/icons/mongodb.webp",
     category: "Database",
     icon: Database,
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
-    borderColor: "border-emerald-500/20"
+    borderColor: "border-emerald-500/20",
   },
   {
     id: 9,
     name: "Vercel",
-    img: "/icons/vercel.webp",
     category: "Deployment",
     icon: Cloud,
     color: "text-purple-500",
     bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/20"
+    borderColor: "border-purple-500/20",
   },
   {
     id: 10,
     name: "Git",
-    img: "/icons/git.webp",
     category: "Tools",
     icon: GitBranch,
     color: "text-red-500",
     bgColor: "bg-red-500/10",
-    borderColor: "border-red-500/20"
+    borderColor: "border-red-500/20",
   },
   {
     id: 11,
     name: "GitHub",
-    img: "/icons/github.webp",
     category: "Tools",
     icon: Github,
     color: "text-gray-400",
     bgColor: "bg-gray-500/10",
-    borderColor: "border-gray-500/20"
+    borderColor: "border-gray-500/20",
   },
   {
     id: 12,
     name: "Tailwind",
-    img: "/icons/tailwind.webp",
     category: "Frontend",
     icon: Zap,
     color: "text-teal-500",
     bgColor: "bg-teal-500/10",
-    borderColor: "border-teal-500/20"
+    borderColor: "border-teal-500/20",
   },
   {
     id: 13,
     name: "Postman",
-    img: "/icons/postman.webp",
     category: "Tools",
     icon: Settings,
     color: "text-orange-400",
     bgColor: "bg-orange-500/10",
-    borderColor: "border-orange-500/20"
+    borderColor: "border-orange-500/20",
   },
   {
     id: 14,
     name: "Adobe Photoshop",
-    img: "/icons/Adobe_Photoshop.webp",
     category: "Design",
     icon: Monitor,
     color: "text-blue-400",
     bgColor: "bg-blue-500/10",
-    borderColor: "border-blue-500/20"
+    borderColor: "border-blue-500/20",
   },
   {
     id: 15,
     name: "Adobe Premiere",
-    img: "/icons/Premiere-Pro.webp",
     category: "Design",
     icon: Activity,
     color: "text-purple-400",
     bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/20"
-  }
+    borderColor: "border-purple-500/20",
+  },
 ];
 
 const DESCRIPTION = [
@@ -212,23 +186,25 @@ const Sobremi = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animación del título principal
-      gsap.fromTo(titleRef.current, 
+      gsap.fromTo(
+        titleRef.current,
         { y: 100, opacity: 0 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          duration: 1.2, 
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.2,
           ease: "power3.out",
           scrollTrigger: {
             trigger: titleRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Animación del contenido
-      gsap.fromTo(contentRef.current,
+      gsap.fromTo(
+        contentRef.current,
         { y: 50, opacity: 0 },
         {
           y: 0,
@@ -239,13 +215,14 @@ const Sobremi = () => {
           scrollTrigger: {
             trigger: contentRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Animación de las skills
-      gsap.fromTo(skillsRef.current?.children,
+      gsap.fromTo(
+        skillsRef.current?.children,
         { y: 30, opacity: 0, scale: 0.8 },
         {
           y: 0,
@@ -257,8 +234,8 @@ const Sobremi = () => {
           scrollTrigger: {
             trigger: skillsRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
     }, sectionRef);
@@ -267,15 +244,15 @@ const Sobremi = () => {
   }, []);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      id="sobremi" 
+      id="sobremi"
       className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.05)_50%,transparent_75%,transparent_100%)] dark:bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.1)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px]"></div>
-      
+
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
@@ -286,7 +263,7 @@ const Sobremi = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
+              animationDuration: `${2 + Math.random() * 3}s`,
             }}
           />
         ))}
@@ -299,7 +276,7 @@ const Sobremi = () => {
             {t("Sobremi.sobre")}
           </h2>
           <div className="text-lg lg:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-            <span className="text-cyan-400 font-bold text-2xl">4+ </span> 
+            <span className="text-cyan-400 font-bold text-2xl">4+ </span>
             {t("Sobremi.subsobre")}
           </div>
         </div>
@@ -318,7 +295,7 @@ const Sobremi = () => {
 
             <div className="space-y-4">
               {DESCRIPTION.map((description, index) => (
-                <div 
+                <div
                   key={index}
                   className="group relative p-4 bg-gray-100/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:bg-gray-100/70 dark:hover:bg-slate-800/70"
                 >
@@ -355,7 +332,10 @@ const Sobremi = () => {
             </div>
 
             {/* Skills Grid */}
-            <div ref={skillsRef} className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+            <div
+              ref={skillsRef}
+              className="grid grid-cols-2 lg:grid-cols-3 gap-3"
+            >
               {skills.map((skill) => {
                 const IconComponent = skill.icon;
                 return (
@@ -364,7 +344,9 @@ const Sobremi = () => {
                     className={`group relative p-3 rounded-lg border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer ${skill.bgColor} ${skill.borderColor} hover:shadow-cyan-500/20`}
                   >
                     <div className="flex flex-col items-center text-center space-y-2">
-                      <div className={`w-6 h-6 ${skill.color} transition-transform duration-300 group-hover:scale-110`}>
+                      <div
+                        className={`w-6 h-6 ${skill.color} transition-transform duration-300 group-hover:scale-110`}
+                      >
                         <IconComponent className="w-full h-full" />
                       </div>
                       <span className="font-semibold text-gray-900 dark:text-white text-xs group-hover:text-cyan-400 transition-colors duration-300">
@@ -374,7 +356,7 @@ const Sobremi = () => {
                         {skill.category}
                       </span>
                     </div>
-                    
+
                     {/* Hover Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
@@ -386,15 +368,21 @@ const Sobremi = () => {
             <div className="grid grid-cols-3 gap-3 pt-6">
               <div className="text-center p-3 bg-gray-100/50 dark:bg-slate-800/50 rounded-lg border border-gray-200/50 dark:border-slate-700/50">
                 <div className="text-xl font-bold text-cyan-400">15+</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Technologies</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Technologies
+                </div>
               </div>
               <div className="text-center p-3 bg-gray-100/50 dark:bg-slate-800/50 rounded-lg border border-gray-200/50 dark:border-slate-700/50">
                 <div className="text-xl font-bold text-green-400">2+</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Years</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Years
+                </div>
               </div>
               <div className="text-center p-3 bg-gray-100/50 dark:bg-slate-800/50 rounded-lg border border-gray-200/50 dark:border-slate-700/50">
                 <div className="text-xl font-bold text-purple-400">∞</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Passion</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Passion
+                </div>
               </div>
             </div>
           </div>

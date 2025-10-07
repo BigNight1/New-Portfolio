@@ -4,7 +4,7 @@ import { Github } from "./Icons/github.jsx";
 import { Linkedin } from "./Icons/Linkedim.jsx";
 import { useTranslation } from "react-i18next";
 import { Gmail } from "./Icons/gmail.jsx";
-import styled from "styled-components";
+// Eliminado styled-components
 import { gsap } from "gsap";
 import FloatingIcons from "./FloatingIcons";
 import OrbitingIcons from "./OrbitingIcons";
@@ -107,9 +107,9 @@ const Presentacion = () => {
               </div>
             </div>
 
-            <Description className="hero-description font-['Inter'] text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+            <div className="hero-description font-['Inter'] text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0 text-center lg:text-left px-4 sm:px-0">
               {t("Presentacion.description")}
-            </Description>
+            </div>
 
             {/* Botones About y CV - Solo visibles en móvil después de la descripción */}
             <div className="hero-buttons flex flex-row gap-4 justify-center lg:hidden">
@@ -134,6 +134,7 @@ const Presentacion = () => {
             <div className="social-links flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start">
               <a
                 href="https://github.com/BigNight1"
+                aria-label="GitHub de Edu Armas"
                 target="__BLANK"
                 alt="GitHub"
                 className="group rounded-full border border-gray-300 dark:border-gray-600 flex justify-center items-center gap-x-2 py-2 px-4 sm:py-3 sm:px-6 bg-white/80 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-700 hover:scale-105 hover:shadow-lg transition-all duration-300 backdrop-blur-sm"
@@ -195,7 +196,7 @@ const Presentacion = () => {
               {/* Tu imagen con efectos modernos */}
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl transition-transform duration-500 lg:group-hover:scale-105">
                 <img
-                  src="/User/Edu_armas.jpg"
+                  src="/User/Edu_armas.webp"
                   alt="Edu Armas"
                   className="w-full h-full object-cover object-center rounded-full"
                 />
@@ -217,26 +218,6 @@ const Presentacion = () => {
   );
 };
 
-const Mobile = styled.div`
-  @media (max-width: 623px) {
-    flex-direction: column;
-    a {
-      margin: 6px 0;
-    }
-  }
-`;
-
-const Description = styled.div`
-  @media (max-width: 667px) {
-    padding: 0 1rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0 0.5rem;
-    font-size: 0.85rem;
-  }
-`;
+// Eliminado styled-components - usando Tailwind CSS
 
 export default Presentacion;

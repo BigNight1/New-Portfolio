@@ -62,6 +62,7 @@ const Footer = () => {
             <div className="flex justify-center sm:justify-end gap-4 mb-4">
               <a
                 href="https://github.com/BigNight1"
+                aria-label="GitHub de Edu Armas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-200/50 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-cyan-500/20 hover:border hover:border-cyan-400/50 transition-all duration-300"

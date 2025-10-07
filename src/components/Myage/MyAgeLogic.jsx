@@ -1,22 +1,29 @@
-// myAgeLogic.js
+// myAgeLogic.js - Optimizado sin Moment.js
 import { useState, useEffect } from "react";
-import moment from "moment";
 
 const useMyAgeLogic = (fechaNacimiento) => {
   const [edad, setEdad] = useState(0);
 
   useEffect(() => {
     const calcularEdad = () => {
-      const fechaNacimientoMoment = moment(fechaNacimiento, "YYYY-MM-DD", true);
-      if (fechaNacimientoMoment.isValid()) {
-        const hoy = moment();
-        const edadCalculada = hoy.diff(fechaNacimientoMoment, "years");
+      const fechaNac = new Date(fechaNacimiento);
+      const hoy = new Date();
+      
+      if (!isNaN(fechaNac.getTime())) {
+        let edadCalculada = hoy.getFullYear() - fechaNac.getFullYear();
+        const mesDiferencia = hoy.getMonth() - fechaNac.getMonth();
+        
+        if (mesDiferencia < 0 || (mesDiferencia === 0 && hoy.getDate() < fechaNac.getDate())) {
+          edadCalculada--;
+        }
+        
         setEdad(edadCalculada);
       }
     };
 
     calcularEdad();
-    const interval = setInterval(calcularEdad, 1000);
+    // Solo recalcular una vez al día, no cada segundo
+    const interval = setInterval(calcularEdad, 24 * 60 * 60 * 1000);
 
     return () => clearInterval(interval);
   }, [fechaNacimiento]);
