@@ -8,7 +8,6 @@ import { Gmail } from "./Icons/gmail.jsx";
 import { gsap } from "gsap";
 import FloatingIcons from "./FloatingIcons";
 import OrbitingIcons from "./OrbitingIcons";
-import OptimizedImage from "./OptimizedImage";
 
 const Presentacion = () => {
   const { t } = useTranslation();
@@ -201,7 +200,7 @@ const Presentacion = () => {
             <div className="hero-image relative group">
               {/* Tu imagen con efectos modernos */}
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl transition-transform duration-500 lg:group-hover:scale-105">
-                <OptimizedImage
+                <img
                   src="/User/Edu_armas288x288.webp"
                   srcSet="
                     /User/Edu_armas120x120.webp 120w,
