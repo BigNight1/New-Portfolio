@@ -38,11 +38,11 @@
     }
   ],
   "Presentacion": {
-    "presentation": "Hey, I'm Edu",
+    "greeting": "Hey, I'm ",
     "subtitle": "Programmer Full Stack",
     "description": "Full stack web developer with experience in web application design and development using front-end and back-end technologies. Expert in creating interactive and functional solutions.",
     "boton1": "About",
-    "boton2": "CV",
+    "boton2": "Download CV",
     "link-cv": "/CV/CV_Edu_Armas_English.pdf"
   },
   "Sobremi": {

@@ -39,11 +39,11 @@
   ],
 
   "Presentacion": {
-    "presentation": "Hola,Soy Edu",
+    "greeting": "Hola, Soy ",
     "subtitle": "Programador Full Stack",
     "description": "Desarrollador web full stack con experiencia en diseño y desarrollo de aplicaciones web utilizando tecnologías front-end y back-end. Experto en crear soluciones interactivas y funcionales.",
     "boton1": "Sobre Mi",
-    "boton2": "HV",
+    "boton2": "Descargar HV",
     "link-cv": "/CV/CV_Edu_Armas_Spañish.pdf"
   },
   "Sobremi": {

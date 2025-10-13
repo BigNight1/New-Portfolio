@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { Github } from "./Icons/github.jsx";
 import { Linkedin } from "./Icons/Linkedim.jsx";
@@ -13,6 +13,9 @@ const Presentacion = () => {
   const { t } = useTranslation();
   const heroRef = useRef(null);
   const leftContentRef = useRef(null);
+  const typewriterRef = useRef(null);
+  const [displayText, setDisplayText] = useState("");
+  const [nameText, setNameText] = useState("");
   const rightImageRef = useRef(null);
 
   useEffect(() => {
@@ -73,6 +76,78 @@ const Presentacion = () => {
     return () => ctx.revert();
   }, []);
 
+  // Actualizar solo el saludo cuando cambia el idioma
+  useEffect(() => {
+    setDisplayText(t("Presentacion.greeting")); // "Hola, Soy " o "Hey, I'm "
+  }, [t]);
+
+  // Efecto de máquina de escribir para "Edu" con repetición (solo se ejecuta una vez)
+  useEffect(() => {
+    const name = "Edu"; // Nombre fijo, no cambia con el idioma
+
+    setNameText("");
+
+    let currentTimeline = null;
+
+    const animateTypewriter = () => {
+      // Limpiar timeline anterior si existe
+      if (currentTimeline) {
+        currentTimeline.kill();
+      }
+
+      currentTimeline = gsap.timeline();
+
+      // Escribir "Edu"
+      currentTimeline.to(
+        {},
+        {
+          duration: 0.4,
+          onUpdate: function () {
+            const progress = this.progress();
+            const currentLength = Math.floor(progress * name.length);
+            setNameText(name.substring(0, currentLength));
+          },
+          ease: "none",
+        }
+      );
+
+      // Pausa antes de borrar
+      currentTimeline.to({}, { duration: 2 });
+
+      // Borrar "Edu" con transición suave
+      currentTimeline.to(
+        {},
+        {
+          duration: 0.3,
+          onUpdate: function () {
+            const progress = this.progress();
+            const currentLength = Math.floor((1 - progress) * name.length);
+            setNameText(name.substring(0, currentLength));
+          },
+          ease: "none",
+        }
+      );
+
+      // Pausa más larga antes de repetir para suavizar la transición
+      currentTimeline.to({}, { duration: 1.5 });
+
+      // Repetir la animación
+      currentTimeline.call(animateTypewriter);
+    };
+
+    // Iniciar después de las animaciones iniciales
+    const startDelay = gsap.delayedCall(1.5, animateTypewriter);
+
+    return () => {
+      // Limpiar todo al desmontar el componente
+      startDelay.kill();
+      if (currentTimeline) {
+        currentTimeline.kill();
+      }
+      gsap.killTweensOf({});
+    };
+  }, []); // Sin dependencias - se ejecuta solo una vez al montar
+
   return (
     <div
       ref={heroRef}
@@ -94,14 +169,25 @@ const Presentacion = () => {
             className="space-y-4 sm:space-y-6 lg:space-y-8 order-last lg:order-first mt-4 lg:mt-0"
           >
             <div className="text-black dark:text-white text-center lg:text-left">
-              <h1 className="hero-title text-4xl sm:text-5xl lg:text-7xl font-bold py-1 font-['Inter'] tracking-tight">
-                {t("Presentacion.presentation")}
+              <h1 className="hero-title text-4xl sm:text-5xl lg:text-6xl font-bold py-1 font-SpaceMono tracking-tight">
+                <span ref={typewriterRef}>
+                  {displayText}
+                  <span style={{ color: "#92c5fe" }}>{nameText}</span> 
+                  {(nameText.length > 0 || displayText.length > 0) && (
+                    <span
+                      className="typewriter-cursor animate-pulse"
+                      style={{ color: "#92c5fe" }}
+                    >
+                      |
+                    </span>
+                  )}
+                </span>
               </h1>
               <div className="text-lg sm:text-xl dark:text-white">
                 <h2 className="hero-subtitle font-['Inter'] font-medium text-gray-600 dark:text-gray-300">
                   <span className="font-['JetBrains_Mono'] font-bold text-green-500">
-                    {"</>"}
-                  </span>{" "}
+                    {"< Hello World />"}
+                  </span>
                   {t("Presentacion.subtitle")}
                 </h2>
               </div>
