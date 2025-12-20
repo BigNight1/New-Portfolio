@@ -51,9 +51,9 @@
     "conoceme": "Know me better",
     "boton_proyecto": "Project",
     "descripcion": {
-      "1": "Hi! I'm Edu, a passionate Full Stack programmer with an exciting journey in the world of web development. I started my journey focusing on the frontend, exploring the wonders of HTML, CSS and JavaScript. My curiosity led me to immerse myself in an intensive program at CoderHouse, where I not only consolidated my existing knowledge but also acquired a high-quality Full Stack skill set.",
-      "2": "During my training at CoderHouse, I embarked on the challenging but rewarding career of Full Stack. As I progressed through the career, I was faced with ecommerce-centric projects where I was able to apply my skills to create solid and functional user experiences. The backend became my next challenge, and although it was a more complicated path, I found great satisfaction in overcoming each obstacle.",
-      "3": "My academic achievements in Full Stack were outstanding, and I am now at an exciting point in my career, ready to take my skills into the working world. My expertise lies not only in problem-solving and technical development but also in my love for the challenges I face on every project. I am determined to keep learning and constantly improving my skills to excel in the competitive working world of web development."
+       "1": "Hello! I'm Edu, a Full Stack Developer with real experience in productive e-commerce projects, modern web applications, and 2D video games. My profile combines solid frontend, scalable backend, and a business- and end-user-oriented mindset.",
+       "2": "I have led full stack projects from concept to production deployment, working with technologies such as React, TypeScript, Node.js, NestJS, and MongoDB. I specialize in building complete systems that include authentication, payment gateways, administrative panels, real-time notifications, and complex data management.",
+       "3": "In addition, I have experience working in international teams using agile methodologies, quickly adapting to new environments, tools, and challenges. I am passionate about automation, continuous improvement, and creating digital products that truly add value to users and businesses."
     }
   },
   "Mishabilidades": {

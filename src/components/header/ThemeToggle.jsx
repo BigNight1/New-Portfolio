@@ -70,7 +70,7 @@ const ThemeToggle = ({ theme, toggleTheme, imageSource }) => {
           ref={iconRef}
           src={imageSource}
           alt={theme}
-          className="w-6 h-6 absolute inset-0"
+          className="w-6 h-6 absolute inset-0 object-contain"
         />
       </div>
 
