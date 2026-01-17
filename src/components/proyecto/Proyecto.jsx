@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Github, Eye, Rocket, Star, ArrowRight } from "lucide-react";
+import { Github, Eye, ArrowRight } from "lucide-react";
 import OptimizedImage from "../OptimizedImage";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -97,15 +97,11 @@ const Proyecto = () => {
         {/* Header Section */}
         <div ref={titleRef} className="text-center mb-12 lg:mb-20">
           <div className="flex sm:flex-row items-center justify-center gap-4 mb-6">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-              <Rocket className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-            </div>
+            
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-800 dark:text-white bg-gradient-to-r from-gray-800 via-cyan-400 to-blue-500 dark:from-white dark:via-cyan-400 dark:to-blue-500 bg-clip-text text-transparent">
           {t("Proyecto.title-project")}
         </h2>
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
-              <Star className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-            </div>
+            
           </div>
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Proyectos que demuestran mi pasión por la programación y la
