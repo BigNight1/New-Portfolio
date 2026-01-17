@@ -5,6 +5,7 @@ import Presentacion from "./components/Presentacion.jsx";
 import Sobremi from "./components/Sobremi/Sobremi.jsx";
 import Header from "./components/header/header.jsx";
 import Proyecto from "./components/proyecto/Proyecto.jsx";
+import Skills3D from "./components/Skills3D/Skills3D.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Presentacion />
       <ExperienceSidebar />
       <Sobremi />
+      <Skills3D />
       <Proyecto />
       <Footer />
     </main>

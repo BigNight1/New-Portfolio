@@ -57,7 +57,8 @@
     }
   },
   "Mishabilidades": {
-    "habher": "My skills and tools"
+    "habher": "My skills",
+    "description": "Technologies I master and use in my projects"
   },
   "Proyecto": {
     "title-project": "PROJECTS",

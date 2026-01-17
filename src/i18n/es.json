@@ -58,7 +58,8 @@
     }
   },
   "Mishabilidades": {
-    "habher": "Mis habilidades y herramientas"
+    "habher": "Mis habilidades",
+    "description": "Tecnologías que domino y utilizo en mis proyectos"
   },
   "Proyecto": {
     "title-project": "PROYECTOS",
