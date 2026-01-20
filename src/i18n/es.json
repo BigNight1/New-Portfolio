@@ -9,135 +9,262 @@
   },
   "Experiencia": {
     "title": "Experiencia",
-    "technologies": "Tecnologías"
+    "technologies": "Tecnologías",
+    "responsibilities": "Responsabilidades"
   },
   "EXPERIENCE": [
     {
       "id": 1,
-      "date": "2025 - Actualidad",
+      "date": "2025 - Presente",
       "title": "Full Stack Developer",
-      "company": "Proyecto \"E-commerce Venta de Polos\" - Lima, Perú",
-      "description": "Desarrollo full stack de una plataforma de e-commerce completa con pasarela de pagos, carrito de compras, autenticación JWT, panel de administración, sistema de reseñas, carga de imágenes, notificaciones y gestión de inventario.",
-      "technologies": ["React", "TypeScript", "Context API", "Tailwind CSS", "Node.js", "NestJS", "Express", "MongoDB", "JWT", "Passport", "Izipay", "Vercel"]
+      "company": "Plataforma CRM - Startup (Chile) | Remoto",
+      "type": "Startup / Remoto",
+      "description": "Trabajando como Full Stack Developer en un entorno de startup, contribuyendo al desarrollo de una plataforma CRM basada en arquitectura de microservicios. Colaboro en tareas de frontend y backend, adaptándome rápidamente a nuevas funcionalidades y requisitos del sistema mientras me enfoco en escalabilidad, confiabilidad y diseño de sistemas limpios.",
+      "responsibilities": [
+        "Desarrollo de funcionalidades frontend y backend",
+        "Colaboración en arquitectura basada en microservicios",
+        "Participación en discusiones técnicas y planificación de sprints",
+        "Adaptación rápida a requisitos cambiantes",
+        "Enfoque en estabilidad y escalabilidad del sistema"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "REST APIs",
+        "Microservicios",
+        "Tailwind CSS",
+        "Vercel",
+        "Docker"
+      ]
     },
     {
       "id": 2,
-      "date": "Febrero 2025 - Mayo 2025",
-      "title": "Video Game Developer",
-      "company": "Unity 2D (Bonsai.meme) - Remoto",
-      "description": "Desarrollo de videojuego 2D top-down con Unity en colaboración con equipo extranjero usando metodologías ágiles. Coordinación semanal con cliente internacional y optimización de experiencia para PC y móviles.",
-      "technologies": ["Unity", "C#", "2D Game Development", "Metodologías Ágiles", "Optimización Multiplataforma"]
+      "date": "2025",
+      "title": "Full Stack Developer (Freelance)",
+      "company": "iLockersApp - Plataforma SaaS para Lavanderías | Remoto (México)",
+      "type": "Proyecto Freelance Pagado",
+      "description": "Desarrollo de extremo a extremo de una plataforma SaaS multi-tenant para negocios de lavandería. Este proyecto freelance pagado involucró comunicación directa con el cliente, propiedad completa de las decisiones de arquitectura y entrega de un sistema listo para producción en un corto período de tiempo.",
+      "responsibilities": [
+        "Diseñé e implementé arquitectura full stack escalable",
+        "Desarrollé sistema multi-tenant con acceso basado en roles (cliente, dueño, admin)",
+        "Integré pagos con Stripe y planes de suscripción",
+        "Implementé actualizaciones de pedidos en tiempo real usando Socket.IO",
+        "Generé facturas PDF y notificaciones automatizadas por WhatsApp",
+        "Construí sitios web personalizables por negocio con enrutamiento dinámico",
+        "Manejé despliegue, configuración de dominio y soporte post-lanzamiento"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Redux Toolkit",
+        "Socket.IO",
+        "Stripe",
+        "Firebase Auth",
+        "Cloudinary",
+        "Material-UI"
+      ]
     },
     {
       "id": 3,
+      "date": "2021 - Presente",
+      "title": "Desarrollador Web Freelance",
+      "company": "Remoto | Clientes de Perú e Internacionales",
+      "type": "Freelance",
+      "description": "Servicios de desarrollo web freelance para clientes locales e internacionales, entregando sitios web y sistemas web listos para producción con un fuerte enfoque en calidad de UI, confiabilidad del backend y soporte a largo plazo para clientes.",
+      "responsibilities": [
+        "Desarrollo de landing pages, sitios web corporativos y sistemas web",
+        "Desarrollo de UI personalizada usando Tailwind CSS y CSS puro",
+        "Desarrollo backend con REST APIs y MongoDB",
+        "Despliegue en Vercel con configuración de dominio personalizado",
+        "Mantenimiento continuo, mejoras y soporte al cliente",
+        "Comunicación clara con clientes a través de explicaciones, visuales y demos en video"
+      ],
+      "technologies": [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "CSS",
+        "Node.js",
+        "MongoDB",
+        "Vercel"
+      ]
+    },
+    {
+      "id": 4,
       "date": "2021 - 2023",
-      "title": "Full Stack Career",
+      "title": "Carrera Full Stack",
       "company": "Coderhouse - Buenos Aires, Argentina",
-      "description": "Finalicé la carrera Full Stack con formación intensiva en Frontend (HTML5, CSS3, JavaScript ES6+, React) y Backend (Node.js, Express, bases de datos). Realicé proyectos prácticos de e-commerce y aplicaciones web. Como autodidacta amplié conocimientos en NestJS, TypeScript, DevOps, videojuegos y proyectos en producción.",
-      "technologies": ["HTML5", "CSS3", "JavaScript ES6+", "React", "Node.js", "Express", "MongoDB", "NestJS", "TypeScript", "DevOps"]
+      "type": "Educación",
+      "description": "Completé un programa intensivo de desarrollo Full Stack que cubre tecnologías frontend y backend. Fortalecí habilidades a través de proyectos prácticos y continué expandiendo conocimientos de forma independiente en sistemas de nivel de producción y aplicaciones del mundo real.",
+      "responsibilities": [
+        "Desarrollo frontend con HTML5, CSS3, JavaScript y React",
+        "Desarrollo backend con Node.js, Express y bases de datos",
+        "Desarrollo de proyectos de e-commerce y aplicaciones web",
+        "Autoaprendizaje en TypeScript, NestJS, DevOps y desarrollo de videojuegos"
+      ],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "TypeScript",
+        "NestJS"
+      ]
     }
   ],
 
   "Presentacion": {
     "greeting": "Hola, Soy ",
     "subtitle": "Programador Full Stack",
-    "description": "Desarrollador web full stack con experiencia en diseño y desarrollo de aplicaciones web utilizando tecnologías front-end y back-end. Experto en crear soluciones interactivas y funcionales.",
+    "description": "Desarrollador Full Stack especializado en ecosistemas SaaS y e-commerce. Mi enfoque principal es el diseño de sistemas mantenibles bajo patrones de arquitectura sólida, asegurando que el código crezca al ritmo del negocio.",
     "boton1": "Sobre Mi",
     "boton2": "Descargar HV",
     "link-cv": "/CV/CV_Edu_Armas_Spanish.pdf"
   },
   "Sobremi": {
     "sobre": "Sobre mi",
-    "subsobre": "año de experiencia programando paginas web y creando paginas interesantes",
-    "conoceme": "Conóceme más",
-    "boton_proyecto": "Proyecto",
+    "subsobre": "De líneas de código a soluciones de negocio escalables",
+    "conoceme": "Conóceme mejor",
+    "boton_proyecto": "Ver proyectos",
     "descripcion": {
-      "1": "¡Hola! Soy Edu, Desarrollador Full Stack con experiencia real en proyectos productivos de e-commerce, aplicaciones web modernas y videojuegos 2D. Mi perfil combina frontend sólido, backend escalable y una mentalidad orientada a negocio y usuario final.",
-      "2": "He liderado proyectos full stack desde la idea hasta el despliegue en producción, trabajando con tecnologías como React, TypeScript, Node.js, NestJS y MongoDB. Me especializo en construir sistemas completos que incluyen autenticación, pasarelas de pago, paneles administrativos, notificaciones en tiempo real y manejo de datos complejos.",
-      "3": "Además, cuento con experiencia trabajando en equipos internacionales bajo metodologías ágiles, adaptándome rápidamente a nuevos entornos, herramientas y desafíos. Me apasiona la automatización, la mejora continua y crear productos digitales que realmente aporten valor a usuarios y empresas."
+      "1": "Soy Edu, desarrollador con experiencia en startups y clientes internacionales. Me especializo en dar vida a plataformas SaaS y CRMs que están en producción constante, donde la calidad del código y la estructura no son negociables.",
+      "2": "Actualmente, contribuyo al desarrollo de un CRM en una startup chilena, trabajando en un entorno de microservicios. Mi rol se centra en equilibrar la entrega de nuevas funcionalidades con la estabilidad de una arquitectura limpia y desacoplada.",
+      "3": "Me integro fácilmente en equipos ágiles, aportando no solo código, sino una visión técnica enfocada en la separación de responsabilidades y la comunicación clara. Mi meta es construir software robusto que sobreviva al paso del tiempo y a las exigencias del mercado."
     }
   },
   "Mishabilidades": {
     "habher": "Mis habilidades y herramientas"
   },
-  "Proyecto": {
-    "title-project": "PROYECTOS",
-    "boton": "Vista Previa",
-    "verMas": "Ver más",
-    "menos": "mostrar menos",
-    "code": "codigo"
-  },
-  "PROYECTOS": [
-    {
-      "id": 1,
-      "name": "Página Web ArmalyTech",
-      "description": "Página web dedicada a la reparación de celulares y otros servicios técnicos, ofreciendo contacto directo con el técnico.",
-      "skills": ["React", "Vite", "Styled-components", "tailwind", "flowbite"],
-      "img": "/proyectos-img/Armalytech.webp",
-      "alt": "Pagina web ArmalyTech",
-      "href": "https://www.armalytech.com/",
-      "code": "https://github.com/BigNight1/WebSite-Armaly"
-    },
-    {
-      "id": 2,
-      "name": "Ecommerce de Polos - Sistema Completo",
-      "description": "Plataforma de ecommerce completa para venta de polos con sistema de administración, notificaciones en tiempo real, pasarela de pagos Tupay, gestión de pedidos y landing page personalizable. Incluye autenticación múltiple (Google, usuarios normales y administradores), carrito de compras, sistema de notificaciones estilo Facebook y panel administrativo completo.",
-      "skills": [
-        "React",
-        "TypeScript", 
-        "Tailwind CSS",
-        "NestJS",
-        "MongoDB",
-        "Mongoose",
-        "Firebase Auth",
-        "React Router",
-        "Zustand",
-        "Axios",
-        "Lucide React",
-        "Downshift",
-        "Vite",
-        "Node.js",
-        "Express",
-        "JWT",
-        "Tupay Payment Gateway",
-        "Email Service",
-        "File Upload",
-        "Admin Dashboard",
-        "Real-time Notifications",
-        "Order Management",
-        "Product Management",
-        "User Management",
-        "SaaS Architecture"
-      ],
-      "img": "/proyectos-img/proyecto-polos.webp",
-      "alt": "Sistema de ecommerce completo para venta de polos",
-      "href": "https://venta-de-polo.vercel.app/",
-      "code": "https://github.com/BigNight1/venta-de-polo"
-    },
-    {
-      "id": 3,
-      "name": "Lords of Memes and Magic 2.0",
-      "description": "Proyecto desarrollado para la comunidad de bonsai.meme. Juego 2D en Unity que combinaba mecánicas de construcción, exploración y batallas con integración a su propia criptomoneda. Aunque el proyecto quedó en prototipo por falta de presupuesto y cierre de la iniciativa cripto, permitió implementar sistemas de tilemaps, gestión de recursos, animaciones y UI en Unity.",
-      "skills": [
-        "Unity 2D",
-        "C#",
-        "Tilemaps",
-        "Animaciones",
-        "Sistemas de recursos",
-        "UI / HUD",
-        "Gestión de escenas",
-        "Game Design",
-        "Integración con blockchain (planificada)"
-      ],
-      "estado": "En desarrollo / Cancelado",
-      "img": "/proyectos-img/lords-memes-magic.webp",
-      "alt": "Captura de Lords of Memes and Magic 2.0",
-      "href": "https://bignight1.itch.io/lords-of-memes-and-magic",
-      "code": "https://github.com/BigNight1/Lords-of-Memes-and-Magic-2.0"
-    }
-  ],
-  "Copy": {
-    "copyright": "Copyright 2023. Todos los Derechos de ser un Programador"
+  "ProjectsGrid": {
+    "title": "Proyectos",
+    "subtitle": "De código a soluciones reales",
+    "projects": [
+      {
+        "order": 1,
+        "sectionNumber": 1,
+        "layout": "main",
+        "name": "Ecommerce de Polos - Sistema Completo",
+        "description": "Plataforma de ecommerce completa para venta de polos con sistema de administración, notificaciones en tiempo real, pasarela de pagos Tupay, gestión de pedidos y landing page personalizable. Incluye autenticación múltiple (Google, usuarios normales y administradores), carrito de compras, sistema de notificaciones estilo Facebook y panel administrativo completo.",
+        "skills": [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "NestJS",
+          "MongoDB",
+          "Mongoose",
+          "Firebase Auth",
+          "React Router",
+          "Zustand",
+          "Axios",
+          "Lucide React",
+          "Downshift",
+          "Vite",
+          "Node.js",
+          "Express",
+          "JWT",
+          "Tupay Payment Gateway",
+          "Email Service",
+          "File Upload",
+          "Admin Dashboard",
+          "Real-time Notifications",
+          "Order Management",
+          "Product Management",
+          "User Management",
+          "SaaS Architecture"
+        ],
+        "img": "/proyectos-img/proyecto-polos.webp",
+        "alt": "Sistema de ecommerce completo para venta de polos",
+        "href": "https://venta-de-polo.vercel.app/",
+        "code": "https://github.com/BigNight1/venta-de-polo"
+      },
+      {
+        "order": 2,
+        "sectionNumber": 2,
+        "layout": "b",
+        "name": "Página Web ArmalyTech",
+        "description": "Página web dedicada a la reparación de celulares y otros servicios técnicos, ofreciendo contacto directo con el técnico.",
+        "skills": ["React", "Vite", "Styled-components", "Tailwind CSS", "Flowbite"],
+        "img": "/proyectos-img/Armalytech.webp",
+        "alt": "Pagina web ArmalyTech",
+        "href": "https://www.armalytech.com/",
+        "code": "https://github.com/BigNight1/WebSite-Armaly"
+      },
+      {
+        "order": 3,
+        "sectionNumber": 3,
+        "layout": "c1",
+        "name": "Formatos Integraficos",
+        "description": "Landing page desarrollada para una imprenta autorizada por SUNAT en Perú, orientada a la captación de clientes que requieren impresión de formatos fiscales como boletas, proformas y vouchers POS. El sistema implementa una arquitectura de componentes modulares con Astro, integrando un formulario de cotización que redirige automáticamente a WhatsApp con los datos precargados. Incluye optimizaciones SEO con meta tags para Open Graph y Twitter Cards, generación automática de sitemap, y una estructura responsive con Tailwind CSS. Técnicamente relevante por su enfoque en rendimiento mediante generación estática y la integración directa con canales de comunicación del negocio.",
+        "skills": [
+          "Astro",
+          "Tailwind CSS",
+          "WhatsApp API",
+          "HTML",
+          "CSS",
+          "SEO",
+          "Responsive Design",
+          "Static Site Generation"
+        ],
+        "img": "/proyectos-img/formatos-integraficos.webp",
+        "alt": "Landing page Formatos Integraficos",
+        "href": "https://formatosintergraficos.pe/",
+        "code": "#"
+      },
+      {
+        "order": 4,
+        "sectionNumber": 4,
+        "layout": "c2",
+        "name": "Generador QR Gratis",
+        "description": "Plataforma web gratuita y accesible para generar códigos QR personalizados. Permite crear QR para URLs, WhatsApp, WiFi y texto plano, con opciones de personalización de tamaño, color y logo. Incluye exportación en múltiples formatos (PNG, JPG, PDF, SVG), soporte multiidioma (ES, EN, PT), modo oscuro/claro y diseño responsive. Desarrollada con React + TypeScript y Node.js + Express, optimizada para ser rápida y fácil de usar para cualquier persona sin costo alguno.",
+        "skills": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "Express",
+          "Vite",
+          "Tailwind CSS",
+          "QRCode",
+          "Sharp",
+          "jsPDF",
+          "i18next",
+          "Responsive Design",
+          "Dark Mode"
+        ],
+        "img": "/proyectos-img/qrgratis.webp",
+        "alt": "Generador QR Gratis - Plataforma web",
+        "href": "https://www.qrgratis.es/",
+        "code": "#"
+      },
+      {
+        "order": 5,
+        "sectionNumber": 5,
+        "layout": "d",
+        "name": "Lords of Memes and Magic",
+        "description": "Proyecto desarrollado para la comunidad de bonsai.meme. Juego 2D en Unity que combinaba mecánicas de construcción, exploración y batallas con integración a su propia criptomoneda. Aunque el proyecto quedó en prototipo por falta de presupuesto y cierre de la iniciativa cripto, permitió implementar sistemas de tilemaps, gestión de recursos, animaciones y UI en Unity.",
+        "skills": [
+          "Unity 2D",
+          "C#",
+          "Tilemaps",
+          "Animaciones",
+          "Sistemas de recursos",
+          "UI / HUD",
+          "Gestión de escenas",
+          "Game Design",
+          "Integración con blockchain (planificada)"
+        ],
+        "estado": "En desarrollo / Cancelado",
+        "img": "/proyectos-img/lords-memes-magic.webp",
+        "alt": "Captura de Lords of Memes and Magic",
+        "href": "https://bignight1.itch.io/lords-of-memes-and-magic",
+        "code": "https://github.com/BigNight1/Lords-of-Memes-and-Magic-2.0"
+      }
+    ]
   },
   "Footer": {
     "description": "Desarrollador Full Stack apasionado por crear experiencias digitales innovadoras y soluciones tecnológicas de calidad.",

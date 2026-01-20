@@ -5,7 +5,7 @@ const OptimizedImage = ({
   alt, 
   className = '', 
   loading = 'lazy',
-  fetchPriority = 'auto',
+  fetchpriority = 'auto',
   placeholder = true,
   srcSet = null,
   sizes = null,
@@ -50,7 +50,7 @@ const OptimizedImage = ({
           sizes={sizes}
           alt={alt}
           loading={loading}
-          fetchPriority={fetchPriority}
+          fetchpriority={fetchpriority}
           onLoad={() => setIsLoaded(true)}
           className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'

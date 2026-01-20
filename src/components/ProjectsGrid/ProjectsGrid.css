@@ -1,0 +1,722 @@
+.projects-grid-section {
+  width: 100%;
+  /* El padding viene del CSS global de section (6rem 2rem) */
+  /* El fondo se maneja con Tailwind en el JSX */
+}
+
+.projects-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* Proyecto Principal - Columna izquierda, 2 filas */
+.project-main {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* Proyecto B - Columna derecha arriba (ocupa 2 columnas) */
+.project-b {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+/* Proyecto C1 - Columna derecha abajo izquierda */
+.project-c1 {
+  grid-column: 2;
+  grid-row: 2;
+  min-height: 200px;
+}
+
+/* Proyecto C2 - Columna derecha abajo derecha */
+.project-c2 {
+  grid-column: 3;
+  grid-row: 2;
+  min-height: 200px;
+}
+
+/* Proyecto D - Ancho completo */
+.project-d {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  min-height: 250px;
+}
+
+/* Estilos comunes para los proyectos */
+.project-item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay oscuro para mejorar legibilidad del texto sobre imágenes (50-65% opacidad) */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+.project-item:hover .project-overlay {
+  opacity: 0.7;
+}
+
+/* C1 y C2: mantener overlay pero más oscuro para legibilidad */
+.project-c1 .project-overlay,
+.project-c2 .project-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.project-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.project-item:hover::before {
+  opacity: 1;
+}
+
+/* C1 y C2 sin overlay hover */
+.project-c1::before,
+.project-c2::before {
+  display: none;
+}
+
+/* Hover mejorado: zoom sutil + elevación */
+.project-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.project-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-section-number {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover .project-section-number,
+.project-sub-item:hover .project-section-number {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Título más fuerte - gana sobre la imagen */
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Subtítulo corto */
+.project-subtitle {
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.4;
+  opacity: 0.95;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Chips de tecnologías en cards */
+.project-skills-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+
+.project-skill-chip {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+/* Consistencia visual: 2 tonos base máximo */
+/* Tono 1: Púrpura/Azul (Principal, B, D) */
+.project-main,
+.project-b,
+.project-d {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Tono 2: Azul/Cian (C1, C2) */
+.project-c1,
+.project-c2 {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Cuando hay imagen de fondo, usar cover y aumentar saturación */
+.project-item[style*="background-image"] {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: saturate(1.3) brightness(0.85);
+  transition: filter 0.4s ease;
+}
+
+.project-item[style*="background-image"]:hover {
+  filter: saturate(1.4) brightness(0.9);
+}
+
+/* C1 y C2: overlay oscuro para legibilidad */
+.project-c1 .project-overlay,
+.project-c2 .project-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.project-item[style*="background-image"] .project-overlay,
+.project-sub-item[style*="background-image"] .project-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              backdrop-filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-overlay.modal-open {
+  opacity: 1;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  position: relative;
+  transform: scale(0.85);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 0.3s ease;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Dark mode para modal */
+.dark .modal-content {
+  background: rgb(15 23 42); /* slate-900 */
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+}
+
+.modal-overlay.modal-open .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Header fijo */
+.modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 1.5rem 2rem;
+  flex-shrink: 0;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dark .modal-header {
+  background: rgb(15 23 42); /* slate-900 */
+  border-bottom: 1px solid rgb(51 65 85); /* slate-700 */
+}
+
+.modal-header-content {
+  flex: 1;
+  padding: 0;
+}
+
+.modal-header h2 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+  color: #1a1a1a;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.dark .modal-header h2 {
+  color: white;
+}
+
+.modal-close-btn {
+  position: relative;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #666;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+  font-weight: 300;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.modal-close-btn:hover {
+  background: #e8e8e8;
+  border-color: #d0d0d0;
+  color: #333;
+  opacity: 1;
+}
+
+.dark .modal-close-btn {
+  background: rgb(51 65 85); /* slate-700 */
+  border-color: rgb(71 85 105); /* slate-600 */
+  color: #cbd5e1; /* slate-300 */
+  opacity: 0.7;
+}
+
+.dark .modal-close-btn:hover {
+  background: rgb(71 85 105); /* slate-600 */
+  border-color: rgb(100 116 139); /* slate-500 */
+  color: #e2e8f0; /* slate-200 */
+  opacity: 1;
+}
+
+/* Contenido scrolleable */
+.modal-body {
+  padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 transparent;
+  min-height: 0;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+.modal-image {
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: #f8f8f8;
+}
+
+.modal-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Preview grande (hero) - mejor uso del espacio */
+.modal-image-hero {
+  width: 100%;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 1.5rem;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: #f8f8f8;
+  max-height: 40vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .modal-image-hero {
+  background: rgb(30 41 59); /* slate-800 */
+}
+
+.modal-image-hero img {
+  width: 100%;
+  height: auto;
+  max-height: 38vh;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.modal-status {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .modal-status {
+  background: rgb(51 65 85); /* slate-700 */
+  color: #cbd5e1; /* slate-300 */
+}
+
+.modal-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  transition: color 0.3s ease;
+}
+
+.dark .modal-description {
+  color: #cbd5e1; /* slate-300 */
+}
+
+/* Ajustes para prose en modal */
+.modal-body .prose {
+  margin-bottom: 0;
+}
+
+.modal-body .prose p {
+  margin-bottom: 1.5rem;
+}
+
+.modal-skills {
+  margin-bottom: 1.5rem;
+}
+
+.modal-skills h3 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: color 0.3s ease;
+}
+
+.dark .modal-skills h3 {
+  color: #cbd5e1; /* slate-300 */
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-tag {
+  background: #f0f0f0;
+  color: #555;
+  padding: 0.3rem 0.65rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.skill-tag:hover {
+  background: #e8e8e8;
+  transform: translateY(-1px);
+  border-color: #d0d0d0;
+}
+
+.dark .skill-tag {
+  background: rgb(51 65 85); /* slate-700 */
+  color: #cbd5e1; /* slate-300 */
+  border-color: rgb(71 85 105); /* slate-600 */
+}
+
+.dark .skill-tag:hover {
+  background: rgb(71 85 105); /* slate-600 */
+  border-color: rgb(100 116 139); /* slate-500 */
+}
+
+.modal-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.modal-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.modal-link-primary {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.modal-link-primary:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.dark .modal-link-primary {
+  color: #818cf8; /* indigo-400 */
+  border-color: #818cf8;
+}
+
+.dark .modal-link-primary:hover {
+  background: #818cf8;
+  color: white;
+}
+
+.modal-link-secondary {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.modal-link-secondary:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.dark .modal-link-secondary {
+  color: #818cf8; /* indigo-400 */
+  border-color: #818cf8;
+}
+
+.dark .modal-link-secondary:hover {
+  background: #818cf8;
+  color: white;
+}
+
+/* Animaciones Premium - Usando transiciones para mejor control */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid-section {
+    padding: 1rem;
+  }
+
+  .projects-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .project-c1 {
+    grid-column: 1;
+  }
+
+  .project-c2 {
+    grid-column: 1;
+  }
+
+  /* Todos los proyectos ocupan una columna en mobile */
+  .project-main {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .project-b {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .project-c1 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .project-c2 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .project-d {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .project-item {
+    min-height: 150px;
+    padding: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .project-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .project-skill-chip {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .modal-header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-close-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+
+  .modal-image-hero {
+    max-height: 30vh;
+    min-height: 180px;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid-section {
+    padding: 0.5rem;
+  }
+
+  .project-item {
+    min-height: 120px;
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .project-skill-chip {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.4rem;
+  }
+}

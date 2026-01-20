@@ -295,7 +295,7 @@ const Presentacion = () => {
                   "
                   sizes="(max-width: 600px) 120px, (max-width: 1200px) 288px, 600px"
                   alt="Edu Armas"
-                  fetchPriority="high"
+                  fetchpriority="high"
                   loading="eager"
                   className="w-full h-full object-cover object-center rounded-full"
                 />

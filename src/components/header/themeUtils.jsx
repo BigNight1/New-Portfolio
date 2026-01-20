@@ -12,7 +12,7 @@ export const LINKS = [
   },
   {
     link: "Proyectos",
-    to: "proyecto",
+    to: "projectsgrid",
   },
 ];
 

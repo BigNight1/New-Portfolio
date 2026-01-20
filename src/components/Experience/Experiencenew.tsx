@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Briefcase } from 'lucide-react';
+import { Briefcase, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -11,7 +11,9 @@ interface Experience {
   date: string;
   title: string;
   company: string;
+  type?: string;
   description: string;
+  responsibilities?: string[];
   technologies: string[];
 }
 
@@ -185,9 +187,28 @@ export default function ExperienceSidebar() {
                     </p>
                     
                     {/* Description */}
-                    <p className="text-sm sm:text-base text-gray-800 dark:text-slate-300 mb-6 leading-relaxed">
-                      {exp.description}
-                    </p>
+                    <div className="prose prose-sm dark:prose-invert max-w-none mb-6">
+                      <p className="text-sm sm:text-base text-gray-800 dark:text-slate-300 leading-relaxed">
+                        {exp.description}
+                      </p>
+                    </div>
+                    
+                    {/* Responsibilities */}
+                    {exp.responsibilities && exp.responsibilities.length > 0 && (
+                      <div className="mb-6 prose prose-sm dark:prose-invert max-w-none">
+                        <h4 className="text-xs font-semibold text-gray-600 dark:text-slate-400 uppercase tracking-wider mb-3 not-prose">
+                          {t('Experiencia.responsibilities')}
+                        </h4>
+                        <ul className="space-y-2">
+                          {exp.responsibilities.map((responsibility, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <CheckCircle2 className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0 not-prose" />
+                              <span>{responsibility}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                     
                     {/* Technologies */}
                     <div className="mb-6">
@@ -215,7 +236,7 @@ export default function ExperienceSidebar() {
       </div>
 
       {/* DESKTOP VERSION - Diseño con sidebar */}
-      <div className="hidden lg:block min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900" id="experiencia">
+      <div className="hidden lg:block min-h-screen bg-gradient-to-br from-slate-100 via-blue-50/40 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900" id="experiencia">
         <div ref={containerRef} className="h-screen flex max-w-7xl mx-auto">
           {/* Sidebar */}
           <div className="w-1/3 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-slate-800 dark:to-slate-700 p-12 flex flex-col justify-center">
@@ -266,9 +287,28 @@ export default function ExperienceSidebar() {
                   <p className="text-lg text-cyan-400 mb-6">
                     {exp.company}
                   </p>
-                  <p className="text-lg text-gray-800 dark:text-slate-300 mb-6 leading-relaxed">
-                    {exp.description}
-                  </p>
+                  <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
+                    <p className="text-gray-800 dark:text-slate-300 leading-relaxed">
+                      {exp.description}
+                    </p>
+                  </div>
+                  
+                  {/* Responsibilities */}
+                  {exp.responsibilities && exp.responsibilities.length > 0 && (
+                    <div className="mb-8 text-left max-w-2xl mx-auto prose prose-lg dark:prose-invert max-w-none">
+                      <h4 className="text-sm font-semibold text-gray-600 dark:text-slate-400 uppercase tracking-wider mb-4 text-center not-prose">
+                        {t('Experiencia.responsibilities')}
+                      </h4>
+                      <ul className="space-y-3">
+                        {exp.responsibilities.map((responsibility, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <CheckCircle2 className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0 not-prose" />
+                            <span>{responsibility}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   
                   {/* Technologies */}
                   <div className="mb-8">
