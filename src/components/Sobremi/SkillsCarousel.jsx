@@ -95,7 +95,6 @@ const SkillsCarousel = () => {
     { name: 'Postman', icon: techIcons['Postman'] },
     { name: 'Jira', icon: techIcons['Jira'] },
     { name: 'Vercel', icon: techIcons['Vercel'] },
-    { name: 'Firebase', icon: techIcons['Firebase'] }
   ];
 
   const duplicateArray = (arr) => [...arr, ...arr, ...arr];
