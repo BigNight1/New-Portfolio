@@ -108,16 +108,10 @@ const Footer = () => {
         <div className="border-t border-gray-200/50 dark:border-slate-700/50 my-8"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
           <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-xs sm:text-sm text-center sm:text-left">
             <span>&copy; 2026</span>
             <span>{t("Footer.rights")}</span>
-          </div>
-
-          <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-xs sm:text-sm">
-            <span>{t("Footer.made_with")}</span>
-            <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 animate-pulse" />
-            <span>{t("Footer.and_coffee")}</span>
           </div>
         </div>
       </div>

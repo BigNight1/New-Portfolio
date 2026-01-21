@@ -185,7 +185,7 @@ const Presentacion = () => {
               </h1>
               <div className="text-lg sm:text-xl dark:text-white">
                 <h2 className="hero-subtitle font-['Inter'] font-medium text-gray-600 dark:text-gray-300">
-                  <span className="font-['JetBrains_Mono'] font-bold text-green-500">
+                  <span className="font-['JetBrains_Mono'] font-bold text-[#4F46E5] dark:text-[#818CF8]">
                     {"< Hello World />"}
                   </span>
                   {t("Presentacion.subtitle")}
@@ -200,7 +200,7 @@ const Presentacion = () => {
             {/* Botones About y CV - Solo visibles en móvil después de la descripción */}
             <div className="hero-buttons flex flex-row gap-4 justify-center lg:hidden">
               <a href="#sobremi" aria-label={t("AriaLabels.about_section")}>
-                <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
+                <button className="bg-[#6366F1] dark:bg-[#4F46E5] hover:bg-[#4f46e5] dark:hover:bg-[#4338ca] text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6366F1]/25 dark:hover:shadow-[#4F46E5]/25">
                   {t("Presentacion.boton1")}
                 </button>
               </a>
@@ -211,7 +211,7 @@ const Presentacion = () => {
                 aria-label="Descargar CV de Edu Armas"
                 className="inline-block"
               >
-                <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
+                <button className="bg-[#6366F1] dark:bg-[#4F46E5] hover:bg-[#4f46e5] dark:hover:bg-[#4338ca] text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6366F1]/25 dark:hover:shadow-[#4F46E5]/25">
                   {t("Presentacion.boton2")}
                 </button>
               </a>
@@ -260,7 +260,7 @@ const Presentacion = () => {
             {/* Botones About y CV - Solo visibles en desktop al final */}
             <div className="hero-buttons hidden lg:flex gap-4 justify-center lg:justify-start">
               <a href="#sobremi" aria-label={t("AriaLabels.about_section")}>
-                <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
+                <button className="bg-[#6366F1] dark:bg-[#4F46E5] hover:bg-[#4f46e5] dark:hover:bg-[#4338ca] text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6366F1]/25 dark:hover:shadow-[#4F46E5]/25">
                   {t("Presentacion.boton1")}
                 </button>
               </a>
@@ -271,7 +271,7 @@ const Presentacion = () => {
                 aria-label="Descargar CV de Edu Armas"
                 className="inline-block"
               >
-                <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
+                <button className="bg-[#6366F1] dark:bg-[#4F46E5] hover:bg-[#4f46e5] dark:hover:bg-[#4338ca] text-white font-['Inter'] font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6366F1]/25 dark:hover:shadow-[#4F46E5]/25">
                   {t("Presentacion.boton2")}
                 </button>
               </a>

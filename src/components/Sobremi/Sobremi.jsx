@@ -102,7 +102,6 @@ const Sobremi = () => {
             {t("Sobremi.sobre")}
           </h2>
           <div className="text-lg lg:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-            <span className="text-cyan-400 font-bold text-2xl">4+ </span>
             {t("Sobremi.subsobre")}
           </div>
         </div>
@@ -133,13 +132,13 @@ const Sobremi = () => {
             </div>
 
             <div className="pt-4">
-              <a href="#proyecto" aria-label={t("AriaLabels.projects_section")}>
-                <button className="group relative px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+              <a href="#projects" aria-label={t("AriaLabels.projects_section")}>
+                <button className="group relative px-6 py-3 bg-[#6366F1] dark:bg-[#4F46E5] hover:bg-[#4f46e5] dark:hover:bg-[#4338ca] text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#6366F1]/25 dark:hover:shadow-[#4F46E5]/25">
                   <span className="relative z-10 flex items-center gap-2">
                     <Target className="w-4 h-4" />
                     {t("Sobremi.boton_proyecto")}
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-[#4F46E5] dark:bg-[#4338ca] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
               </a>
             </div>

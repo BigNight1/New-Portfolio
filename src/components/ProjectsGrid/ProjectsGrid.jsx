@@ -103,7 +103,7 @@ const ProjectsGrid = () => {
   };
 
   return (
-    <section id="projectsgrid" className="projects-grid-section relative min-h-screen bg-gradient-to-br from-slate-100 via-blue-50/40 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
+    <section id="projects" className="projects-grid-section relative min-h-screen bg-gradient-to-br from-slate-100 via-blue-50/40 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12">
         {/* Header Section */}
         <div className="text-center mb-12">
