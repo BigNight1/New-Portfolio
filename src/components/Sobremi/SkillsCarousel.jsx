@@ -99,11 +99,11 @@ const SkillsCarousel = () => {
 
   const duplicateArray = (arr) => [...arr, ...arr, ...arr];
 
-  const getCSSVariables = (element) => {
+  const getTrackMetrics = (element) => {
     const computedStyle = window.getComputedStyle(element);
-    const itemWidth = parseFloat(computedStyle.getPropertyValue('--item-width')) || 110;
-    const itemGap = parseFloat(computedStyle.getPropertyValue('--item-gap')) || 20;
-    return { itemWidth, itemGap };
+    const gap = parseFloat(computedStyle.gap) || parseFloat(computedStyle.columnGap) || 20;
+    const scrollWidth = element.scrollWidth;
+    return { scrollWidth, gap };
   };
 
   const cleanupCarousel = (timelineRef, draggableRef) => {
@@ -121,9 +121,13 @@ const SkillsCarousel = () => {
   const initCarousel = (trackRef, itemCount, timelineRef, draggableRef) => {
     if (!trackRef.current) return;
 
-    const { itemWidth, itemGap } = getCSSVariables(trackRef.current);
-    const itemTotalWidth = itemWidth + itemGap;
-    const totalWidth = itemCount * itemTotalWidth;
+    // Medir directamente del DOM para precisión exacta
+    const { scrollWidth, gap } = getTrackMetrics(trackRef.current);
+    
+
+    const totalWidth = (scrollWidth + gap) / 3;
+    
+    if (totalWidth <= 0) return;
     
     const animationDuration = itemCount * 2; 
 

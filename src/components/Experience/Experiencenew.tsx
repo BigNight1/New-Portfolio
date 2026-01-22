@@ -17,10 +17,29 @@ interface Experience {
   technologies: string[];
 }
 
+const ResponsibilitiesList = ({ responsibilities, title }: { responsibilities: string[], title: string }) => {
+  return (
+    <div className="mb-8 text-left mx-auto prose prose-lg dark:prose-invert max-w-none">
+      <h4 className="text-sm font-semibold text-gray-600 dark:text-slate-400 uppercase tracking-wider mb-4 text-center not-prose">
+        {title}
+      </h4>
+      <ul className="space-y-3">
+        {responsibilities.map((responsibility, idx) => (
+          <li key={idx} className="flex items-start gap-3">
+            <CheckCircle2 className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0 not-prose" />
+            <span className="text-gray-700 dark:text-slate-300">{responsibility}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
 export default function ExperienceSidebar() {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const mobileCardsRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<ScrollTrigger | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   
   const experiences: Experience[] = t('EXPERIENCE', { returnObjects: true }) as Experience[];
@@ -33,7 +52,7 @@ export default function ExperienceSidebar() {
     if (!isDesktop) return;
 
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({
+      triggerRef.current = ScrollTrigger.create({
         trigger: containerRef.current,
         start: 'top top',
         end: `+=${experiences.length * 800}`,
@@ -52,6 +71,22 @@ export default function ExperienceSidebar() {
 
     return () => ctx.revert();
   }, [experiences.length]);
+
+  const handleItemClick = (index: number) => {
+    if (!triggerRef.current || !triggerRef.current.start || !triggerRef.current.end) return;
+    
+    // Calcular posición de scroll basada en el progreso del ScrollTrigger
+    const start = triggerRef.current.start;
+    const end = triggerRef.current.end;
+    const totalDistance = end - start;
+    const progress = index / (experiences.length - 1);
+    const targetScroll = start + totalDistance * progress;
+
+    window.scrollTo({
+      top: targetScroll,
+      behavior: 'smooth'
+    });
+  };
 
   // GSAP para Mobile - Timeline con scroll
   useEffect(() => {
@@ -249,6 +284,7 @@ export default function ExperienceSidebar() {
               {experiences.map((exp, index) => (
                 <div
                   key={exp.id}
+                  onClick={() => handleItemClick(index)}
                   className={`transition-all duration-500 cursor-pointer ${
                     activeIndex === index
                       ? 'opacity-100 translate-x-0'
@@ -270,11 +306,11 @@ export default function ExperienceSidebar() {
           </div>
 
           {/* Content Panel */}
-          <div className="w-2/3 p-12 flex items-center justify-center relative overflow-hidden">
+          <div className="w-2/3 p-12 flex justify-center relative overflow-hidden">
             {experiences.map((exp, index) => (
               <div
                 key={exp.id}
-                className={`absolute inset-0 p-12 flex flex-col justify-center items-center transition-all duration-700 ${
+                className={`absolute inset-0 pt-32 px-12 pb-12 flex flex-col justify-start items-center transition-all duration-700 ${
                   activeIndex === index
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8 pointer-events-none'
@@ -295,19 +331,10 @@ export default function ExperienceSidebar() {
                   
                   {/* Responsibilities */}
                   {exp.responsibilities && exp.responsibilities.length > 0 && (
-                    <div className="mb-8 text-left max-w-2xl mx-auto prose prose-lg dark:prose-invert max-w-none">
-                      <h4 className="text-sm font-semibold text-gray-600 dark:text-slate-400 uppercase tracking-wider mb-4 text-center not-prose">
-                        {t('Experiencia.responsibilities')}
-                      </h4>
-                      <ul className="space-y-3">
-                        {exp.responsibilities.map((responsibility, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0 not-prose" />
-                            <span>{responsibility}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <ResponsibilitiesList 
+                      responsibilities={exp.responsibilities} 
+                      title={t('Experiencia.responsibilities')} 
+                    />
                   )}
                   
                   {/* Technologies */}

@@ -42,29 +42,23 @@
       "id": 2,
       "date": "2025",
       "title": "Full Stack Developer (Freelance)",
-      "company": "iLockersApp - Plataforma SaaS para Lavanderías | Remoto (México)",
-      "type": "Proyecto Freelance Pagado",
-      "description": "Desarrollo de extremo a extremo de una plataforma SaaS multi-tenant para negocios de lavandería. Este proyecto freelance pagado involucró comunicación directa con el cliente, propiedad completa de las decisiones de arquitectura y entrega de un sistema listo para producción en un corto período de tiempo.",
+      "company": "iLockersApp – SaaS Platform for Laundries | Remote",
+      "type": "Paid Freelance Project",
+      "description": "Colaboré con un cliente para evolucionar su código hacia un SaaS multi-tenant escalable. Entregué un panel administrativo completo para que los negocios gestionen sus subdominios, inventario y ventas, asegurando un lanzamiento exitoso.",
       "responsibilities": [
-        "Diseñé e implementé arquitectura full stack escalable",
-        "Desarrollé sistema multi-tenant con acceso basado en roles (cliente, dueño, admin)",
-        "Integré pagos con Stripe y planes de suscripción",
-        "Implementé actualizaciones de pedidos en tiempo real usando Socket.IO",
-        "Generé facturas PDF y notificaciones automatizadas por WhatsApp",
-        "Construí sitios web personalizables por negocio con enrutamiento dinámico",
-        "Manejé despliegue, configuración de dominio y soporte post-lanzamiento"
+        "Desarrollé panel admin para creación dinámica de sitios",
+        "Implementé carritos de compra aislados para cada negocio",
+        "Modernicé el diseño UI/UX recibiendo elogios del cliente",
+        "Refactoricé código existente y añadí funciones en tiempo real",
+        "Realicé pruebas QA y aseguré una entrega final satisfactoria"
       ],
       "technologies": [
         "React",
         "Node.js",
-        "Express",
         "MongoDB",
-        "Redux Toolkit",
-        "Socket.IO",
         "Stripe",
-        "Firebase Auth",
-        "Cloudinary",
-        "Material-UI"
+        "Socket.IO",
+        "Firebase"
       ]
     },
     {

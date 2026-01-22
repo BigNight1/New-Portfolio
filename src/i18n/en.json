@@ -42,29 +42,23 @@
       "id": 2,
       "date": "2025",
       "title": "Full Stack Developer (Freelance)",
-      "company": "iLockersApp - SaaS Platform for Laundries | Remote (Mexico)",
+      "company": "iLockersApp – SaaS Platform for Laundries | Remote",
       "type": "Paid Freelance Project",
-      "description": "End-to-end development of a multi-tenant SaaS platform for laundry businesses. This paid freelance project involved direct communication with the client, full ownership of architecture decisions, and delivery of a production-ready system in a short timeframe.",
+      "description": "Collaborated with a client to evolve their codebase into a scalable multi-tenant SaaS. Delivered a comprehensive admin panel for businesses to manage their own subdomains, inventory, and sales, ensuring a high-quality product launch.",
       "responsibilities": [
-        "Designed and implemented scalable full stack architecture",
-        "Developed multi-tenant system with role-based access (customer, owner, admin)",
-        "Integrated Stripe payments and subscription plans",
-        "Implemented real-time order updates using Socket.IO",
-        "Generated PDF invoices and automated WhatsApp notifications",
-        "Built customizable websites per business with dynamic routing",
-        "Handled deployment, domain setup, and post-launch support"
+        "Developed admin panel for dynamic site & subdomain creation",
+        "Implemented isolated shopping carts for each business",
+        "Revamped UI/UX design receiving positive client feedback",
+        "Refactored legacy code & added real-time capabilities",
+        "Conducted QA testing & ensured successful project delivery"
       ],
       "technologies": [
         "React",
         "Node.js",
-        "Express",
         "MongoDB",
-        "Redux Toolkit",
-        "Socket.IO",
         "Stripe",
-        "Firebase Auth",
-        "Cloudinary",
-        "Material-UI"
+        "Socket.IO",
+        "Firebase"
       ]
     },
     {
