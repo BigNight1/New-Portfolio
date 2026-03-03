@@ -64,14 +64,14 @@
         "id": 1,
         "title": "Web pages",
         "description": "Landing pages, corporate sites and blogs. Responsive design, SEO and fast delivery.",
-        "img": "/proyectos-img/Armalytech.webp",
+        "img": "/proyectos-img/armalytech.webp",
         "imgAlt": "ArmalyTech website"
       },
       {
         "id": 2,
         "title": "Desktop and web applications",
         "description": "Desktop and web apps: dashboards, internal tools and SaaS ready to scale.",
-        "img": "/proyectos-img/qrgratis.webp",
+        "img": "/proyectos-img/App-Escritorio.webp",
         "imgAlt": "QR Generator web app"
       },
       {
@@ -85,21 +85,21 @@
         "id": 4,
         "title": "APIs and backends",
         "description": "REST APIs, databases, integrations and clean architecture with clear documentation.",
-        "img": "/icons/nodejs.webp",
+        "img": "/proyectos-img/makez-landing.webp",
         "imgAlt": "Node.js backend"
       },
       {
         "id": 5,
         "title": "Code help",
         "description": "Code review, refactoring, debugging and mentoring. I unblock issues and improve your code quality.",
-        "img": "/icons/react.webp",
+        "img": "/proyectos-img/easylaundry.webp",
         "imgAlt": "React development"
       },
       {
         "id": 6,
         "title": "Maintenance and support",
         "description": "Updates, improvements and ongoing support. Your projects always up to date and secure.",
-        "img": "/icons/git.webp",
+        "img": "/proyectos-img/qrgratis.webp",
         "imgAlt": "Code maintenance"
       }
     ]
@@ -275,7 +275,7 @@
         "name": "ArmalyTech Website",
         "description": "A website dedicated to cell phone repair and other technical services, offering direct contact with the technician.",
         "skills": ["React", "Vite", "Styled-components", "Tailwind CSS", "Flowbite"],
-        "img": "/proyectos-img/Armalytech.webp",
+        "img": "/proyectos-img/armalytech.webp",
         "alt": "ArmalyTech website",
         "href": "https://www.armalytech.com/",
         "code": "https://github.com/BigNight1/WebSite-Armaly"

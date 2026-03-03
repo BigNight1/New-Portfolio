@@ -64,15 +64,15 @@
         "id": 1,
         "title": "Páginas web",
         "description": "Landing pages, sitios corporativos y blogs. Diseño responsive, SEO y entrega rápida.",
-        "img": "/proyectos-img/Armalytech.webp",
+        "img": "/proyectos-img/armalytech.webp",
         "imgAlt": "Página web ArmalyTech"
       },
       {
         "id": 2,
         "title": "Aplicaciones para escritorio y web",
         "description": "Apps de escritorio y web apps: dashboards, herramientas internas y SaaS listos para escalar.",
-        "img": "/proyectos-img/qrgratis.webp",
-        "imgAlt": "Aplicación web Generador QR"
+        "img": "/proyectos-img/App-Escritorio.webp",
+        "imgAlt": "Aplicación de escritorio y web"
       },
       {
         "id": 3,
@@ -85,21 +85,21 @@
         "id": 4,
         "title": "APIs y backends",
         "description": "REST APIs, bases de datos, integraciones y arquitectura limpia con documentación clara.",
-        "img": "/icons/nodejs.webp",
-        "imgAlt": "Backend Node.js"
+        "img": "/proyectos-img/makez-landing.webp",
+        "imgAlt": "Backend y APIs para landing"
       },
       {
         "id": 5,
         "title": "Ayuda con tu código",
         "description": "Code review, refactor, debugging y mentoring. Resuelvo bloqueos y mejoro la calidad de tu código.",
-        "img": "/icons/react.webp",
+        "img": "/proyectos-img/easylaundry.webp",
         "imgAlt": "Desarrollo con React"
       },
       {
         "id": 6,
         "title": "Mantenimiento y soporte",
         "description": "Actualizaciones, mejoras y soporte continuo. Tus proyectos siempre al día y seguros.",
-        "img": "/icons/git.webp",
+        "img": "/proyectos-img/qrgratis.webp",
         "imgAlt": "Mantenimiento de código"
       }
     ]
@@ -276,7 +276,7 @@
         "name": "Página Web ArmalyTech",
         "description": "Página web dedicada a la reparación de celulares y otros servicios técnicos, ofreciendo contacto directo con el técnico.",
         "skills": ["React", "Vite", "Styled-components", "Tailwind CSS", "Flowbite"],
-        "img": "/proyectos-img/Armalytech.webp",
+        "img": "/proyectos-img/armalytech.webp",
         "alt": "Pagina web ArmalyTech",
         "href": "https://www.armalytech.com/",
         "code": "https://github.com/BigNight1/WebSite-Armaly"

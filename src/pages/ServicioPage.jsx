@@ -19,16 +19,9 @@ const ServicioPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50/40 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 pt-20">
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex flex-col items-center justify-center px-4 py-16 sm:py-24 overflow-hidden">
+      <div className="relative min-h-[60vh] flex flex-col items-center justify-center px-4 py-16 sm:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.08),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.12),transparent_50%)]" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="mb-8 flex justify-center">
-            <img
-              src="/others/Bignight.webp"
-              alt=""
-              className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl object-cover shadow-xl border-2 border-cyan-400/30 dark:border-cyan-500/30"
-            />
-          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white mb-4 bg-gradient-to-r from-gray-800 via-cyan-400 to-blue-500 dark:from-white dark:via-cyan-400 dark:to-blue-500 bg-clip-text text-transparent">
             {t("ServicioPage.hero_title")}
           </h1>
@@ -46,20 +39,20 @@ const ServicioPage = () => {
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>
-      </section>
+      </div>
 
       {/* Services grid */}
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8 pb-16">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white text-center mb-12 bg-gradient-to-r from-gray-800 via-cyan-400 to-blue-500 dark:from-white dark:via-cyan-400 dark:to-blue-500 bg-clip-text text-transparent">
           {t("ServicioPage.section_title")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pageServices.map((service) => (
             <article
               key={service.id}
-              className="group rounded-2xl overflow-hidden bg-gray-100/50 dark:bg-slate-800/50 border border-gray-200/50 dark:border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+              className="group  overflow-hidden bg-gray-100/50 dark:bg-slate-800/50 border border-gray-200/50 dark:border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
             >
-              <div className="aspect-video overflow-hidden bg-gray-200 dark:bg-slate-700">
+              <div className="overflow-hidden bg-gray-200 dark:bg-slate-700 h-56 sm:h-64">
                 <img
                   src={service.img}
                   alt={service.imgAlt}
