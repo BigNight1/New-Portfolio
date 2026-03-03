@@ -11,6 +11,10 @@ export const LINKS = [
     to: "sobremi",
   },
   {
+    link: "Servicios",
+    to: "servicios",
+  },
+  {
     link: "Proyectos",
     to: "projectsgrid",
   },

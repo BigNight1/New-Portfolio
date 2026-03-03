@@ -2,6 +2,7 @@
   "Menu": {
     "Experiencia": "Experiencia",
     "Sobre Mi": "Sobre Mí",
+    "Servicios": "Servicios",
     "Proyectos": "Proyectos"
   },
   "TiempodeVida": {
@@ -11,6 +12,97 @@
     "title": "Experiencia",
     "technologies": "Tecnologías",
     "responsibilities": "Responsabilidades"
+  },
+  "Servicios": {
+    "title": "Servicios freelance",
+    "subtitle": "Desarrollo full stack a medida: desde la idea hasta producción",
+    "cta": "¿Tienes un proyecto?",
+    "cta_aria": "Ir a contacto",
+    "services": [
+      {
+        "id": 1,
+        "title": "Creación de páginas web",
+        "description": "Landing pages, sitios corporativos y blogs. Diseño responsive, SEO y rápido tiempo de entrega.",
+        "icon": "Globe"
+      },
+      {
+        "id": 2,
+        "title": "Creación de aplicaciones",
+        "description": "Web apps, dashboards y SaaS. Frontend y backend integrados, listos para escalar.",
+        "icon": "Code2"
+      },
+      {
+        "id": 3,
+        "title": "Ayuda con tu código",
+        "description": "Code review, refactor, debugging y mentoring. Resuelvo bloqueos y mejoro la calidad de tu código.",
+        "icon": "Wrench"
+      },
+      {
+        "id": 4,
+        "title": "APIs y backends",
+        "description": "REST APIs, bases de datos e integraciones. Arquitectura limpia y documentación clara.",
+        "icon": "Server"
+      },
+      {
+        "id": 5,
+        "title": "Mantenimiento y soporte",
+        "description": "Actualizaciones, mejoras y soporte continuo. Tus proyectos siempre al día y seguros.",
+        "icon": "Settings"
+      }
+    ]
+  },
+  "ServicioPage": {
+    "hero_title": "Servicios",
+    "hero_subtitle": "Desarrollo full stack a medida: páginas web, aplicaciones, ecommerce y más. Desde la idea hasta producción.",
+    "hero_cta": "Contactar",
+    "hero_cta_aria": "Ir a contacto",
+    "section_title": "Qué puedo hacer por ti",
+    "card_button": "Saber más",
+    "back_to_home": "Volver al inicio",
+    "pageServices": [
+      {
+        "id": 1,
+        "title": "Páginas web",
+        "description": "Landing pages, sitios corporativos y blogs. Diseño responsive, SEO y entrega rápida.",
+        "img": "/proyectos-img/Armalytech.webp",
+        "imgAlt": "Página web ArmalyTech"
+      },
+      {
+        "id": 2,
+        "title": "Aplicaciones para escritorio y web",
+        "description": "Apps de escritorio y web apps: dashboards, herramientas internas y SaaS listos para escalar.",
+        "img": "/proyectos-img/qrgratis.webp",
+        "imgAlt": "Aplicación web Generador QR"
+      },
+      {
+        "id": 3,
+        "title": "Ecommerce",
+        "description": "Tiendas online completas: catálogo, carrito, pagos, panel de administración y notificaciones.",
+        "img": "/proyectos-img/proyecto-polos.webp",
+        "imgAlt": "Ecommerce de polos"
+      },
+      {
+        "id": 4,
+        "title": "APIs y backends",
+        "description": "REST APIs, bases de datos, integraciones y arquitectura limpia con documentación clara.",
+        "img": "/icons/nodejs.webp",
+        "imgAlt": "Backend Node.js"
+      },
+      {
+        "id": 5,
+        "title": "Ayuda con tu código",
+        "description": "Code review, refactor, debugging y mentoring. Resuelvo bloqueos y mejoro la calidad de tu código.",
+        "img": "/icons/react.webp",
+        "imgAlt": "Desarrollo con React"
+      },
+      {
+        "id": 6,
+        "title": "Mantenimiento y soporte",
+        "description": "Actualizaciones, mejoras y soporte continuo. Tus proyectos siempre al día y seguros.",
+        "img": "/icons/git.webp",
+        "imgAlt": "Mantenimiento de código"
+      }
+    ]
   },
   "EXPERIENCE": [
     {

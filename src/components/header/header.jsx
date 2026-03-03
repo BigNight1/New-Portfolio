@@ -1,4 +1,5 @@
 import "../../styles/header.css";
+import { Link } from "react-router-dom";
 import {
   useTheme,
   getImageSource,
@@ -22,18 +23,30 @@ function Header() {
     <nav className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm">
       <div className="nav-content ">
         {/* Web - Live */}
-        <div className="flex gap-1 py-5">
+        <div className="flex gap-1 py-5 items-center">
           <MyAge />
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-2xl text-gray-800 font-black dark:text-[#e8e6e3] lg:block md:block desaparece hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
           >
             BIGNIGHT.DEV
-          </a>
+          </Link>
+          <Link
+            to="/servicio"
+            className="ml-4 px-3 py-1.5 rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-slate-800"
+          >
+            <span className="flex flex-col leading-tight">
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                {t("Menu.Servicios")}
+              </span>
+              <span className="text-[10px] uppercase tracking-wide text-cyan-600 dark:text-cyan-400">
+                freelance
+              </span>
+            </span>
+          </Link>
         </div>
 
         <div className="flex items-center ">
-
           {/* Bandera del idioma actual */}
           {currentLanguage && (
             <Tooltip
@@ -68,7 +81,6 @@ function Header() {
               imageSource={imageSource}
             />
           </Tooltip>
-
         </div>
       </div>
     </nav>
