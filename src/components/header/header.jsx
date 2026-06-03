@@ -7,11 +7,8 @@ import {
   LANGUAGES,
   useLanguage,
 } from "./themeUtils.jsx";
-import MyAge from "../Myage/myage.jsx";
 import { useTranslation } from "react-i18next";
-import ThemeToggle from "./ThemeToggle";
-import Tooltip from "./Tooltip";
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const OVERLAY_DURATION_MS = 160;
 
@@ -26,12 +23,26 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
   const [entered, setEntered] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const exitTimeoutRef = useRef(null);
+  const dropdownRef = useRef(null);
 
-  // Cierra el menú al cambiar de ruta (sin animación)
+  // Cierra dropdown al hacer clic fuera
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Cierra menús al cambiar de ruta
   useEffect(() => {
     setMenuOpen(false);
     setIsExiting(false);
+    setDropdownOpen(false);
   }, [location.pathname]);
 
   // Bloquea scroll cuando el menú está abierto o cerrando
@@ -79,63 +90,69 @@ function Header() {
         <div className="nav-content">
           {/* ── Lado izquierdo ── */}
           <div className="flex gap-1 py-5 items-center">
-            <MyAge />
             <Link
               to="/"
-              className="hidden sm:block text-2xl text-gray-800 font-black dark:text-[#e8e6e3] hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
+              className="text-2xl text-gray-800 font-black dark:text-[#e8e6e3] hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
             >
               BIGNIGHT.DEV
-            </Link>
-            <Link
-              to="/servicio"
-              className="hidden sm:inline-flex ml-4 items-baseline gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
-            >
-              {t("Menu.Servicios")}
-              <span className="text-[10px] uppercase tracking-wider text-cyan-600 dark:text-cyan-400 font-normal">
-                freelance
-              </span>
             </Link>
           </div>
 
           {/* ── Lado derecho ── */}
           <div className="flex items-center">
-            {currentLanguage && (
-              <Tooltip
-                text={currentLanguage.code === "es" ? "Español" : "English"}
-                position="bottom"
+            {/* Dropdown desktop */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                className="ml-1 p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                onClick={() => {
+                  if (window.innerWidth >= 640) {
+                    setDropdownOpen(!dropdownOpen);
+                  } else {
+                    menuOpen ? closeMenu() : setMenuOpen(true);
+                  }
+                }}
+                aria-label={dropdownOpen || menuOpen ? "Cerrar menú" : "Abrir menú"}
               >
-                <div className="relative group mx-2 p-1 rounded-full dark:hover:bg-gray-800 transition-colors duration-300 cursor-pointer">
-                  <div
-                    className="transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-2 group-hover:shadow-xl group-active:scale-95 group-hover:brightness-110"
-                    onClick={toggleLanguage}
-                  >
-                    <img
-                      src={currentLanguage.icon}
-                      alt={currentLanguage.code}
-                      className="w-6 h-6 rounded-full border-2 border-transparent transition-all duration-300"
-                    />
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400/20 to-blue-400/20 opacity-0 transition-opacity duration-300 pointer-events-none" />
-                  </div>
+                <div className={`hamburger-btn ${(dropdownOpen || menuOpen) ? 'hamburger-open' : ''}`}>
+                  <span className="hamburger-line hamburger-line--top" />
+                  <span className="hamburger-line hamburger-line--bottom" />
                 </div>
-              </Tooltip>
-            )}
-            <Tooltip
-              text={theme === "light" ? "Modo Oscuro" : "Modo Claro"}
-              position="bottom"
-            >
-              <ThemeToggle
-                theme={theme}
-                toggleTheme={toggleTheme}
-                imageSource={imageSource}
-              />
-            </Tooltip>
-            <button
-              className="sm:hidden ml-1 p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
-              onClick={() => (menuOpen ? closeMenu() : setMenuOpen(true))}
-              aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
-            >
-              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              </button>
+              <div className={`dropdown-menu ${dropdownOpen ? 'open' : ''}`}>
+                <Link to="/servicio" onClick={() => setDropdownOpen(false)}>
+                  {t("Menu.Servicios")}
+                </Link>
+                <Link to="/calculadora" onClick={() => setDropdownOpen(false)}>
+                  {t("Menu.Calculadora")}
+                </Link>
+                <Link to="/proyectos" onClick={() => setDropdownOpen(false)}>
+                  {t("Menu.Proyectos")}
+                </Link>
+                <Link to="/resumen" onClick={() => setDropdownOpen(false)}>
+                  {t("Menu.Resumen")}
+                </Link>
+                <Link to="/contacto" onClick={() => setDropdownOpen(false)}>
+                  {t("Menu.Contacto")}
+                </Link>
+                <div className="border-t border-gray-100 dark:border-slate-700 flex">
+                  <button
+                    onClick={toggleLanguage}
+                    className="w-1/2 flex items-center justify-center gap-2 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                  >
+                    <img src={currentLanguage?.icon} alt={currentLanguage?.code} className="w-5 h-5 rounded-full" />
+                    <span>{currentLanguage?.code === "es" ? "Español" : "English"}</span>
+                  </button>
+                  <div className="w-px bg-gray-100 dark:bg-slate-700" />
+                  <button
+                    onClick={toggleTheme}
+                    className="w-1/2 flex items-center justify-center gap-2 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                  >
+                    <img src={imageSource} alt={theme} className="w-5 h-5" />
+                    <span>{theme === "light" ? "Oscuro" : "Claro"}</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -176,8 +193,8 @@ function Header() {
             </button>
           </div>
 
-          {/* Servicios: título y debajo "freelance" */}
-          <div className="flex-1 flex flex-col items-center justify-center px-6 min-h-0">
+          {/* Servicios & Calculadora: links en móvil */}
+          <div className="flex-1 flex flex-col items-center justify-center gap-4 px-6 min-h-0">
             <Link
               to="/servicio"
               className="w-full max-w-sm flex flex-col items-center py-4 px-6 rounded-2xl bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 active:scale-[0.98] transition-all"
@@ -186,8 +203,41 @@ function Header() {
               <span className="text-xl font-semibold text-gray-800 dark:text-gray-100">
                 {t("Menu.Servicios")}
               </span>
-              <span className="text-xs uppercase tracking-wider text-cyan-600 dark:text-cyan-400 font-normal mt-0.5">
-                freelance
+            </Link>
+            <Link
+              to="/calculadora"
+              className="w-full max-w-sm flex flex-col items-center py-4 px-6 rounded-2xl bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 active:scale-[0.98] transition-all"
+              onClick={closeMenu}
+            >
+              <span className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                {t("Menu.Calculadora")}
+              </span>
+            </Link>
+            <Link
+              to="/contacto"
+              className="w-full max-w-sm flex flex-col items-center py-4 px-6 rounded-2xl bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 active:scale-[0.98] transition-all"
+              onClick={closeMenu}
+            >
+              <span className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                {t("Menu.Contacto")}
+              </span>
+            </Link>
+            <Link
+              to="/proyectos"
+              className="w-full max-w-sm flex flex-col items-center py-4 px-6 rounded-2xl bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 active:scale-[0.98] transition-all"
+              onClick={closeMenu}
+            >
+              <span className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                {t("Menu.Proyectos")}
+              </span>
+            </Link>
+            <Link
+              to="/resumen"
+              className="w-full max-w-sm flex flex-col items-center py-4 px-6 rounded-2xl bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 active:scale-[0.98] transition-all"
+              onClick={closeMenu}
+            >
+              <span className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                {t("Menu.Resumen")}
               </span>
             </Link>
           </div>

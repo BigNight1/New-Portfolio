@@ -3,7 +3,11 @@
     "Experiencia": "Experience",
     "Sobre Mi": "About",
     "Servicios": "Services",
-    "Proyectos": "Projects"
+    "Proyectos": "Projects",
+    "Calculadora": "Calculator",
+    "Contacto": "Contact",
+    "ContactoBadge": "write me",
+    "Resumen": "Resume"
   },
   "TiempodeVida": {
     "Edad": "Age"
@@ -14,93 +18,104 @@
     "responsibilities": "Responsibilities"
   },
   "Servicios": {
-    "title": "Freelance services",
-    "subtitle": "Full stack development tailored to you: from idea to production",
+    "title": "Freelance Services",
+    "subtitle": "Full stack development tailored to your business: from idea to production",
     "cta": "Have a project?",
     "cta_aria": "Go to contact",
     "services": [
       {
         "id": 1,
-        "title": "Web page creation",
-        "description": "Landing pages, corporate sites and blogs. Responsive design, SEO and fast delivery.",
-        "icon": "Globe"
+        "title": "Web Pages / Landing Pages",
+        "description": "Fast and SEO-optimized landing pages. Responsive design and delivered in record time to acquire customers.",
+        "icon": "Globe",
+        "price": "From $150 USD"
       },
       {
         "id": 2,
-        "title": "Application development",
-        "description": "Web apps, dashboards and SaaS. Integrated frontend and backend, ready to scale.",
-        "icon": "Code2"
+        "title": "Web Apps & SaaS Platforms",
+        "description": "Web apps, internal tools and scalable SaaS. Highly interactive frontend and integrated backend.",
+        "icon": "Code2",
+        "price": "From $250 USD"
       },
       {
         "id": 3,
-        "title": "Code help",
-        "description": "Code review, refactoring, debugging and mentoring. I unblock issues and improve your code quality.",
-        "icon": "Wrench"
+        "title": "Code Audit & Project Rescue",
+        "description": "Code review, refactoring, debugging and performance optimization for existing platforms to fix bugs and improve load times.",
+        "icon": "Wrench",
+        "price": "From $200 USD"
       },
       {
         "id": 4,
-        "title": "APIs and backends",
-        "description": "REST APIs, databases and integrations. Clean architecture and clear documentation.",
-        "icon": "Server"
+        "title": "Robust APIs & Backend Services",
+        "description": "Clean backend architectures designed with NestJS/Node.js, SQL/NoSQL databases, and clear API docs with Swagger.",
+        "icon": "Server",
+        "price": "From $500 USD"
       },
       {
         "id": 5,
-        "title": "Maintenance and support",
-        "description": "Updates, improvements and ongoing support. Your projects always up to date and secure.",
-        "icon": "Settings"
+        "title": "Maintenance & Support",
+        "description": "Ongoing monthly support, security updates, and new feature integrations without service interruption.",
+        "icon": "Settings",
+        "price": "From $100 USD/month"
       }
     ]
   },
   "ServicioPage": {
-    "hero_title": "Services",
-    "hero_subtitle": "Full stack development tailored to you: web pages, applications, ecommerce and more. From idea to production.",
-    "hero_cta": "Contact",
-    "hero_cta_aria": "Go to contact",
-    "section_title": "What I can do for you",
-    "card_button": "Learn more",
+    "hero_title": "Software Development Services",
+    "hero_subtitle": "Custom digital solutions designed to sell, automate processes, and scale your business in LATAM. React Native, NestJS, Node.js, and robust databases.",
+    "hero_cta": "Start Project",
+    "hero_cta_aria": "Contact via WhatsApp",
+    "section_title": "How I can help your business grow",
+    "card_button": "Get a quote",
     "back_to_home": "Back to home",
     "pageServices": [
       {
         "id": 1,
         "title": "Web pages",
-        "description": "Landing pages, corporate sites and blogs. Responsive design, SEO and fast delivery.",
+        "description": "Landing pages, corporate sites and blogs. Responsive design, SEO optimization and fast delivery.",
         "img": "/proyectos-img/armaly.webp",
-        "imgAlt": "ArmalyTech website"
+        "imgAlt": "ArmalyTech website",
+        "price": "From $150 USD"
       },
       {
         "id": 2,
         "title": "Desktop and web applications",
         "description": "Desktop and web apps: dashboards, internal tools and SaaS ready to scale.",
         "img": "/proyectos-img/App-Escritorio.webp",
-        "imgAlt": "QR Generator web app"
+        "imgAlt": "QR Generator web app",
+        "price": "From $250 USD"
       },
       {
         "id": 3,
         "title": "Ecommerce",
-        "description": "Complete online stores: catalog, cart, payments, admin panel and notifications.",
+        "description": "Complete online stores: catalog, shopping cart, payment integration, admin panel and notifications.",
         "img": "/proyectos-img/proyecto-polos.webp",
-        "imgAlt": "Polo ecommerce"
+        "imgAlt": "Polo ecommerce",
+        "price": "From $800 USD"
       },
       {
         "id": 4,
         "title": "APIs and backends",
-        "description": "REST APIs, databases, integrations and clean architecture with clear documentation.",
-        "img": "/proyectos-img/makez-landing.webp",
-        "imgAlt": "Node.js backend"
+        "description": "REST APIs, robust databases, payment gateway integrations and clean architecture with clear documentation.",
+        "img": "/proyectos-img/api-backend.png",
+        "imgAlt": "Node.js backend",
+        "price": "From $500 USD"
       },
       {
         "id": 5,
-        "title": "Code help",
-        "description": "Code review, refactoring, debugging and mentoring. I unblock issues and improve your code quality.",
+        "title": "Code audit and optimization",
+        "description": "Code review, refactoring, debugging, and support to resolve blockers and improve code quality.",
         "img": "/proyectos-img/easylaundry.webp",
-        "imgAlt": "React development"
+        "imgAlt": "React development",
+        "price": "From $200 USD"
       },
       {
         "id": 6,
         "title": "Maintenance and support",
-        "description": "Updates, improvements and ongoing support. Your projects always up to date and secure.",
+        "description": "Preventive support, monthly updates, and continuous improvements. Your software always secure and up-to-date.",
         "img": "/proyectos-img/qrgratis.webp",
-        "imgAlt": "Code maintenance"
+        "imgAlt": "Code maintenance",
+        "price": "From $100 USD/month"
       }
     ]
   },
@@ -206,11 +221,11 @@
   ],
   "Presentacion": {
     "greeting": "Hey, I'm ",
-    "subtitle": "Programmer Full Stack",
-    "description": "Full Stack developer specialized in SaaS ecosystems and e-commerce. My main focus is designing maintainable systems under solid architecture patterns, ensuring that code grows at the pace of business.",
-    "boton1": "About",
-    "boton2": "Download CV",
-    "link-cv": "/CV/CV_Edu_Armas_English.pdf"
+    "subtitle": "Full Stack Freelance Developer",
+    "description": "I help startups and SMBs in LATAM design and launch high-performance web and mobile applications. I build robust SaaS platforms and fast e-commerce stores using React Native, NestJS, and Node.js, ensuring secure payment gateways and scalable codebases.",
+    "boton1": "About me",
+    "boton2": "Get a Quote",
+    "link-cv": "https://wa.me/51965728013?text=Hello%20Edu,%20vengo%20de%20tu%20web%20bignight.dev%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto.%20%C2%BFCu%C3%A1ndo%20tienes%20disponibilidad%20para%20hablar?"
   },
   "Sobremi": {
     "sobre": "About me",
@@ -351,15 +366,363 @@
       }
     ]
   },
+  "ProjectsPage": {
+    "badge": "Latest projects",
+    "title": "Here are some of the things I've been working on.",
+    "description": "This space brings together products, platforms, and experiments I have built for clients, startups, and my own ideas.",
+    "section_label": "Pinned",
+    "view_project": "View project"
+  },
+  "ProjectsDetail": {
+    "badge": "Projects",
+    "back_to_projects": "Back to projects",
+    "not_found_title": "Project not found",
+    "not_found_description": "We could not find this project. The URL may have changed or this case study is not published yet.",
+    "items": [
+      {
+        "slug": "ecommerce-de-polos-sistema-completo",
+        "name": "Polo Ecommerce - Complete System",
+        "summary": "A complete ecommerce platform with admin workflows, payments, notifications, and day-to-day operations focused on growth.",
+        "description": "This project was built to cover the full online sales cycle for polos: from catalog and cart to admin operations and post-purchase experience. The technical focus was creating a reliable checkout flow, a strong back-office panel, and reusable components that allow the product to evolve quickly.",
+        "heroImage": "/proyectos-img/proyecto-polos.webp",
+        "heroAlt": "Main view of the polo ecommerce system",
+        "website": "https://venta-de-polo.vercel.app/",
+        "tech": ["React", "NestJS", "MongoDB", "Tailwind CSS"],
+        "year": "2025",
+        "highlights": [
+          "Admin panel for products, orders, and users",
+          "Payment integration and real-time notifications",
+          "Scalable architecture for future features",
+          "Responsive UX optimized for conversion"
+        ]
+      },
+      {
+        "slug": "pagina-web-armalytech",
+        "name": "ArmalyTech Website",
+        "summary": "Commercial website designed to capture technical service leads with a clean and direct contact journey.",
+        "description": "ArmalyTech was designed as a results-focused website: communicate trust, explain services quickly, and enable immediate contact with the technician. The implementation prioritized speed, clarity, and mobile-first behavior to reduce friction and improve conversion from organic and social traffic.",
+        "heroImage": "/proyectos-img/armaly.webp",
+        "heroAlt": "ArmalyTech website",
+        "website": "https://www.armalytech.com/",
+        "tech": ["React", "Vite", "Tailwind CSS", "Styled-components"],
+        "year": "2025",
+        "highlights": [
+          "Lead-oriented layout and messaging",
+          "Clear navigation with strong contact CTA",
+          "Performance tuned for mobile users",
+          "Professional visual system aligned to brand"
+        ]
+      },
+      {
+        "slug": "formatos-integraficos",
+        "name": "Formatos Integraficos",
+        "summary": "Landing page for a SUNAT-authorized print business, focused on local SEO and WhatsApp quotation flows.",
+        "description": "This solution combines business goals with technical performance: a modular landing architecture, SEO-oriented content, and conversion-first contact forms. The objective was increasing qualified inquiries and streamlining sales communication through prefilled WhatsApp redirection.",
+        "heroImage": "/proyectos-img/formatos-integraficos.webp",
+        "heroAlt": "Formatos Integraficos landing page",
+        "website": "https://formatosintergraficos.pe/",
+        "tech": ["Astro", "Tailwind CSS", "SEO", "WhatsApp API"],
+        "year": "2025",
+        "highlights": [
+          "Performance-first architecture for SEO",
+          "Quote form connected to WhatsApp automation",
+          "Search-optimized content for local intent",
+          "Structure prepared for campaign extensions"
+        ]
+      },
+      {
+        "slug": "generador-qr-gratis",
+        "name": "Free QR Generator",
+        "summary": "Web platform for personalized QR creation with multiple content types and export options.",
+        "description": "This product was designed to feel simple for users while remaining technically robust. It supports QR generation for different scenarios, visual customization, and multiple export formats. The core challenge was balancing speed and ease of use with advanced functionality.",
+        "heroImage": "/proyectos-img/qrgratis.webp",
+        "heroAlt": "Free QR Generator platform",
+        "website": "https://www.qrgratis.es/",
+        "tech": ["React", "TypeScript", "Node.js", "Express"],
+        "year": "2025",
+        "highlights": [
+          "QR generation for URL, WiFi, WhatsApp, and text",
+          "Export to PNG, JPG, PDF, and SVG",
+          "Multilingual support and dark mode",
+          "Fast interface optimized for quick tasks"
+        ]
+      },
+      {
+        "slug": "lords-of-memes-and-magic",
+        "name": "Lords of Memes and Magic",
+        "summary": "A 2D Unity prototype with exploration, building, and combat mechanics for a web3 community concept.",
+        "description": "The project explored a playable game loop tied to a digital community initiative. We implemented core systems for maps, resources, progression, and UI. Even though it remained in prototype stage for external business reasons, it validated technical direction and gameplay foundations.",
+        "heroImage": "/proyectos-img/lords-memes-magic.webp",
+        "heroAlt": "Lords of Memes and Magic screenshot",
+        "website": "https://bignight1.itch.io/lords-of-memes-and-magic",
+        "tech": ["Unity 2D", "C#", "Tilemaps", "UI"],
+        "year": "2025",
+        "highlights": [
+          "Functional prototype with core game loop",
+          "Resource and progression systems",
+          "UI/HUD focused on clear player feedback",
+          "Concept validation for a niche audience"
+        ]
+      }
+    ]
+  },
+  "Resume": {
+    "downloadLabel": "Download",
+    "header": {
+      "name": "EDU WALTER ARMAS ALIAGA",
+      "role": "Full Stack Developer",
+      "location": "Lima, Peru",
+      "phone": "+51 965 728 013",
+      "email": "eduarmascontact@gmail.com",
+      "linkedinLabel": "linkedin.com/in/edu-armas",
+      "linkedinUrl": "https://linkedin.com/in/edu-armas",
+      "githubLabel": "github.com/BigNight1",
+      "githubUrl": "https://github.com/BigNight1"
+    },
+    "summary": "Full Stack Developer with 4+ years of experience building scalable web applications with React, TypeScript, Angular, Node.js, and NestJS. Specialized in REST API architectures, Clean Architecture, e-commerce platforms, CRM with chatbot, and external API integrations (META, WhatsApp Business). Experience delivering end-to-end projects for clients in Peru and Chile, using agile methodologies (Scrum/Kanban) with a focus on performance, SEO, and user experience. Available for remote or hybrid roles.",
+    "sections": {
+      "profile": "Professional profile",
+      "experience": "Professional experience",
+      "featuredProjects": "Featured projects",
+      "technologies": "Technologies and tools",
+      "education": "Education",
+      "certifications": "Certifications",
+      "languages": "Languages"
+    },
+    "experience": [
+      {
+        "title": "Full Stack Developer — Makez (Startup)",
+        "period": "Nov 2025 – Mar 2026",
+        "meta": "Remote technical collaboration · Santiago, Chile",
+        "bullets": [
+          "Built a complete CRM dashboard with Angular 21 (standalone components, signals) consuming a REST API with JWT authentication, route guards, and responsive UI with PrimeNG and Tailwind CSS.",
+          "Implemented commercial KPI visualization (conversion, revenue, leads, response rate) with date filters and Chart.js charts in general mode and per-client comparative views.",
+          "Designed REST API backend with NestJS 11 and domain-modular architecture (Auth, Leads, Sales, Chatbot, Metrics, Integrations) following Clean Architecture with MongoDB and Mongoose.",
+          "Built a chatbot engine with configurable flows and API-type steps: orchestration of external HTTP calls with multiple authentication (Bearer, Basic, API Key) and data extraction with JSONPath.",
+          "Integrated META API (WhatsApp Business) for message automation using official templates, connecting the chatbot to real communication channels.",
+          "Developed a conversion-focused sales landing page with React and Tailwind CSS for end-customer product presentation."
+        ]
+      },
+      {
+        "title": "Full Stack Developer — Polo E-commerce",
+        "period": "Jun 2025 – Sep 2025",
+        "meta": "Independent project · Lima, Peru",
+        "bullets": [
+          "Architected and developed a full stack e-commerce platform with 3+ active clients (entrepreneurs, startups, and banking entities).",
+          "Frontend: React + TypeScript + Tailwind CSS with Context API; shopping cart, authentication, admin panel, and responsive UI (Lighthouse > 90).",
+          "Backend: Node.js + NestJS + MongoDB/Mongoose; REST API with JWT, Tupay payment integration, order and inventory management.",
+          "DevOps: Vercel deployment, CI/CD with GitHub Actions, technical documentation, and automated testing."
+        ]
+      },
+      {
+        "title": "Video Game Developer — Unity 2D",
+        "period": "Feb 2025 – May 2025",
+        "meta": "Bonsai.meme · Remote",
+        "bullets": [
+          "Developed top-down 2D game mechanics in Unity for a distributed international team.",
+          "Coordinated weekly deliveries with a foreign client using Scrum, optimizing UX on desktop and mobile.",
+          "Integrated into an existing codebase in less than a week, adapting to team technologies and workflows."
+        ]
+      }
+    ],
+    "featuredProjects": [
+      {
+        "title": "ArmalyTech — Corporate Website",
+        "period": "March 2026",
+        "meta": "Client · armalytech.com · Lima, Peru",
+        "bullets": [
+          "Built a multi-page corporate site with React 18, Vite, and Tailwind CSS; responsive design with PageSpeed scores of 90–100 across all metrics.",
+          "Implemented serverless API on Vercel (Node.js + Nodemailer) for contact form with validation, XSS sanitization, and SMTP delivery.",
+          "Configured full technical SEO (OG meta, canonical, Google Analytics, Google Maps embed) and full-stack Vercel deployment with SPA rewrites."
+        ]
+      },
+      {
+        "title": "ArmalyTech — Desktop Inventory System",
+        "period": "Jan 2026 (delivered in 5 days)",
+        "meta": "Client · Lima, Peru",
+        "bullets": [
+          "Built desktop application with Electron + React + TypeScript + SQLite for hierarchical inventory management (brands, models, parts) and cash closing module (cash and Yape/Plin).",
+          "Implemented bulk import from Excel (multiple sheets, atomic SQLite transactions) with real-time progress feedback via IPC.",
+          "Built secure IPC architecture (preload, contextBridge) and build pipeline with electron-builder to generate Windows installer (NSIS) ready for distribution."
+        ]
+      },
+      {
+        "title": "Embedded Chatbots Platform",
+        "period": "2025 – 2026",
+        "meta": "Independent project for startup",
+        "bullets": [
+          "Designed and developed a white-label embedded chatbots platform, delivering production-ready MVP in less than 8 weeks.",
+          "Built reusable and configurable React component library for fast integration on third-party sites.",
+          "Architected scalable backend with Node.js and Socket.IO for real-time messaging."
+        ]
+      }
+    ],
+    "technologies": [
+      {
+        "category": "Frontend",
+        "items": "React, Angular 21, TypeScript, JavaScript ES6+, Next.js, Tailwind CSS, PrimeNG, Context API, RxJS, HTML5, CSS3, Firebase"
+      },
+      {
+        "category": "Backend",
+        "items": "Node.js, NestJS 11, Express, Socket.IO, Passport, JWT, bcrypt, Axios, .NET / C#"
+      },
+      {
+        "category": "Databases",
+        "items": "MongoDB, Mongoose, PostgreSQL, SQLite (better-sqlite3)"
+      },
+      {
+        "category": "DevOps",
+        "items": "Vercel, Git, GitHub Actions, CI/CD, Electron, electron-builder, Docker, Linux"
+      },
+      {
+        "category": "Testing",
+        "items": "Jest, Jasmine, Karma, automated testing"
+      },
+      {
+        "category": "APIs and integrations",
+        "items": "REST API, META API, WhatsApp Business API, JSONPath, ExcelJS, Nodemailer, SMTP"
+      },
+      {
+        "category": "Architecture and patterns",
+        "items": "Clean Architecture, domain-modular architecture, Repository Pattern, Dependency Injection, DTO validation, domain microservices"
+      },
+      {
+        "category": "Methodologies",
+        "items": "Scrum, Kanban, Agile, Git Flow"
+      },
+      {
+        "category": "Other",
+        "items": "Unity 2D, technical SEO, PageSpeed optimization, responsive design, web accessibility"
+      }
+    ],
+    "education": [
+      {
+        "title": "Full Stack Development Program",
+        "period": "Jan 2021 – Jun 2023",
+        "meta": "Coderhouse · Buenos Aires, Argentina",
+        "bullets": [
+          "Intensive Full Stack development program covering Frontend (HTML5, CSS3, JavaScript ES6+, React) and Backend (Node.js, Express, databases). 100+ hours of hands-on training."
+        ]
+      }
+    ],
+    "certifications": [
+      { "name": "Web Development — Coderhouse", "date": "January 5, 2023" },
+      { "name": "JavaScript — Coderhouse", "date": "March 14, 2023" },
+      { "name": "React Js — Coderhouse", "date": "May 9, 2023" },
+      { "name": "Responsive Web Design — freeCodeCamp", "date": "" },
+      { "name": "Angular — HackerRank", "date": "" },
+      { "name": "C# / .NET — Udemy", "date": "" }
+    ],
+    "languages": [
+      { "language": "Spanish", "level": "Native" },
+      { "language": "English", "level": "Intermediate — advanced technical reading" }
+    ]
+  },
   "Footer": {
     "description": "Full Stack developer passionate about creating innovative digital experiences and quality technological solutions.",
-    "connect": "Connect With Me",
+    "connect": "GET IN TOUCH",
     "collaborate": "Interested in collaborating?",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "pages": "PAGES",
+    "home": "Home",
+    "services": "Services",
+    "calculator": "Calculator",
+    "contact": "Contact",
+    "resume": "Resume"
   },
   "AriaLabels": {
     "about_section": "Go to About section",
     "projects_section": "Go to Projects section",
     "whatsapp_contact": "Contact via WhatsApp for collaboration"
+  },
+  "Calculadora": {
+    "title": "Budget Calculator",
+    "subtitle": "Estimate the cost of your software project in less than 1 minute.",
+    "step1_title": "1. Project Type",
+    "step1_subtitle": "Select the base of what you need to develop",
+    "step2_title": "2. Additional Features",
+    "step2_subtitle": "Select the features required for your project",
+    "step3_title": "3. Delivery Timeline",
+    "step3_subtitle": "When do you need the project to be ready?",
+    "step4_title": "4. Your Estimated Budget",
+    "step4_subtitle": "Complete your details to receive the technical breakdown and get in touch",
+    "btn_next": "Next",
+    "btn_prev": "Back",
+    "btn_submit": "Send Estimate via WhatsApp",
+    "placeholder_name": "Your name",
+    "placeholder_email": "Your email address",
+    "placeholder_phone": "Your WhatsApp number (with country code)",
+    "placeholder_desc": "Tell me more about your idea (optional)",
+    "estimated_price": "Estimated Budget:",
+    "project_types": {
+      "landing": {
+        "title": "Web Page / Landing Page",
+        "desc": "Single-page website optimized for conversion."
+      },
+      "app": {
+        "title": "Web / Desktop Application",
+        "desc": "Custom software, internal tools, or SaaS platforms."
+      },
+      "ecommerce": {
+        "title": "Online Store (E-commerce)",
+        "desc": "Selling physical or digital products with a cart."
+      },
+      "backend": {
+        "title": "API / Robust Backend",
+        "desc": "Databases, server logic, microservices, and integrations."
+      }
+    },
+    "features": {
+      "landing": {
+        "contact_form": "Advanced contact form / Lead gen",
+        "seo": "Advanced SEO & local search optimization",
+        "i18n": "Multi-language support (English / Spanish)",
+        "blog": "Integrated blog system",
+        "social_integration": "Social media & WhatsApp integration"
+      },
+      "app": {
+        "auth": "User authentication & roles (Admin/Client)",
+        "admin": "Administration panel & metrics (Dashboard)",
+        "payment": "Integrated payment gateway (Stripe/PayPal)",
+        "inventory": "Inventory and stock management module",
+        "realtime": "Real-time features (Chat/Notifications)",
+        "api_integration": "Integration with external APIs"
+      },
+      "ecommerce": {
+        "payment": "Integrated payment gateway",
+        "admin": "Product and order management dashboard",
+        "inventory_sync": "Automatic stock synchronization",
+        "coupons": "Discount coupons system",
+        "shipping": "Shipping costs & carrier integration",
+        "i18n": "Multi-language support (English / Spanish)"
+      },
+      "backend": {
+        "db_design": "SQL/NoSQL database design & modeling",
+        "auth_jwt": "JWT/OAuth security & authentication",
+        "swagger": "Interactive API documentation (Swagger)",
+        "payment_webhooks": "Webhooks & payment gateway integration",
+        "cron_jobs": "Background scheduled tasks (Cron Jobs)"
+      }
+    },
+    "timelines": {
+      "fast": "Urgent (Less than 2 weeks)",
+      "standard": "Standard (3 to 5 weeks)",
+      "flexible": "Flexible (More than 6 weeks)"
+    }
+  },
+  "Contacto": {
+    "title": "Send me a message!",
+    "subtitle": "Got a question or proposal, or just want to say hello? Go ahead.",
+    "label_name": "Your Name",
+    "label_email": "Email Address",
+    "label_message": "Your Message",
+    "placeholder_name": "hello",
+    "placeholder_email": "example@example.com",
+    "placeholder_message": "Hello,| I think we need a design system for our products at company X. When could you meet to discuss this?",
+    "btn_submit": "SHOOT",
+    "sending": "SENDING...",
+    "success_title": "Message Sent!",
+    "success_message": "Thank you for your message. I'll get back to you as soon as possible.",
+    "error_message": "There was an error sending your message. Please try again."
   }
 }

@@ -14,7 +14,7 @@ const ServicioPage = () => {
   }, [t]);
 
   const whatsappUrl =
-    "https://wa.me/51965728013?text=¡Hola!%20Me%20interesa%20contratar%20tus%20servicios.%20¿Podemos%20hablar?";
+    "https://wa.me/51965728013?text=Hola%20Edu,%20vengo%20de%20tu%20web%20bignight.dev%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto.%20%C2%BFCu%C3%A1ndo%20tienes%20disponibilidad%20para%20hablar?";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50/40 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 pt-20">
@@ -60,9 +60,16 @@ const ServicioPage = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                  {service.title}
-                </h3>
+                <div className="flex justify-between items-baseline gap-2 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                    {service.title}
+                  </h3>
+                  {service.price && (
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-400 border border-cyan-200/20 whitespace-nowrap">
+                      {service.price}
+                    </span>
+                  )}
+                </div>
                 <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
                   {service.description}
                 </p>
