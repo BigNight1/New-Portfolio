@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
+import emailjs from '@emailjs/browser';
 import Footer from "../components/Footer.jsx";
 
 const ContactoPage = () => {
@@ -32,27 +33,16 @@ const ContactoPage = () => {
 
     // SIMULATED SENDING (To be configured by user with EmailJS, Web3Forms, etc.)
     try {
-      // Simular delay de 1.5s
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      /*
-      // EJEMPLO INTEGRACIÓN WEB3FORMS:
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: JSON.stringify({
-          access_key: "TU_ACCESS_KEY_AQUI",
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
           name: formData.name,
           email: formData.email,
-          message: formData.message
-        })
-      });
-      const result = await response.json();
-      if (!result.success) throw new Error("Error de Web3Forms");
-      */
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
       setStatus({ submitting: false, success: true, error: false });
       setFormData({ name: "", email: "", message: "" });
